@@ -22,33 +22,33 @@
                     <!-- search area -->
                     <label for="textinput">Search Name</label>  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                        < class="row"><br>
-                            <div class="col-md-4">
-                                <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                <button type="submit" class="btn btn-primary" >Search</button>      
-                            </div>
-                                        
-                            <div class="col-md-4">
-                                <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
-                                <button type="submit" class="btn btn-primary">Search</button>
-                            </div>
-
-                            <div class="col-md-4">
-                                <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
-                                <button type="submit" class="btn btn-primary">Search</button>
-                            </div><br>
-
-                            <!-- Date input -->
-                            <div class="row">
+                        <div class="row"><br>
                                 <div class="col-md-4">
-                                            <label for="fromDate">From:</label>
-                                            <input type="date" id="#" name="#">
+                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
+                                    <button type="submit" class="btn btn-primary" >Search</button>      
                                 </div>
+                                            
                                 <div class="col-md-4">
-                                            <label for="intoDate">Into:</label>
-                                            <input type="date" id="#" name="#">
+                                    <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
+                                    <button type="submit" class="btn btn-primary">Search</button>
                                 </div>
-                            </div><br>
+
+                                <div class="col-md-4">
+                                    <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div><br>
+                        </div><br>
+                        <!-- Date input -->
+                        <div class="row">
+                            <div class="col-md-4">
+                                        <label for="fromDate">From:</label>
+                                        <input type="date" id="#" name="#">
+                            </div>
+                            <div class="col-md-4">
+                                        <label for="intoDate">Into:</label>
+                                        <input type="date" id="#" name="#">
+                            </div>
+                        </div><br>
                         </form><br>
                     <!--List of stations buttons-->
                    <div>
