@@ -18,53 +18,42 @@
                     </ul>
                    </div>
           <main>
-                    <h1>Stations List</h1>
-                    <!-- for contact tracing, the head admin system and system user can able to use this.
-                    you can use the search button by filling up either the
-                        >QR code and
-                        >the date
-                    with qr code, it will search only the specific qr code 
-                    if qr code is not fulfilled but with the date it will
-                    display a table of that date and between of the date.
-                    -->
+                    <h1>Stations List</h1><br>
                     <!-- search area -->
-                        <div class="form-group"><br>
-                            <label for="textinput">Search Name</label>  
-                                        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
-                                            <div class="row"><br>
-                                                  <div class="col-md-4">
-                                                      <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                                      <button type="submit" class="btn btn-primary" >Search</button>      
-                                                  </div>
+                    <label for="textinput">Search Name</label>  
+                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+                        < class="row"><br>
+                            <div class="col-md-4">
+                                <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
+                                <button type="submit" class="btn btn-primary" >Search</button>      
+                            </div>
                                         
-                                              <div class="col-md-4">
-                                                  <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
-                                                  <button type="submit" class="btn btn-primary">Search</button>
-                                              </div>
+                            <div class="col-md-4">
+                                <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
 
-                                              <div class="col-md-4">
-                                                  <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
-                                                  <button type="submit" class="btn btn-primary">Search</button>
-                                              </div><br>
-                                            </div>
-                                            <!-- Date input -->
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                            <label for="fromDate">From:</label>
-                                                            <input type="date" id="#" name="#">
-                                                </div>
-                                                <div class="col-md-4">
-                                                            <label for="intoDate">Into:</label>
-                                                            <input type="date" id="#" name="#">
-                                                </div>
-                                            </div><br>
-                                        </form><br>
-                    </div>
+                            <div class="col-md-4">
+                                <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div><br>
+
+                            <!-- Date input -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                            <label for="fromDate">From:</label>
+                                            <input type="date" id="#" name="#">
+                                </div>
+                                <div class="col-md-4">
+                                            <label for="intoDate">Into:</label>
+                                            <input type="date" id="#" name="#">
+                                </div>
+                            </div><br>
+                        </form><br>
                     <!--List of stations buttons-->
                    <div>
-                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.html' ">Station A</button>
-                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
-                    </div>
+                        <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.html' ">Station A</button>
+                        <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
                     </div><br>
                     <?php
                     include "db_connect.php";
