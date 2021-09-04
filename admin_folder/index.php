@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-        <title>Customer login</title>
+        <title>Head Admin Login</title>
         <meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="/assets/mymain1.css"/>
@@ -17,9 +17,9 @@
             </header>
             <main>
             <h1 id="titlemain" >Smart Contact Tracing</h1>
-            <h2>Login as Customer</h2>
-            <!-- Login as Customer -->
-            <form method="post" action="customer.html">
+            <h2>Login as Head Admin</h2>
+            <!-- Login as Head Admin -->
+            <form method="post" action="index.php">
                       
                       <div class="form-group">
                       <label>Username</label>
