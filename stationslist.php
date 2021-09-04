@@ -28,9 +28,7 @@
                     display a table of that date and between of the date.
                     -->
                     <!-- search area -->
-                    <div>
-                        <div class="form-group">
-                            <br>
+                        <div class="form-group"><br>
                             <label for="textinput">Search Name</label>  
                                         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                                             <div class="row"><br>
@@ -47,21 +45,20 @@
                                               <div class="col-md-4">
                                                   <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
                                                   <button type="submit" class="btn btn-primary">Search</button>
-                                              </div>
-
+                                              </div><br>
                                             </div>
+                                            <!-- Date input -->
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                            <label for="fromDate">From:</label>
+                                                            <input type="date" id="#" name="#">
+                                                </div>
+                                                <div class="col-md-4">
+                                                            <label for="intoDate">Into:</label>
+                                                            <input type="date" id="#" name="#">
+                                                </div>
+                                            </div><br>
                                         </form><br>
-                                    <br>
-                                    <div class="col-md-4">
-                                                <label for="fromDate">From:</label>
-                                                <input type="date" id="#" name="#">
-                                    </div>
-                                    <div class="col-md-4">
-                                                <label for="intoDate">Into:</label>
-                                                <input type="date" id="#" name="#">
-                                    </div>
-                            </div>
-                            <br>
                     </div>
                     <!--List of stations buttons-->
                    <div>
@@ -88,24 +85,30 @@
                                   // collect value of input field
                                   $Sfname = $_REQUEST['Sfname'];
                                   $Slname = $_REQUEST['Slname'];
+                                  $QRcode = $_REQUEST['QRcode'];
                                   if (!empty($Sfname)) {
                                             $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE firstname LIKE '".$Sfname."' ");
                                                       while($row = mysqli_fetch_array($result))
                                                                 {
+                                                                    // station facialimg date time bodyheat_temp
                                                                 echo "<tr>";
                                                                 echo "<td>" . $row['QRcode'] . "</td>";
                                                                 echo "<td>" . $row['firstname'] . "</td>";
                                                                 echo "<td>" . $row['lastname'] . "</td>";
                                                                 echo "<td>" . $row['contactno'] . "</td>";
                                                                 echo "<td>" . $row['email'] . "</td>";
-                                                                echo "<td>" . $row['address'] . "</td>";
+                                                                echo "<td>" . $row['station'] . "</td>";
+                                                                echo "<td>" . $row['facialimg'] . "</td>";
+                                                                echo "<td>" . $row['date'] . "</td>";
+                                                                echo "<td>" . $row['time'] . "</td>";
+                                                                echo "<td>" . $row['bodyheat_temp'] . "</td>";
                                                                 echo "</tr>";
                                                                 }
                                             echo "</table>";
                                             mysqli_close($mysqli);
                                   } elseif(!empty($Slname)) {
                                             
-                                            $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE lastname = '".$Slname."' ");
+                                            $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE lastname = '".$Slname."' ");
                                                       while($row = mysqli_fetch_array($result))
                                                       {
                                                                 echo "<tr>";
@@ -114,25 +117,54 @@
                                                                 echo "<td>" . $row['lastname'] . "</td>";
                                                                 echo "<td>" . $row['contactno'] . "</td>";
                                                                 echo "<td>" . $row['email'] . "</td>";
-                                                                echo "<td>" . $row['address'] . "</td>";
+                                                                echo "<td>" . $row['station'] . "</td>";
+                                                                echo "<td>" . $row['facialimg'] . "</td>";
+                                                                echo "<td>" . $row['date'] . "</td>";
+                                                                echo "<td>" . $row['time'] . "</td>";
+                                                                echo "<td>" . $row['bodyheat_temp'] . "</td>";
                                                                 echo "</tr>";
                                                       }
                                                       echo "</table>";
                                                       mysqli_close($mysqli);
+
+                                 } elseif(!empty($QRcode)){
+                                    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE QRcode = '".$QRcode."' ");
+                                    while($row = mysqli_fetch_array($result))
+                                    {
+                                              echo "<tr>";
+                                              echo "<td>" . $row['QRcode'] . "</td>";
+                                              echo "<td>" . $row['firstname'] . "</td>";
+                                              echo "<td>" . $row['lastname'] . "</td>";
+                                              echo "<td>" . $row['contactno'] . "</td>";
+                                              echo "<td>" . $row['email'] . "</td>";
+                                              echo "<td>" . $row['station'] . "</td>";
+                                              echo "<td>" . $row['facialimg'] . "</td>";
+                                              echo "<td>" . $row['date'] . "</td>";
+                                              echo "<td>" . $row['time'] . "</td>";
+                                              echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                              echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                    mysqli_close($mysqli);
+                                }
                                   } else {
-                                            while($row = mysqli_fetch_array($result))
-                                                      {
-                                                                echo "<tr>";
-                                                                echo "<td>" . $row['QRcode'] . "</td>";
-                                                                echo "<td>" . $row['firstname'] . "</td>";
-                                                                echo "<td>" . $row['lastname'] . "</td>";
-                                                                echo "<td>" . $row['contactno'] . "</td>";
-                                                                echo "<td>" . $row['email'] . "</td>";
-                                                                echo "<td>" . $row['address'] . "</td>";
-                                                                echo "</tr>";
-                                                      }
-                                            echo "</table>";
-                                            mysqli_close($mysqli);
+                                    while($row = mysqli_fetch_array($result))
+                                    {
+                                              echo "<tr>";
+                                              echo "<td>" . $row['QRcode'] . "</td>";
+                                              echo "<td>" . $row['firstname'] . "</td>";
+                                              echo "<td>" . $row['lastname'] . "</td>";
+                                              echo "<td>" . $row['contactno'] . "</td>";
+                                              echo "<td>" . $row['email'] . "</td>";
+                                              echo "<td>" . $row['station'] . "</td>";
+                                              echo "<td>" . $row['facialimg'] . "</td>";
+                                              echo "<td>" . $row['date'] . "</td>";
+                                              echo "<td>" . $row['time'] . "</td>";
+                                              echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                              echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                    mysqli_close($mysqli);
                                             }
                         }
               ?>
