@@ -66,7 +66,20 @@
                     <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
                     </div>
                     </div><br>
+                    <?php
+                    include "db_connect.php";
+                    $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
+                    // Check connection
+                    if (mysqli_connect_errno())
+                    {
+                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    }
 
+                    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table");
+                    $Sfname =  "";
+                    $Slname = "";
+                    $QRcode = "";
+                    ?>
               <table>
                         <tr>
                                   <th>QR code</th>
