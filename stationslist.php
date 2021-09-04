@@ -55,6 +55,7 @@
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.html' ">Station A</button>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
                     </div><br>
+
                     <?php
                     include "db_connect.php";
                     $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
@@ -168,12 +169,7 @@
                                     echo "</table>";
                                     mysqli_close($mysqli);
                                             }
-                        }
-              ?>
+                                ?>
           </main>
-                   
-                   
-                    
-                              
           </body>
 </html>
