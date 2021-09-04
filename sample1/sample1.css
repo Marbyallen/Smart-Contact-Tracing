@@ -1,0 +1,182 @@
+:root {
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  line-height: 1;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+main {
+  margin-left: 1rem;
+  padding: 1rem;
+}
+footer {
+  position: fixed;
+  background-color: rgb(47, 59, 116);
+  left: 0;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  color: #dddddd;
+  font-size: 20px;
+}
+
+/*sidenav*/
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(72, 52, 212);
+  overflow: hidden;
+}
+li {
+  float: left;
+  text-decoration: none;
+}
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(221, 70, 70);
+}
+
+li a:hover {
+  background-color: rgb(18, 17, 71);
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  background-color: rgb(49, 74, 145);
+}
+/* end of sidenav */
+/*Form*/
+input[type="text"] {
+  border: 2px;
+  border-radius: 4px;
+}
+/* end of form */
+/*classes*/
+.container-registration {
+  background-color: rgba(16, 117, 117, 0.3);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: auto;
+}
+
+.form-group {
+  margin: 10px 0px 10px 0px;
+}
+
+li.topmenu {
+  float: right;
+}
+.titlemain {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+/* end of class */
+
+/*Buttons*/
+a.btn.btn-primary {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*Table*/
+
+/* td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+} */
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #050000;
+  text-align: left;
+  padding: 15px;
+  height: 25px;
+}
+/* end of table */
+
+/* form */
+form {
+  font: 20px;
+}
+input[type="text"] {
+  border: 2px solid rgb(2, 70, 11);
+  border-radius: 4px;
+  margin: 5px;
+  padding: 30px;
+  width: 30px 30px;
+}
+input[type="password"] {
+  border: 2px solid rgb(2, 70, 11);
+  border-radius: 4px;
+  margin: 5px;
+  padding: 5px;
+}
+input[type="password"]:focus {
+  background-color: rgb(125, 223, 141);
+}
+input[type="text"]:focus {
+  background-color: rgb(125, 223, 141);
+}
+input[type="submit"] {
+  background-color: rgba(2, 90, 221.3);
+  margin: 0.1rem;
+  padding: 12px 24px;
+  border-radius: 4pt;
+  font-size: 12px;
+  cursor: pointer;
+}
+/* end of form */
+/* ID */
+#inpAddress {
+  height: 50px;
+  width: 390px;
+}
+/* end of ID */

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Registration</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/mymain1.css">
+  </head>
+    <body>
+      <main>
+      <h1 style="font-size: 200%;">Registration</h1>
+      <p> Already have an account? <a href="login.php" target="_target">Log in here</a></p>
+    <!-- Form container>-->
+        <div class="container-registration">
+                <form action="registerin.php" method="post">
+                                            <div class="form-group">
+                                                  <label>First Name</label><br>
+                                                  <input type="text" name="Fname" id="Fname" maxlength="20" required>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>Last Name</label><br>
+                                                <input type="text" name="Lname" id="Lname" maxlength="20" required>
+                                            </div> <br>
+                                            <div class="form-group">
+                                                <label>Gender</label><br>
+                                                <input type="text" name="gender" id="gender" maxlength="1" required>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>Contact number</label><br>
+                                                <input type="text" name="Cnumber" id="Cnumber" onkeypress="return isNumber(event)" maxlength="11" required>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>Address</label><br>
+                                                <input type="text" id="address" name="address" required>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>Email Address</label><br>
+                                                <input type="text" name="Eaddress" id="Eaddress"  maxlength="20" required>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label>Username</label><br>
+                                                <input type="text" name="username" id="username" maxlength="20" >
+                                            </div> 
+                                            <div class="col-sm-6">
+                                            <div class="form-group">
+                                                    <label>Password</label>
+                                                    <input type="password" name="password" id="password" required><br>
+                                                    <input type="checkbox" onclick="showPass1()" >Show Password
+                                            </div> <br>
+                    <input type="submit" name="reg_user">  
+                </form>
+                </div>
+        </main> 
+            <!-- Javascript -->
+            <!-- toggle password visibility function -->
+                  <script>
+                      function showPass1() {
+                      var x = document.getElementById("password");
+                      if (x.type === "password") {
+                          x.type = "text";
+                      } else {
+                          x.type = "password";
+                      }
+                      }
+                      // number only
+                      function isNumber(evt) {
+                        evt = (evt) ? evt : window.event;
+                        var charCode = (evt.which) ? evt.which : evt.keyCode;
+                        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                        return false;
+                        }
+                        return true;
+                    }
+
+                  </script>
+                  
+    </body>
+</html>

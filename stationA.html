@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+          <head> 
+                    <link rel="stylesheet" href="/assets/mymain1.css">
+                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <title>Station A</title>
+                    
+          </head>
+          <body>
+                   <div class="sidenav">
+                    <ul class="first">
+                              <li> <a href="hadmin.html">Home</a></li>
+                              <li> <a href="registeredUsers.html">Users List</a></li>
+                              <li><a href="stationslist.html">Stations List</a></li>
+                              <li style="float: right;"> <a href="index.html">Logout</a></li>
+                    </ul>
+                   </div>
+
+                   <main>
+                    <h1>Station A</h1>
+                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationslist.html' "> Back </button>
+                    <!--Form-->
+                              <div class="form-group">
+                                        <br>
+                                        <div class="row">
+                                                  <br>
+                                                  <div class="col-md-4">
+                                                  <input id="textinput" name="textinput" type="text" placeholder="QR code" class="form-control input-md">
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                            <label for="fromDate">From:</label>
+                                                            <input type="date" id="#" name="#">
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                            <label for="intoDate">Into:</label>
+                                                            <input type="date" id="#" name="#">
+                                                  </div>
+                                        </div>
+                                        <br>
+                                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Search</button>
+                              </div>
+                              <table>
+                                        <tr>
+                                                  <th>QR code</th>
+                                                  <th>Facial recognition image</th>
+                                                  <th>Date and Time</th>
+                                                  <th>Body Heat Temperature</th>
+                                        </tr>
+                              </table>
+                    </main>
+                   
+                   
+                    
+                              
+          </body>
+</html>
