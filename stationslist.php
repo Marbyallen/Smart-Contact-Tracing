@@ -132,24 +132,23 @@
 
                                  } elseif(!empty($QRcode)){
                                     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE QRcode = '".$QRcode."' ");
-                                    while($row = mysqli_fetch_array($result))
-                                    {
-                                              echo "<tr>";
-                                              echo "<td>" . $row['QRcode'] . "</td>";
-                                              echo "<td>" . $row['firstname'] . "</td>";
-                                              echo "<td>" . $row['lastname'] . "</td>";
-                                              echo "<td>" . $row['contactno'] . "</td>";
-                                              echo "<td>" . $row['email'] . "</td>";
-                                              echo "<td>" . $row['station'] . "</td>";
-                                              echo "<td>" . $row['facialimg'] . "</td>";
-                                              echo "<td>" . $row['date'] . "</td>";
-                                              echo "<td>" . $row['time'] . "</td>";
-                                              echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                              echo "</tr>";
-                                    }
-                                    echo "</table>";
-                                    mysqli_close($mysqli);
-                                }
+                                                        while($row = mysqli_fetch_array($result))
+                                                        {
+                                                                echo "<tr>";
+                                                                echo "<td>" . $row['QRcode'] . "</td>";
+                                                                echo "<td>" . $row['firstname'] . "</td>";
+                                                                echo "<td>" . $row['lastname'] . "</td>";
+                                                                echo "<td>" . $row['contactno'] . "</td>";
+                                                                echo "<td>" . $row['email'] . "</td>";
+                                                                echo "<td>" . $row['station'] . "</td>";
+                                                                echo "<td>" . $row['facialimg'] . "</td>";
+                                                                echo "<td>" . $row['date'] . "</td>";
+                                                                echo "<td>" . $row['time'] . "</td>";
+                                                                echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                                                echo "</tr>";
+                                                        }
+                                                        echo "</table>";
+                                                        mysqli_close($mysqli);
                                   } else {
                                     while($row = mysqli_fetch_array($result))
                                     {
@@ -168,8 +167,9 @@
                                     }
                                     echo "</table>";
                                     mysqli_close($mysqli);
-                                            }
-                                ?>
+                                    }
+                        }
+                        ?>
           </main>
           </body>
 </html>
