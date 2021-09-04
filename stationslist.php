@@ -185,7 +185,7 @@
                                     }
                                     echo "</table>";
                                     mysqli_close($mysqli);
-                                    }
+                                    
                         }
                         ?>
           </main>
