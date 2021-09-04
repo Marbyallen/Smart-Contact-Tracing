@@ -20,7 +20,7 @@
           <main>
                     <h1>Stations List</h1><br>
                     <!-- search area -->
-                    <label for="textinput">Search Name</label>  
+                    <label for="textinput">Search</label>  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
                                 <div class="col-md-4">
@@ -168,24 +168,6 @@
                                     echo "</table>";
                                     mysqli_close($mysqli);
                                     }
-                                    while($row = mysqli_fetch_array($result))
-                                    {
-                                              echo "<tr>";
-                                              echo "<td>" . $row['QRcode'] . "</td>";
-                                              echo "<td>" . $row['firstname'] . "</td>";
-                                              echo "<td>" . $row['lastname'] . "</td>";
-                                              echo "<td>" . $row['contactno'] . "</td>";
-                                              echo "<td>" . $row['email'] . "</td>";
-                                              echo "<td>" . $row['station'] . "</td>";
-                                              echo "<td>" . $row['facialimg'] . "</td>";
-                                              echo "<td>" . $row['date'] . "</td>";
-                                              echo "<td>" . $row['time'] . "</td>";
-                                              echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                              echo "</tr>";
-                                    }
-                                    echo "</table>";
-                                    mysqli_close($mysqli);
-                                    
                         }
                         ?>
           </main>
