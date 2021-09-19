@@ -10,7 +10,7 @@
           <body>
             <header>
               <ul>
-                <li><h1 id="titlemain" >Smart Contact Tracing</h1></li>
+                <li><h1 id="titlemain" >Smart Contact Tracing test update with branch</h1></li>
                         <li class="topmenu">
                         <a href="loginadmin.html" target="_self">Login as Admin</a>
                         </li>
