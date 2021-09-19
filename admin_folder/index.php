@@ -10,7 +10,7 @@
           <body>
             <header>
               <ul>
-                <li><h1 id="titlemain" >Smart Contact Tracing test2</h1></li>
+                <li><h1 id="titlemain" >Smart Contact Tracing</h1></li>
                 <li class="topmenu"><a href="loginadmin.html" target="_self">Login as Admin</a></li>
               </ul>
             </header>
@@ -30,11 +30,9 @@
                       <button type="submit" class="btn btn-primary" name="login_user">Login</button>
                       </div>
             </form>
-            <a href="testPage/index.php">sample</a>
-            <a href="sample1/sample1.php">sample2</a><br>
             </main>
             <footer>
-                      <p>Page created by Smart Contact Tracing team</p>
+              <p>Page created by Smart Contact Tracing team</p>
             </footer>
           </body>
 </html>
