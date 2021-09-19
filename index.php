@@ -10,13 +10,12 @@
           <body>
             <header>
               <ul>
-                        <li class="topmenu">
+                        <li>
                         <h1 id="titlemain" >Smart Contact Tracing</h1>
                         </li>
               </ul>
             </header>
             <main>
-            <h1 id="titlemain" >Smart Contact Tracing</h1>
             <h2>Login as Customer</h2>
             <!-- Login as Customer -->
             <form method="post" action="customer.html">

@@ -98,14 +98,8 @@ li a:hover {
   margin: 10px 0px 10px 0px;
 }
 
-
-
-/* li.topmenu {
+li.topmenu {
   float: right;
-} */
-
-li, #h1 {
-  float: left;
 }
 
 .titlemain {
