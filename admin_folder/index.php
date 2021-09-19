@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-        <title>Head Admin Login</title>
+        <title>Head Admin Login test update</title>
         <meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="../assets/mymain1.css"/>
