@@ -10,9 +10,7 @@
           <body>
             <header>
               <ul>
-                        <li class="topmenu">
-                        <a href="loginadmin.html" target="_self">Login as Admin</a>
-                        </li>
+                        <li class="topmenu"></li>
               </ul>
             </header>
             <main>
