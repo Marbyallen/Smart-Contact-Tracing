@@ -10,7 +10,9 @@
           <body>
             <header>
               <ul>
-                        <li class="topmenu"></li>
+                        <li class="topmenu">
+                        <h1 id="titlemain" >Smart Contact Tracing</h1>
+                        </li>
               </ul>
             </header>
             <main>
