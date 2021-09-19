@@ -15,9 +15,9 @@
               </ul>
             </header>
             <main>
-              <h2>Login as Head Admin</h2>
-              <!-- Login as Head Admin -->
-              <form method="post" action="index.php">
+              <h2>Login as Admin</h2>
+              <!-- Login as Admin -->
+              <form method="post" action="loginadmin.html">
                 <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username">
