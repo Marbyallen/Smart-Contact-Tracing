@@ -1,6 +1,6 @@
 # Smart Contact Tracing
 
-Thesis Website created by Smart Contact Tracing team
+Thesis Website created by:
 
 - Marby Allen P. Agbunag
 - Miko Christian P. Morita
