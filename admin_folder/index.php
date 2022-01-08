@@ -11,7 +11,7 @@
             <header>
               <ul>
                 <li><h1 id="titlemain" >Smart Contact Tracing</h1></li>
-                <li class="topmenu"><a href="loginhadmin.html" target="_self">Login as Head Admin</a></li>
+                <li class="topmenu"><a href="loginhadmin.php" target="_self">Login as Head Admin</a></li>
               </ul>
             </header>
             <main>
