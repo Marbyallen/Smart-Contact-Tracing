@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Head Admin</title>
+    <title>Admin</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" type="text/css" href="\assets_admin\mymain1.css">
