@@ -39,7 +39,39 @@
                                 </div><br>
                         </div><br>
                         <!-- Date input -->
-                        <div class="row">
+                        <div class="col-md-3"></div>
+                            <div class="col-md-6 well">
+                                <form class="form-inline" method="POST" action="">
+                                    <label>Date:</label>
+                                    <input type="date" class="form-control" placeholder="Start"  name="date1"/>
+                                    <label>To</label>
+                                    <input type="date" class="form-control" placeholder="End"  name="date2"/>
+                                    <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button> <a href="index.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span></a>
+                                </form>
+                                <br /><br />
+                                <div class="table-responsive">	
+                                    <table class="table table-bordered">
+                                        <thead class="alert-info">
+                                            <tr>
+                                                <th>QR code</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Contact No.</th>
+                                                <th>Email Address</th>
+                                                <th>Station</th>
+                                                <th>Facial recognition image</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Body Heat Temperature</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php include'range.php'?>	
+                                        </tbody>
+                                    </table>
+                                </div>	
+                            </div>
+                        <!-- <div class="row">
                             <div class="col-md-4">
                                         <label for="fromDate">From:</label>
                                         <input type="date" id="#" name="#">
@@ -49,7 +81,7 @@
                                         <input type="date" id="#" name="#">
                             </div>
                         </div><br>
-                        </form><br>
+                        </form><br> -->
                     <!--List of stations buttons-->
                    <div>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.html' ">Station A</button>
