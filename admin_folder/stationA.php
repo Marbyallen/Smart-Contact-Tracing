@@ -50,7 +50,7 @@
                                     </div>
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
-                                    <a href="stationslist.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
+                                    <a href="stationA.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 
                                 </form>
                         <!-- Display Table -->
