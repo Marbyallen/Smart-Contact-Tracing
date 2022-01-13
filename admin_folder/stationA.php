@@ -63,7 +63,7 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
 
-                    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE station LIKE 'A'");
+                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete");
                     $Sfname =  "";
                     $Slname = "";
                     $QRcode = "";
@@ -90,7 +90,7 @@
                                   $date1 = $_REQUEST['date1'];
                                   $date2 = $_REQUEST['date2'];
                                   if (!empty($Sfname)) {
-                                            $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE firstname LIKE '".$Sfname."' ");
+                                            $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete WHERE firstname LIKE '".$Sfname."' ");
                                                       while($row = mysqli_fetch_array($result))
                                                                 {
                                                                     // station facialimg date time bodyheat_temp
@@ -111,7 +111,7 @@
                                             mysqli_close($mysqli);
                                   } elseif(!empty($Slname)) {
                                             
-                                            $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE lastname = '".$Slname."' ");
+                                            $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete WHERE lastname = '".$Slname."' ");
                                                       while($row = mysqli_fetch_array($result))
                                                       {
                                                                 echo "<tr>";
@@ -131,7 +131,7 @@
                                                       mysqli_close($mysqli);
 
                                  } elseif(!empty($QRcode)){
-                                    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE QRcode = '".$QRcode."' ");
+                                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete WHERE QRcode = '".$QRcode."' ");
                                                         while($row = mysqli_fetch_array($result))
                                                         {
                                                                 echo "<tr>";
@@ -150,7 +150,7 @@
                                                         echo "</table>";
                                                         mysqli_close($mysqli);
                                   } elseif(!empty($date1) && !empty($date2)){
-                                    $result = mysqli_query($mysqli, "SELECT * FROM `usersAndStations_table` WHERE `date` BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
+                                    $result = mysqli_query($mysqli, "SELECT * FROM `stationA_complete` WHERE `date` BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
                                     while($row = mysqli_fetch_array($result))
                                     {
                                             echo "<tr>";
