@@ -46,7 +46,7 @@
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                     <label>To</label>
                                     <input type="date" class="form-control" placeholder="End"  name="date2"/>
                                     </div>
