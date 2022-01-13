@@ -188,7 +188,7 @@
                                                         }
                                                         echo "</table>";
                                                         mysqli_close($mysqli);
-                                  } elseif(!empty($date1) && !empty($date2)){
+                                  } elseif(!empty($date1) and !empty($date2)){
                                     $result = mysqli_query($mysqli,"SELECT * FROM usersAndStations_table WHERE 'date' BETWEEN '".$date1."' AND '".$date2."' ");
                                     while($row = mysqli_fetch_array($result))
                                     {
