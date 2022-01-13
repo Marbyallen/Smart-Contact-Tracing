@@ -39,14 +39,13 @@
                                 </div><br>
                         </div><br>
                         <!-- Date input -->
-                                <form class="form-inline" method="POST" action="">
                                 <div class="col-md-4">
                                     <label>Date:</label>
-                                    <input type="date" class="form-control" placeholder="Start"  name="date1"/>
+                                    <input type="date" class="form-control" placeholder="Start"  name="date1">
                                     </div>
                                     <div class="col-md-4">
                                     <label>To</label>
-                                    <input type="date" class="form-control" placeholder="End"  name="date2"/>
+                                    <input type="date" class="form-control" placeholder="End"  name="date2">
                                     </div>
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
@@ -126,6 +125,9 @@
                                   $Sfname = $_REQUEST['Sfname'];
                                   $Slname = $_REQUEST['Slname'];
                                   $QRcode = $_REQUEST['QRcode'];
+                                  $date1 = $_REQUEST['date1'];
+                                  $date2 = $_REQUEST['date2'];
+                                  
                                   if (!empty($Sfname)) {
                                             $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE firstname LIKE '".$Sfname."' ");
                                                       while($row = mysqli_fetch_array($result))
@@ -186,6 +188,25 @@
                                                         }
                                                         echo "</table>";
                                                         mysqli_close($mysqli);
+                                  } elseif(!empty($date1) && !empty($date2)){
+                                    $result = mysqli_query($mysqli,"SELECT * FROM usersAndStations_table WHERE 'date' BETWEEN '".$date1."' AND '".$date2."' ");
+                                    while($row = mysqli_fetch_array($result))
+                                    {
+                                            echo "<tr>";
+                                            echo "<td>" . $row['QRcode'] . "</td>";
+                                            echo "<td>" . $row['firstname'] . "</td>";
+                                            echo "<td>" . $row['lastname'] . "</td>";
+                                            echo "<td>" . $row['contactno'] . "</td>";
+                                            echo "<td>" . $row['email'] . "</td>";
+                                            echo "<td>" . $row['station'] . "</td>";
+                                            echo "<td>" . $row['facialimg'] . "</td>";
+                                            echo "<td>" . $row['date'] . "</td>";
+                                            echo "<td>" . $row['time'] . "</td>";
+                                            echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                            echo "</tr>";
+                                    }
+                                    echo "</table>";
+                                    mysqli_close($mysqli);
                                   } else {
                                     while($row = mysqli_fetch_array($result))
                                     {
