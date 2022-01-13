@@ -52,40 +52,6 @@
                                     <a href="stationslist.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 
                                 </form>
-                            
-                                 <!-- <div class="table-responsive">	
-                                    <table class="table table-bordered">
-                                        <thead class="alert-info">
-                                            <tr>
-                                                <th>QR code</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Contact No.</th>
-                                                <th>Email Address</th>
-                                                <th>Station</th>
-                                                <th>Facial recognition image</th>
-                                                <th>Date</th>
-                                                <th>Time</th>
-                                                <th>Body Heat Temperature</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody> -->
-                                            <!-- ?php include'range.php'?>	 -->
-                                        <!-- </tbody>
-                                    </table>
-                                </div>	 -->
-                            
-                        <!-- <div class="row">
-                            <div class="col-md-4">
-                                        <label for="fromDate">From:</label>
-                                        <input type="date" id="#" name="#">
-                            </div>
-                            <div class="col-md-4">
-                                        <label for="intoDate">Into:</label>
-                                        <input type="date" id="#" name="#">
-                            </div>
-                        </div><br>
-                        </form><br> -->
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.html' ">Station A</button>
@@ -127,8 +93,6 @@
                                   $QRcode = $_REQUEST['QRcode'];
                                   $date1 = $_REQUEST['date1'];
                                   $date2 = $_REQUEST['date2'];
-                                //   $date1 = date("Y-m-d", strtotime($_REQUEST['date1']));
-                                //   $date2 = date("Y-m-d", strtotime($_REQUEST['date2']));
                                   if (!empty($Sfname)) {
                                             $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE firstname LIKE '".$Sfname."' ");
                                                       while($row = mysqli_fetch_array($result))
