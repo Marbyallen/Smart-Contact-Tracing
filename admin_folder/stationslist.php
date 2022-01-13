@@ -51,7 +51,8 @@
                                     <a href="stationslist.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 </form>
                                 <br /><br />
-                                <div class="table-responsive">	
+                                </div>
+                                <!-- <div class="table-responsive">	
                                     <table class="table table-bordered">
                                         <thead class="alert-info">
                                             <tr>
@@ -71,8 +72,8 @@
                                             <?php include'range.php'?>	
                                         </tbody>
                                     </table>
-                                </div>	
-                            </div>
+                                </div>	 -->
+                            
                         <!-- <div class="row">
                             <div class="col-md-4">
                                         <label for="fromDate">From:</label>
