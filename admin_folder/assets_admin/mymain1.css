@@ -123,8 +123,10 @@ button.btn-primary {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.divstations-list{
-  background-color: rgb(103, 101, 216);
+.divStations-btn{
+  background-color: rgb(94, 92, 233);
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 /*-------------------------------------------------Table*/
