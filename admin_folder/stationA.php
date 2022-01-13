@@ -64,7 +64,7 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
 
-                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete ORDER BY 'date' DESC");
+                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete");
                     $Sfname =  "";
                     $Slname = "";
                     $QRcode = "";
