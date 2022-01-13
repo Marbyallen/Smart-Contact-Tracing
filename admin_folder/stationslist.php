@@ -45,14 +45,15 @@
                                 <div class="col-md-4">
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
-                                    
+                                    </div>
+                                    <div class="col-md-4">
                                     <label>To</label>
                                     <input type="date" class="form-control" placeholder="End"  name="date2"/>
-                                    
+                                    </div>
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
                                     <a href="stationslist.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
-                                </div>
+                                
                                 </form>
                             
                                  <!-- <div class="table-responsive">	
