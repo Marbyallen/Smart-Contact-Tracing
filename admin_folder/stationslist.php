@@ -42,7 +42,7 @@
                         
                             <!-- <div class="col-md-6 well"> -->
                                 <form class="form-inline" method="POST" action="">
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
                                     
