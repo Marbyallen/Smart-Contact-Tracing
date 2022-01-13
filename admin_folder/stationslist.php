@@ -125,10 +125,10 @@
                                   $Sfname = $_REQUEST['Sfname'];
                                   $Slname = $_REQUEST['Slname'];
                                   $QRcode = $_REQUEST['QRcode'];
-                                //   $date1 = $_REQUEST['date1'];
-                                //   $date2 = $_REQUEST['date2'];
-                                  $date1 = date("Y-m-d", strtotime($_REQUEST['date1']));
-                                  $date2 = date("Y-m-d", strtotime($_REQUEST['date2']));
+                                  $date1 = $_REQUEST['date1'];
+                                  $date2 = $_REQUEST['date2'];
+                                //   $date1 = date("Y-m-d", strtotime($_REQUEST['date1']));
+                                //   $date2 = date("Y-m-d", strtotime($_REQUEST['date2']));
                                   if (!empty($Sfname)) {
                                             $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE firstname LIKE '".$Sfname."' ");
                                                       while($row = mysqli_fetch_array($result))
