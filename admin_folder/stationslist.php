@@ -40,7 +40,7 @@
                         </div><br>
                         <!-- Date input -->
                         
-                            <div class="col-md-6 well">
+                            <!-- <div class="col-md-6 well"> -->
                                 <form class="form-inline" method="POST" action="">
                                 <div class="col-md-3">
                                     <label>Date:</label>
