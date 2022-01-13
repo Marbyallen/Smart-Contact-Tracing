@@ -11,15 +11,16 @@
                    <div class="sidenav">
                     <ul class="first">
                               <li> <a href="hadmin.html">Home</a></li>
-                              <li> <a href="registeredUsers.html">Users List</a></li>
-                              <li><a href="stationslist.html">Stations List</a></li>
+                              <li> <a href="registeredUsers.php">Users List</a></li>
+                              <li> <a href="adminslist.php">Admins List</a></li>
+                              <li><a href="stationslist.php">Stations List</a></li>
                               <li style="float: right;"> <a href="index.html">Logout</a></li>
                     </ul>
                    </div>
 
                    <main>
+                   <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationslist.php' "> Back to stations list </button>
                     <h1>Station A</h1>
-                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationslist.php' "> Back </button>
                     <!--Form-->
                     <h3>Search</h3>  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
@@ -63,7 +64,7 @@
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
                     }
 
-                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete");
+                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete ORDER BY 'date' DESC");
                     $Sfname =  "";
                     $Slname = "";
                     $QRcode = "";
