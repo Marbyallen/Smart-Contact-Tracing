@@ -20,7 +20,7 @@
           <main>
                     <h1>Stations List</h1><br>
                     <!-- search area -->
-                    <label for="textinput">Search</label>  
+                    <h3>Search</h3>  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
                                 <div class="col-md-4">
@@ -39,8 +39,6 @@
                                 </div><br>
                         </div><br>
                         <!-- Date input -->
-                        
-                            <!-- <div class="col-md-6 well"> -->
                                 <form class="form-inline" method="POST" action="">
                                 <div class="col-md-4">
                                     <label>Date:</label>
