@@ -51,7 +51,7 @@
                                     
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
-                                    <a href="stationslist.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
+                                    <a href="stationslist.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 </div>
                                 </form>
                             

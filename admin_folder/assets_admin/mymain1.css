@@ -119,6 +119,10 @@ a.btn.btn-primary {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+button.btn-primary {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 
 /*-------------------------------------------------Table*/
 
