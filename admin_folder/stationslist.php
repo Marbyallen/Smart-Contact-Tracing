@@ -40,7 +40,7 @@
                         </div><br>
                         <!-- Date input -->
                         <div class="col-md-3"></div>
-                            <!-- <div class="col-md-6 well"> -->
+                            <div class="col-md-6 well">
                                 <form class="form-inline" method="POST" action="">
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
@@ -72,7 +72,7 @@
                                         </tbody>
                                     </table>
                                 </div>	
-                            <!-- </div> -->
+                            </div>
                         <!-- <div class="row">
                             <div class="col-md-4">
                                         <label for="fromDate">From:</label>
