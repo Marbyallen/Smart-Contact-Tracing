@@ -2,24 +2,25 @@
 <html lang="en-US">
           <head> 
             <link rel="stylesheet" type="text/css" href="\assets_admin\mymain1.css">
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <title>Stations List</title>
+                    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <title>Station A</title>
                     
           </head>
           <body>
                    <div class="sidenav">
                     <ul class="first">
-                              <li> <a  href="hadmin.html">Home</a></li>
-                              <li> <a href="registeredUsers.php">Users List</a></li>
-                              <li> <a href="adminslist.php">Admins List</a></li>
-                              <li><a class="active" href="stationslist.php">Stations List</a></li>
-                              <li style="float: right"> <a href="index.php">Logout</a></li>
+                              <li> <a href="hadmin.html">Home</a></li>
+                              <li> <a href="registeredUsers.html">Users List</a></li>
+                              <li><a href="stationslist.html">Stations List</a></li>
+                              <li style="float: right;"> <a href="index.html">Logout</a></li>
                     </ul>
                    </div>
-          <main>
-                    <h1>Stations List</h1><br>
-                    <!-- search area -->
+
+                   <main>
+                    <h1>Station A</h1>
+                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationslist.php' "> Back </button>
+                    <!--Form-->
                     <h3>Search</h3>  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
@@ -52,13 +53,8 @@
                                     <a href="stationslist.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 
                                 </form>
-                    <!--List of stations buttons-->
-                   <div class="divStations-btn">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
-                    </div><br>
-
-                    <?php
+                        <!-- Display Table -->
+                        <?php
                     include "db_connect.php";
                     $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
                     // Check connection
@@ -193,6 +189,10 @@
                                     }
                         }
                         ?>
-          </main>
+                    </main>
+                   
+                   
+                    
+                              
           </body>
 </html>
