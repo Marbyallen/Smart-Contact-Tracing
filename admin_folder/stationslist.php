@@ -39,19 +39,23 @@
                                 </div><br>
                         </div><br>
                         <!-- Date input -->
-                        <div class="col-md-3"></div>
-                            <div class="col-md-6 well">
+                        
+                            <!-- <div class="col-md-6 well"> -->
                                 <form class="form-inline" method="POST" action="">
+                                <div class="col-md-3">
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
+                                    
                                     <label>To</label>
                                     <input type="date" class="form-control" placeholder="End"  name="date2"/>
+                                    
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
                                     <a href="stationslist.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
+                                </div>
                                 </form>
                                 <br /><br />
-                                </div>
+                            
                                 <!-- <div class="table-responsive">	
                                     <table class="table table-bordered">
                                         <thead class="alert-info">
