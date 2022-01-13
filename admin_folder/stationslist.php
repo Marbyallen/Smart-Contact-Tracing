@@ -107,7 +107,7 @@
                     $Slname = "";
                     $QRcode = "";
                     ?>
-              <table>
+              <table class="table table-bordered">
                         <tr>
                                   <th>QR code</th>
                                   <th>First Name</th>
