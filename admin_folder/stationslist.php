@@ -40,7 +40,7 @@
                         </div><br>
                         <!-- Date input -->
                         
-                            <!-- <div class="col-md-6 well"> -->
+                            <div class="col-md-6 well">
                                 <form class="form-inline" method="POST" action="">
                                 <div class="col-md-3">
                                     <label>Date:</label>
@@ -54,9 +54,8 @@
                                     <a href="stationslist.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 </div>
                                 </form>
-                                <br /><br />
                             
-                                <!-- <div class="table-responsive">	
+                                 <!-- <div class="table-responsive">	
                                     <table class="table table-bordered">
                                         <thead class="alert-info">
                                             <tr>
@@ -72,9 +71,9 @@
                                                 <th>Body Heat Temperature</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <?php include'range.php'?>	
-                                        </tbody>
+                                        <tbody> -->
+                                            <!-- ?php include'range.php'?>	 -->
+                                        <!-- </tbody>
                                     </table>
                                 </div>	 -->
                             
