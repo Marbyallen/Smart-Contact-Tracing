@@ -39,13 +39,14 @@
                                 </div><br>
                         </div><br>
                         <!-- Date input -->
-                        <div class="col-md-4"></div>
+                        <div class="col-md-3"></div>
                             <!-- <div class="col-md-6 well"> -->
                                 <form class="form-inline" method="POST" action="">
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
                                     <label>To</label>
                                     <input type="date" class="form-control" placeholder="End"  name="date2"/>
+                                    <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span></button> <a href="index.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span></a>
                                 </form>
                                 <br /><br />
