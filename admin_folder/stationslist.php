@@ -88,7 +88,7 @@
                         </div><br>
                         </form><br> -->
                     <!--List of stations buttons-->
-                   <div class="stations-list">
+                   <div class="divstations-list">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.html' ">Station A</button>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
                     </div><br>
