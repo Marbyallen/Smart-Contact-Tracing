@@ -46,6 +46,7 @@
                                     <input type="date" class="form-control" placeholder="Start"  name="date1"/>
                                     <label>To</label>
                                     <input type="date" class="form-control" placeholder="End"  name="date2"/>
+                                    <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
                                     <a href="stationslist.php" type="button" class="btn btn-success"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                                 </form>
