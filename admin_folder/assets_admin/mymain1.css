@@ -123,6 +123,9 @@ button.btn-primary {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+div.stations-list{
+  background-color: rgb(103, 101, 216);
+}
 
 /*-------------------------------------------------Table*/
 
