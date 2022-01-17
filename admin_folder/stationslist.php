@@ -176,7 +176,7 @@
                                   } else {
                                     while($row = mysqli_fetch_array($result))
                                     { 
-                                        include totalResults.php;                   
+                                                        
                                               echo "<tr>";
                                               echo "<td>" . $row['QRcode'] . "</td>";
                                               echo "<td>" . $row['firstname'] . "</td>";
@@ -194,6 +194,7 @@
                                     mysqli_close($mysqli);
                                     }
                         }
+                        include totalResults.php;   
                         ?>
           </main>
           </body>
