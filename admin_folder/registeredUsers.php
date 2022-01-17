@@ -24,12 +24,12 @@
                                         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                                             <div class="row"><br>
                                                 <div class="col-md-4">
-                                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>   
+                                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
+                                                    <button type="submit" class="btn btn-primary" >Search</button>   
                                                 </div>
                                                 <div class="col-md-4">
                                                     <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
                                                 </div>
-                                            <br><button type="submit" class="btn btn-primary" >Search</button>
                                             </div>
                                         </form><br>
                     <?php
