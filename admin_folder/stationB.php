@@ -47,9 +47,8 @@
                                     <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
-                                    <a href="stationA.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
                         </div>
+                        <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button>
                                 </form>
                         <!-- Display Table -->
                         <?php
