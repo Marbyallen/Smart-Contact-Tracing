@@ -37,7 +37,8 @@
                                 </div>
                         </div><br>
                         <!-- Date input -->
-                                <div class="col-md-4">
+                        <div class="row">
+                                    <div class="col-md-4">
                                     <label>Date:</label>
                                     <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
                                     </div>
@@ -48,7 +49,7 @@
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
                                     <a href="stationA.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
-                                
+                        </div>
                                 </form>
                         <!-- Display Table -->
                         <?php
