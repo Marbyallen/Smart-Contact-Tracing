@@ -20,7 +20,7 @@
           <main>
                     <h1>Stations List</h1><br>
                     <!-- search area -->
-                    <h3>Search</h3>  
+                    <label for="">You can search their Name here or QR code</label>  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
                                 <div class="col-md-4">
