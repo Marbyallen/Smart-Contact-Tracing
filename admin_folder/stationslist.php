@@ -153,6 +153,7 @@
                                                         }
                                                         echo "</table>";
                                                         mysqli_close($mysqli);
+                                //-----------------------date range filter
                                   } elseif(!empty($date1) && !empty($date2)){
                                     $result = mysqli_query($mysqli, "SELECT * FROM `usersAndStations_table` WHERE `date` BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
                                     while($row = mysqli_fetch_array($result))
@@ -174,7 +175,11 @@
                                     mysqli_close($mysqli);
                                   } else {
                                     while($row = mysqli_fetch_array($result))
-                                    {
+                                    {                                        echo "<script>";
+                                        echo "function myFunction() {";
+                                            echo "alert("I am an alert box!");";
+                                            echo "}";
+                                        echo "</script>";
                                               echo "<tr>";
                                               echo "<td>" . $row['QRcode'] . "</td>";
                                               echo "<td>" . $row['firstname'] . "</td>";
