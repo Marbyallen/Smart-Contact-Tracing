@@ -26,17 +26,17 @@
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
                                 <div class="col-md-4">
-                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
+                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
                                     <button type="submit" class="btn btn-primary" >Search</button>      
                                 </div>
                                             
                                 <div class="col-md-4">
-                                    <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
+                                    <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
                                     
                                 </div>
 
                                 <div class="col-md-4">
-                                    <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
+                                    <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
                                     
                                 </div><br>
                         </div><br>
