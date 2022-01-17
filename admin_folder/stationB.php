@@ -28,13 +28,10 @@
                                 <div class="col-md-4">
                                     <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
                                     <button type="submit" class="btn btn-primary" >Search</button>      
-                                </div>
-                                            
+                                </div>     
                                 <div class="col-md-4">
                                     <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
-                                    
                                 </div>
-
                                 <div class="col-md-4">
                                     <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
                                 </div>
@@ -42,11 +39,11 @@
                         <!-- Date input -->
                                 <div class="col-md-4">
                                     <label>Date:</label>
-                                    <input type="date" class="form-control" placeholder="Start"  name="date1">
+                                    <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
                                     </div>
                                     <div class="col-md-4">
                                     <label>To</label>
-                                    <input type="date" class="form-control" placeholder="End"  name="date2">
+                                    <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
                                     </div>
                                     <br>
                                     <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
