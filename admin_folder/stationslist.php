@@ -175,7 +175,10 @@
                                     mysqli_close($mysqli);
                                   } else {
                                     while($row = mysqli_fetch_array($result))
-                                    {                   
+                                    { 
+                                        echo '<script type ="text/JavaScript">';  
+                                        echo 'alert(" Welcome to JavaTpoint !!!! ")';  
+                                        echo '</script>';                    
                                               echo "<tr>";
                                               echo "<td>" . $row['QRcode'] . "</td>";
                                               echo "<td>" . $row['firstname'] . "</td>";
