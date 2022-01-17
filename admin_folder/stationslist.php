@@ -55,7 +55,7 @@
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.html' ">Station B</button>
+                        <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.php' ">Station B</button>
                     </div><br>
                     <?php
                     include "db_connect.php";
