@@ -175,11 +175,7 @@
                                     mysqli_close($mysqli);
                                   } else {
                                     while($row = mysqli_fetch_array($result))
-                                    {                                        echo "<script>";
-                                        echo "function myFunction() {";
-                                            echo "alert("I am an alert box!");";
-                                            echo "}";
-                                        echo "</script>";
+                                    {                   
                                               echo "<tr>";
                                               echo "<td>" . $row['QRcode'] . "</td>";
                                               echo "<td>" . $row['firstname'] . "</td>";
