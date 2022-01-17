@@ -24,34 +24,30 @@
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
                                 <div class="col-md-4">
-                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                    <button onclick="searchFunction()" type="submit" class="btn btn-primary" >Search</button>      
-                                </div>
-                                            
+                                    <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
+                                    <button type="submit" class="btn btn-primary" >Search</button>      
+                                </div>     
                                 <div class="col-md-4">
-                                    <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
-                                    
+                                    <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
                                 </div>
-
                                 <div class="col-md-4">
-                                    <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md"><br>
-                                    
-                                </div><br>
+                                    <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
+                                </div>
                         </div><br>
                         <!-- Date input -->
-                                <div class="col-md-4">
+                        <div class="row">
+                                    <div class="col-md-4">
                                     <label>Date:</label>
-                                    <input type="date" class="form-control" placeholder="Start"  name="date1">
+                                    <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
                                     </div>
                                     <div class="col-md-4">
                                     <label>To</label>
-                                    <input type="date" class="form-control" placeholder="End"  name="date2">
+                                    <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button> 
-                                    <a href="stationslist.php" type="button" class="btn btn-primary"><span class = "glyphicon glyphicon-refresh"><span>Refresh</a>
-                                
-                                </form>
+                        </div><br>
+                        <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
+                    </form> <br>
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
