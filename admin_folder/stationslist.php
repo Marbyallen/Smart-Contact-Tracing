@@ -176,11 +176,7 @@
                                   } else {
                                     while($row = mysqli_fetch_array($result))
                                     { 
-                                        $total = $row[0];
-                                        echo '<script type ="text/JavaScript">';  
-                                        echo 'function searchFunction(){';
-                                        echo 'alert("results found:" . $total)}';  
-                                        echo '</script>';                    
+                                        include totalResults.php;                   
                                               echo "<tr>";
                                               echo "<td>" . $row['QRcode'] . "</td>";
                                               echo "<td>" . $row['firstname'] . "</td>";
