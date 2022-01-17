@@ -21,8 +21,7 @@
                    <main>
                    <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationslist.php' "> Back to stations list </button>
                     <h1>Station A</h1>
-                    <!--Form-->
-                    <h3>Search</h3>  
+                    <!--Form-->  
                     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
                         <div class="row"><br>
                                 <div class="col-md-4">
