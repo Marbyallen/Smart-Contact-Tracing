@@ -47,8 +47,8 @@
                                     <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
                                     </div>
                                     <br>
-                        </div>
-                        <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button>
+                        </div><br>
+                        <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
                                 </form>
                         <!-- Display Table -->
                         <?php
