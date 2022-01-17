@@ -13,7 +13,8 @@
                     <ul class="first">
                               <li> <a href="hadmin.html">Home</a></li>
                               <li> <a href="registeredUsers.html">Registered Users</a></li>
-                              <li><a href="stationslist.html">Stations List</a></li>
+                              <li> <a href="adminslist.php">Admins List</a></li>
+                              <li><a href="stationslist.php">Stations List</a></li>
                               <li style="float: right;"> <a href="index.html">Logout</a></li>
                     </ul>
                    </div>
