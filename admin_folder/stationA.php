@@ -54,21 +54,21 @@
                                 
                                 </form>
                         <!-- Display Table -->
-                        <?php
-                    include "db_connect.php";
-                    $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
-                    // Check connection
-                    if (mysqli_connect_errno())
-                    {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                    }
+                    <?php
+                        include "db_connect.php";
+                        $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
+                        // Check connection
+                        if (mysqli_connect_errno())
+                        {
+                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                        }
 
-                    $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete");
-                    $Sfname =  "";
-                    $Slname = "";
-                    $QRcode = "";
+                        $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete");
+                        $Sfname =  "";
+                        $Slname = "";
+                        $QRcode = "";
                     ?>
-              <table class="table table-bordered">
+                    <table class="table table-bordered">
                         <tr>
                                   <th>QR code</th>
                                   <th>First Name</th>
@@ -81,7 +81,7 @@
                                   <th>Time</th>
                                   <th>Body Heat Temperature</th>
                         </tr>
-                        <?php
+                    <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                   // collect value of input field
                                   $Sfname = $_REQUEST['Sfname'];
@@ -188,7 +188,7 @@
                                     mysqli_close($mysqli);
                                     }
                         }
-                        ?>
+                    ?>
                     </main>
                    
                    
