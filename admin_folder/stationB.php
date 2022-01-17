@@ -37,8 +37,7 @@
 
                                 <div class="col-md-4">
                                     <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
-                                    
-                                </div><br>
+                                </div>
                         </div><br>
                         <!-- Date input -->
                                 <div class="col-md-4">
