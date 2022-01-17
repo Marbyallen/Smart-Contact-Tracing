@@ -70,7 +70,7 @@
                     $Sfname =  "";
                     $Slname = "";
                     $QRcode = "";
-                    include totalResults.php;
+                    include "totalResults.php";
                     ?>
               <table class="table table-bordered">
                         <tr>
