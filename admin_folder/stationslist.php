@@ -25,7 +25,7 @@
                         <div class="row"><br>
                                 <div class="col-md-4">
                                     <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                    <button type="submit" class="btn btn-primary" >Search</button>      
+                                    <button onclick="searchFunction()" type="submit" class="btn btn-primary" >Search</button>      
                                 </div>
                                             
                                 <div class="col-md-4">
@@ -177,7 +177,8 @@
                                     while($row = mysqli_fetch_array($result))
                                     { 
                                         echo '<script type ="text/JavaScript">';  
-                                        echo 'alert(" Welcome to JavaTpoint !!!! ")';  
+                                        echo 'function searchFunction(){';
+                                        echo 'alert(" Welcome to search Function !!!! ")}';  
                                         echo '</script>';                    
                                               echo "<tr>";
                                               echo "<td>" . $row['QRcode'] . "</td>";
