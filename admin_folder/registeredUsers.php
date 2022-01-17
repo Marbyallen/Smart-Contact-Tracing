@@ -31,7 +31,7 @@
                                         
                                               <div class="col-md-4">
                                                   <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
-                                                  <button type="submit" class="btn btn-primary">Search</button>
+                                                  
                                               </div>
                                             </div>
                                         </form><br>
