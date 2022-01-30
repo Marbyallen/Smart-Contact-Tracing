@@ -52,7 +52,8 @@
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.php' ">Station B</button>
-                    </div><br>
+                  </div><br>
+
                     <?php
                     include "db_connect.php";
                     $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
