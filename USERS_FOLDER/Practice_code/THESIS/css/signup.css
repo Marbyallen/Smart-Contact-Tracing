@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(66, 65, 65);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.wrapper{
+    min-height: 88vh;
+    justify-content:space-around;
+    display:grid;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.registration h1{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin: 20px;
+}
+.registration h1::before{
+    content: '';
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 250px;
+    margin-left: 28.5%;
+    display: flex;
+}
+.registration{
+    height: 82vh;
+    width: 80vh;
+    background-color: rgba(149, 165, 172, 0.726);
+    border-radius: 25px;
+}
+.registration form .user-detail{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.inputs{
+    padding: 10px;
+}
+input{
+    font-size: 14px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-bottom-width: 4px;
+    transition: all 0.3 ease-in-out;
+}
+input:focus,input:valid{
+    border-color: rgba(40, 98, 207, 0.8);
+}
+.details{
+    margin-bottom: 8px;
+}
+
+.category{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    margin:12px;
+}
+.gender-title{
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 170px;
+    margin: 10px;
+    
+}
+.submit{
+    margin: 10px;
+}
+button{
+    padding: 10px;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: #60b9cf;
+}
+button:hover{
+    background-color: #60b9cfb9;
+}

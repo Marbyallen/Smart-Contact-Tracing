@@ -1,0 +1,56 @@
+<?php
+
+session_start();
+    include("connect.php");
+    include("function.php");
+
+    $user_data = check_login($con);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="\css\dashboard.css">
+    <title>THESIS</title>
+</head>
+<header>
+<nav class="nav">
+    <div class="logo"><a href="index.html">CONTACT<span>TRACING</span></a></div>
+    <ul class="nav_link">
+    </ul>
+    <div class="nav_button">
+    </div>
+</nav>
+</header>
+<body>
+      <div class="wrapper">
+            <div class="main-top">
+                <div class="profilepic">
+                    <p>NO PICTURE</p>
+                </div>
+                <div class="main-bottom">
+                    <section class="qr_code">
+                        <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0" class="qr-code img-thumbnail img-responsive" />
+                    </section>
+                    <section class="temperature">TEMPERATURE</section>
+                </div>
+            </div>
+            
+            <div class="sidebar">   
+                <ul>
+                    <li><button><a href="dashboard.html">DASHBOARD</a></button></li>
+                    <li><button><a href="profile.html">PROFILE</a> </button></li>
+                    <li><button><a href="qrcode.html">QR CODE</a></button></li>
+                    <li><button><a href="temperature.html">TEMPERATURE</a></button></li>
+                </ul>
+            </div>
+            <div class="sidebar_bottom">
+                 <ul>
+                    <li><button><a href="profile.html">LOG OUT</a></button></li>
+                </ul>
+            </div>
+                
+      </div>
+</body>
+
+</html>

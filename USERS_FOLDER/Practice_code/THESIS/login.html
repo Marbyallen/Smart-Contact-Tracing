@@ -1,0 +1,79 @@
+<?php 
+
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		//something was posted
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+
+		if(!empty($username) && !empty($password) && !is_numeric($username))
+		{
+
+			//read from database
+			$query = "select * from users where user_name = '$username' limit 1";
+			$result = mysqli_query($con, $query);
+
+			if($result)
+			{
+				if($result && mysqli_num_rows($result) > 0)
+				{
+
+					$user_data = mysqli_fetch_assoc($result);
+					
+					if($user_data['password'] === $password)
+					{
+
+						$_SESSION['user_id'] = $user_data['user_id'];
+						header("Location: index.php");
+						die;
+					}
+				}
+			}
+			
+			echo "wrong username or password!";
+		}else
+		{
+			echo "wrong username or password!";
+		}
+	}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+    <meta  name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css\login.css">
+    <title>DATA HISTORY</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="registration">
+            <h1>LOG IN</h1>
+            <form method="post">
+                <div class="user-detail">
+                    <div class="inputs">
+                        <h3 class="details">Username</h3>
+                        <input type="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="inputs">
+                        <h3 class="details">Password</h3>
+                        <input type="password" name="password" placeholder="password" minlength = "6"required>
+                    </div>
+                    
+                    <div class="submit">
+                        <button>LOG IN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
