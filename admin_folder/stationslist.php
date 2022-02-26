@@ -53,6 +53,7 @@
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.php' ">Station B</button>
                   </div><br>
+                  <button type="button" onclick="window.print()">Print this page</button>
 
                     <?php
                     include "db_connect.php";
