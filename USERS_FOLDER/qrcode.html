@@ -86,11 +86,19 @@
         // Generate the link that would be
         // used to generate the QR Code
         // with the given data 
+        //input value from customer
         let finalURL ='https://chart.googleapis.com/chart?cht=qr&chl=' +htmlEncode($('#content').val()) +'&chs=160x160&chld=L|0'
         $('.qr-code').attr('src', finalURL);
+        console.log(finalURL);
+
+        //https://chart.googleapis.com/chart?cht=qr&chl= myname &chs=160x160&chld=L|0
+        console.log(htmlEncode($('#content').val()));
+        let c_input= htmlEncode($('#content').val());
+        console.log(c_input);
       });
     });
   </script>
+
 </body>
 
 </html>
