@@ -33,6 +33,8 @@
             </form>
             <a href="testPage/index.php">sample</a>
             <a href="sample1/sample1.php">sample2</a><br>
+            <a href="USERS_FOLDER/code/index.php">code folder</a><br>
+            
             </main>
             <footer>
                       <p>Page created by Smart Contact Tracing team</p>
