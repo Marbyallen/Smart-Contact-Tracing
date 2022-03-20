@@ -71,7 +71,7 @@
                 <label>Password</label>
                 <input type="password" name="password">
                 <br>
-                <button type="submit" class="btn btn-primary" name="login_user">Login</button>
+                <button type="submit" class="btn btn-primary" value="Login">Login</button>
                 </div>
               </form>
             </main>
