@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 session_start();
 
@@ -41,8 +41,7 @@ session_start();
     echo"wrong username or password!";
   }
   }
-
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +62,7 @@ session_start();
             <main>
 
               <h2>Login as Admin</h2>
-              <form method="post" action="hadmin.html">
+              <form method="post">
                 <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username">
