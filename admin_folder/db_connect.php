@@ -9,7 +9,7 @@
 //---
 $dbhost = "localhost";
 $dbuser = "u923368226_tracingconnect";
-$dbpass = "Mainsct21";
+$dbpass = "Mainsct21!";
 $dbname = "u923368226_contactTracing";
 
 
