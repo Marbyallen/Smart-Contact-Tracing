@@ -53,7 +53,7 @@
                         <!-- Display Table -->
                     <?php
                         include "db_connect.php";
-                        $mysqli=mysqli_connect("$host","$username","$user_pass","$database_in_use");
+                        $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
                         // Check connection
                         if (mysqli_connect_errno())
                         {
