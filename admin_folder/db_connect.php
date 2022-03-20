@@ -14,7 +14,7 @@ $dbname = "u923368226_contactTracing";
 
 
 create database connection instance
-$mysqli = new mysqli($host, $username, $user_pass, $database_in_use);
+$mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
 
 
