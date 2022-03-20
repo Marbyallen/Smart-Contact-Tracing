@@ -8,16 +8,16 @@ session_start();
   if($_SERVER['REQUEST_METHOD'] == 'POST')
   {
     //something was posted
-    $username = $_POST['username'];
+    $user_name = $_POST['user_name'];
     $password = $_POST['password'];
 
-    if(!empty($username) && !empty($password) && !is_numeric($username))
+    if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
     {
 
       
       //read from db
-      $query = "SELECT * FROM Allusers_table WHERE username = '$username' limit 1 ";
-      $result = mysqli_query($con, $query);
+      $query = "SELECT * FROM Allusers_table WHERE username = '$user_name' limit 1 ";
+      $result = mysqli_query($con,$query);
 
       if($result)
       {
@@ -37,9 +37,9 @@ session_start();
 
       echo "wrong username or password!";
     }else
-  {
-    echo"wrong username or password!";
-  }
+      {
+        echo"wrong username or password!";
+      }
   } 
 ?>
 
@@ -65,7 +65,7 @@ session_start();
               <form method="post">
                 <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username">
+                <input type="text" name="user_name">
                 </div>
                 <div class="form-group">
                 <label>Password</label>
