@@ -13,7 +13,7 @@ $dbpass = "Mainsct21";
 $dbname = "u923368226_contactTracing";
 
 
-create database connection instance
+// create database connection instance
 $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
 
