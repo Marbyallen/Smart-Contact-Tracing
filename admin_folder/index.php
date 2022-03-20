@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -63,6 +62,8 @@ session_start();
 
               <h2>Login as Admin</h2>
               <form method="post">
+
+
                 <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="user_name">
