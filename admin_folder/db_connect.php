@@ -10,10 +10,10 @@ $database_in_use = "u923368226_contactTracing";
 create database connection instance
 $mysqli = new mysqli($host, $username, $user_pass, $database_in_use);
 
-// $dbhost = "localhost";
-// $dbuser = "u923368226_tracingconnect";
-// $dbpass = "Mainsct21";
-// $dbname = "u923368226_contactTracing";
+$dbhost = "localhost";
+$dbuser = "u923368226_tracingconnect";
+$dbpass = "Mainsct21";
+$dbname = "u923368226_contactTracing";
 
 // if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
 // {
