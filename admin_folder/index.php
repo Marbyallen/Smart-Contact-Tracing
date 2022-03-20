@@ -1,6 +1,6 @@
-<?php
 
-session_start();
+
+<!-- session_start();
 
   include("db_connect.php");
   include("functions.php");
@@ -40,8 +40,8 @@ session_start();
   {
     echo"wrong username or password!";
   }
-  }
-?>
+  } -->
+
 
 <!DOCTYPE html>
 <html lang="en">
