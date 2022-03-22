@@ -1,83 +1,38 @@
-<?php
+<?php 
 session_start();
 
-  include("db_connect.php");
-  include("functions.php");
+	include("db_connect.php");
+	include("functions.php");
 
-  if($_SERVER['REQUEST_METHOD'] == 'POST')
-  {
-    //something was posted
-    $user_name = $_POST['user_name'];
-    $password = $_POST['password'];
+	$user_data = check_login($con);
 
-    if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
-    {
-
-      
-      //read from db
-      $query = "SELECT * FROM Allusers_table WHERE username = '$user_name' limit 1 ";
-      $result = mysqli_query($con,$query);
-
-      if($result)
-      {
-        if($result && mysqli_num_rows($result) > 0)
-        {
-          $user_data = mysqli_fetch_aassoc($result);
-
-          if($user_data['password'] === $password)
-          {
-
-            $_SESSION['QRcode'] = $user_data['QRcode'];
-            header("Location: hadmin.html");
-            die;
-          }
-        }
-      }
-
-      echo "wrong username or password!";
-    }else
-      {
-        echo"wrong username or password!";
-      }
-  } 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Admin</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="stylesheet" type="text/css" href="\assets_admin\mymain1.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<html lang="en-US">
+          <head> 
+            <link rel="stylesheet" type="text/css" href="\assets_admin\mymain1.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <title>Head Admin</title>
+                    
           </head>
           <body>
-            <header>
-              <ul>
-                <li><h1 id="titlemain" >Smart Contact Tracing</h1></li>
-                <!-- <li class="topmenu"><a href="loginhadmin.php" target="_self">Login as Head Admin</a></li> -->
-              </ul>
-            </header>
-            <main>
-
-              <h2>Login as Admin</h2>
-              <form method="post">
-
-
-                <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="user_name">
-                </div>
-                <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password">
-                <br>
-                <button type="submit" class="btn btn-primary" value="Login">Login</button>
-                </div>
-              </form>
-            </main>
-            <footer>
-              <p>Page created by Smart Contact Tracing team</p>
-            </footer>
+                   <div class="sidenav">
+                    <ul class="first">
+                              <li> <a class="active" href="hadmin.html">Home</a></li>
+                              <li> <a href="registeredUsers.php">Users List</a></li>
+                              <li> <a href="adminslist.php">Admins List</a></li>
+                              <li><a href="stationslist.php">Stations List</a></li>
+                              <li style="float: right"> <a href="index.php">Logout</a></li>
+                    </ul>
+                   </div>
+                   <main>
+                    <h1>Welcome to Head Admin Page</h1>
+                   </main>
+                   
+                   
+                    
+                              
           </body>
 </html>
