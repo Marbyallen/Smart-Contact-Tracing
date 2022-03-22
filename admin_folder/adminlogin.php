@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-  include('db_connect.php');
-  include('functions.php');
+  // include('db_connect.php');
+  // include('functions.php');
 
   // if($_SERVER['REQUEST_METHOD'] == 'POST')
   // {
@@ -62,7 +62,6 @@ session_start();
 
               <h2>Login as Admin</h2>
               <form method="post">
-
 
                 <div class="form-group">
                 <label>Username</label>
