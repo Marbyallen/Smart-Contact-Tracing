@@ -28,8 +28,8 @@ session_start();
           {
 
             $_SESSION['QRcode'] = $user_data['QRcode'];
-            // header("Location: index.php");
-            header("Location: http://admin.tracingconnections.com/index.php");
+            header("Location: index.php");
+            // header("Location: http://admin.tracingconnections.com/index.php");
             
             die;
           }
@@ -57,7 +57,6 @@ session_start();
             <header>
               <ul>
                 <li><h1 id="titlemain" >Smart Contact Tracing</h1></li>
-                <!-- <li class="topmenu"><a href="loginhadmin.php" target="_self">Login as Head Admin</a></li> -->
               </ul>
             </header>
             <main>

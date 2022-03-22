@@ -17,8 +17,8 @@ function check_login($con)
     }
 
     //redirect to login
-    // header("Location: adminlogin.php");
-    header("Location: http://admin.tracingconnections.com/adminlogin.php");
+    header("Location: adminlogin.php");
+    // header("Location: http://admin.tracingconnections.com/adminlogin.php");
     
     die;
 }
