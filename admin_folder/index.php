@@ -1,21 +1,11 @@
 <?php
 session_start();
 
-	// include('db_connect.php');
-	// include('functions.php');
+	include('db_connect.php');
+	include('functions.php');
 
-	// $user_data = check_login($con);
+	$user_data = check_login($con);
 
-  
-	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "You must log in first";
-		header('location: adminlogin.php');
-	}
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: adminlogin.php");
-	}
 ?>
 
 
