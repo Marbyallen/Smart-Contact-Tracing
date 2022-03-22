@@ -61,7 +61,7 @@ session_start();
             <main>
 
               <h2>Login as Admin</h2>
-              <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+              <form  method="post">
 
 
                 <div class="form-group">
