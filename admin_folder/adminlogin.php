@@ -16,7 +16,7 @@ session_start();
       
       //read from db
       $query = "SELECT * FROM Allusers_table WHERE username = '$user_name' limit 1 ";
-      $result = mysqli_query($con,$query);
+      $result = mysqli_query($con, $query);
 
       if($result)
       {
@@ -28,7 +28,7 @@ session_start();
           {
 
             $_SESSION['QRcode'] = $user_data['QRcode'];
-            header("Location: hadmin.html");
+            header("Location: index.php");
             die;
           }
         }
