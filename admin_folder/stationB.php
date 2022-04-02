@@ -20,7 +20,7 @@ session_start();
           <body>
                    <div class="sidenav">
                     <ul class="first">
-                              <li> <a href="hadmin.php">Home</a></li>
+                              <li> <a href="index.php">Home</a></li>
                               <li> <a href="registeredUsers.html">Registered Users</a></li>
                               <li> <a href="adminslist.php">Admins List</a></li>
                               <li><a href="stationslist.php">Stations List</a></li>
