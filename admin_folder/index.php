@@ -30,7 +30,7 @@ session_start();
                    </div>
                    <main>
                     <h1>Welcome to Head Admin Page</h1>
-                    Hello, <?php echo $_SESSION['username']; ?>
+                    Hello, <?php echo $user_data['username']; ?>
                    </main>
           </body>
 </html>
