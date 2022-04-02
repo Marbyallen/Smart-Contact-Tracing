@@ -32,9 +32,5 @@ session_start();
                     <h1>Welcome to Head Admin Page</h1>
                     Hello, <?php echo $user_data['user_name']; ?>
                    </main>
-                   
-                   
-                    
-                              
           </body>
 </html>
