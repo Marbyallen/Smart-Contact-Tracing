@@ -49,7 +49,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="userName">
+                <input type="text" name="userName" 
+                required autofocus autocomplete = "off">
                 </div>
                 <div class="form-group">
                 <label>Password</label>
