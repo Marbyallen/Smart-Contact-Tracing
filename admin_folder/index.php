@@ -7,8 +7,6 @@ session_start();
 	$user_data = check_login($con);
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en-US">
           <head> 
@@ -30,7 +28,7 @@ session_start();
                    </div>
                    <main>
                     <h1>Welcome to Head Admin Page</h1>
-                    Hello, <?php echo $user_data['username']; ?>
+                    Hello, <?php echo $user_data['firstname'] $user_data['lastname'] ?>
                    </main>
           </body>
 </html>
