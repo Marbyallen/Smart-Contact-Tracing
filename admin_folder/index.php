@@ -28,7 +28,7 @@ session_start();
                    </div>
                    <main>
                     <h1>Welcome to Head Admin Page</h1>
-                    Hello, <?php echo $user_data['firstname'] $user_data['lastname']; ?>
+                    Hello, <?php echo "'.$user_data['firstname'].'" " " "'.$user_data['lastname'].'"; ?>
                    </main>
           </body>
 </html>
