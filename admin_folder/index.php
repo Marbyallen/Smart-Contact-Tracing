@@ -21,7 +21,7 @@ session_start();
           <body>
                    <div class="sidenav">
                     <ul class="first">
-                              <li> <a class="active" href="hadmin.html">Home</a></li>
+                              <li> <a class="active" href="hadmin.php">Home</a></li>
                               <li> <a href="registeredUsers.php">Users List</a></li>
                               <li> <a href="adminslist.php">Admins List</a></li>
                               <li><a href="stationslist.php">Stations List</a></li>
@@ -30,7 +30,7 @@ session_start();
                    </div>
                    <main>
                     <h1>Welcome to Head Admin Page</h1>
-                    Hello, <?php echo $user_data['username']; ?>
+                    Hello, <?php echo $_SESSION['username']; ?>
                    </main>
           </body>
 </html>
