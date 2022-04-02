@@ -10,11 +10,11 @@
                    
                     <div class="sidenav">
                     <ul class="first">
-                              <li> <a href="hadmin.html">Home</a></li>
+                              <li> <a href="hadmin.php">Home</a></li>
                               <li> <a  href="registeredUsers.php">Users List</a></li>
                               <li> <a class="active" href="adminslist.php">Admins List</a></li>
                               <li><a href="stationslist.php">Stations List</a></li>
-                              <li style="float: right"> <a href="index.php">Logout</a></li>
+                              <li style="float: right"> <a href="logout.php">Logout</a></li>
                     </ul>
                    </div>
 
