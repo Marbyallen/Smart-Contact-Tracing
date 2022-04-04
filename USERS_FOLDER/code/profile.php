@@ -10,14 +10,12 @@
 		unset($_SESSION['username']);
 		header("location: login.php");
 	}
-    include("function.php");
-    //$username = check_login($con);//
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="profile.css">
-    <title>SMARTC</title>
+    <title>THESIS</title>
 </head>
 <header>
 <nav class="nav">
@@ -41,17 +39,13 @@
                     <section class="detail">
                         <section class="detail-row-1">
                             <ul class="firstname"><p> FIRST NAME</p> <?php echo $_SESSION['username']; ?><strong></ul>
-                        </section>
-                    <!--
-                            <ul class="lastname"><p>LAST NAME</p><?php echo $_SESSION['lastname']; ?></ul>
+                            <ul class="firstname"><p>LAST NAME</p><?php echo $_SESSION['lastname']; ?></ul>
                         </section>  
-                        <section class="detail-row-2">c 
-                            <ul class="contact"><p>CONTACT NUMBER</p><?php echo $_SESSION['contact']; ?></ul>
-                            <ul class="address"><p>ADDRESS</p><?php echo $_SESSION['address']; ?></ul>
+                        <section class="detail-row-2">
+                            <ul class="firstname"><p>CONTACT NUMBER</p><?php echo $_SESSION['contact']; ?></ul>
+                            <ul class="firstname"><p>ADDRESS</p><?php echo $_SESSION['address']; ?></ul>
                         </section>
-                    -->
                     </section>
-                    
                 </div>
                 <div class="button_edit">
                     <button class="EDIT"><p>EDIT</p></button>

@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header{
+    background-color: rgb(66, 65, 65);
+    font-size: 1.3em;
+    display: flex;
+    font-weight: 200;
+    justify-content: space-around;
+    border-bottom: 7px solid rgb(84, 165, 165);
+}
+.nav{
+    margin: 0px;
+    font-family: sans-serif,Arial;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 8vh;
+}
+.nav a{
+    color: rgb(170, 165, 165);
+}
+.logo{
+    width: 80%;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.logo a{
+    color:rgb(75, 197, 197);
+    margin-left: 21px;
+}
+.logo span{
+    color: rgb(170, 165, 165);
+    margin-left: 7px;
+}
+
+
+/* End of Navigation */
+
+
+/* MAIN START */
+body{
+    background-color: rgb(223, 231, 238);
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.main-top{
+    background-color: aliceblue;
+    width: 1024px;
+    height: 655px;
+    left: 0;
+    right: 0;
+    margin:auto;
+    position: absolute;
+}
+.profilepic{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(67, 67, 75);
+    margin: 30px auto 0px auto;
+    border: 5px solid rgb(140, 159, 160);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%; 
+}
+.profilepic p{
+    color: azure ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-bottom{
+    display: flex;
+}
+.main-bottom .qr_code{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(67, 67, 75);
+    margin: 30px auto 0px auto;
+    border: 5px solid rgb(140, 159, 160);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%; 
+}
+.main-bottom{
+    color: azure ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.main-bottom .temperature{
+    background-image: url("/image/temp_pic.jfif");
+    width: 250px;
+    height: 250px;
+    background-color: rgb(67, 67, 75);
+    margin: 30px auto 0px auto;
+    border: 5px solid rgb(140, 159, 160);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%; 
+}
+/* MAIN END */
+/* SIDE BAR START */ 
+.sidebar{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin-top: 300px;
+    position: fixed;
+    width: 150px;
+    height: 250px;
+    background-color: rgb(66, 65, 65);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 7px solid rgb(84, 165, 165);
+    border-top: 7px solid rgb(84, 165, 165);
+    border-right: 7px solid rgb(84, 165, 165);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.qr-code {
+    max-width: 200px;
+    margin: 60px;
+  }
+.sidebar a{
+    color: black;
+    font-family: sans-serif;
+    font-weight:600;
+}
+.sidebar_bottom a{
+    color: black;
+    font-family: sans-serif;
+    font-weight:bold;
+}   
+.sidebar li{
+    font-size: 0.8em;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+.sidebar li button{
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(75, 197, 197);
+    border: 3px solid rgb(128, 168, 168);
+    transition: 0.3 all ease-in-out;
+}
+.sidebar li button:hover{
+    background-color: rgba(92, 233, 233, 0.993);
+}
+
+
+.sidebar_bottom{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin-top: 580px;
+    position: fixed;
+    width: 150px;
+    height: 70px;
+    background-color: rgb(66, 65, 65);
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    border-bottom: 7px solid rgb(84, 165, 165);
+    border-top: 7px solid rgb(84, 165, 165);
+    border-right: 7px solid rgb(84, 165, 165);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.sidebar_bottom li{
+    font-size: 0.8em;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+.sidebar_bottom li button{
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(75, 197, 197);
+    border: 3px solid rgb(128, 168, 168);
+    transition: 0.3 all ease-in-out;
+}
+.sidebar_bottom li button:hover{
+    background-color: rgba(92, 233, 233, 0.993);
+}
+
+
+/* SIDE BAR END */ 

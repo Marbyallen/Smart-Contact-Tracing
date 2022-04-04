@@ -3,12 +3,12 @@
 <head>
 </head>
     <link rel="stylesheet" href="login.css">
-    <title>SMARTC</title>
+    <title>DATA HISTORY</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="registration">
-            <h1>Log In to Contact Tracing</h1>
+            <h1>Log In to SMARTC</h1>
             <form method="post">
 				<?php include('errors.php') ?>
                 <div class="user-detail">

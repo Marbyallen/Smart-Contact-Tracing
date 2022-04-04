@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$qrcode 	= "";
+$qrcode 	= "qr";
 $username 	= "";
 $email	  	= "";
 $firstname	= "";
@@ -8,9 +8,8 @@ $lastname 	= "";
 $gender	 	= "";
 $contact	= "";
 $address	= "";
-$admin_customer = "";
+$admin_customer = "c";
 $errors   = array();
-$emailinput = "";
 
 $db = mysqli_connect('localhost', 'root', '', 'registration');
 
@@ -19,15 +18,16 @@ if (isset($_POST['reg_user'])) {
 	$qrcode 	= mysqli_real_escape_string($db, $_POST['qrcode']);
 	$firstname  = mysqli_real_escape_string($db, $_POST['firstname']);
 	$lastname  	= mysqli_real_escape_string($db, $_POST['lastname']);
+	$email	    = mysqli_real_escape_string($db, $_POST['email']);
 	$gender	    = mysqli_real_escape_string($db, $_POST['gender']);
 	$contact	= mysqli_real_escape_string($db, $_POST['contact']);
 	$email	    = mysqli_real_escape_string($db, $_POST['email']);
-	$address	= mysqli_real_escape_string($db, $_POST['address']);
+	$address	    = mysqli_real_escape_string($db, $_POST['address']);
 	$username   = mysqli_real_escape_string($db, $_POST['username']);
 	$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 	$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 	$admin_customer = mysqli_real_escape_string($db, $_POST['c']);
-	$emailinput = mysqli_real_escape_string($db, $_POST['emailinput']);
+
 	// checking filled
 	
 	if (empty($firstname)) { 
@@ -80,7 +80,8 @@ if (isset($_POST['reg_user'])) {
 	// Insert New Data
 	if (count($errors) == 0) {
 		$password = md5($password_1);
-		$query = "INSERT INTO users (qrcode,firstname,lastname,gender,contact, email,address,username, password,admin_customer) VALUES ('$qrcode','$firstname','$lastname','$gender','$contact','$emailinput$email','$address','$username', '$password','$admin_customer')";
+
+		$query = "INSERT INTO users (qrcode,firstname,lastname,gender,contact, email,address,username, password,admin_customer) VALUES ('$qrcode','$firstname','$lastname','$gender','$contact', '$email','$address','$username', '$password','$admin_customer')";
 		mysqli_query($db, $query);
 		$_SESSION['username'] = $username;
 		$_SESSION['success']  = "You're now logged in";

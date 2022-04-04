@@ -28,16 +28,11 @@
 		</div>
 		<div class="input-group">
 			<label>Contact No.</label>
-			<input type="text" minlength="12"name="contact" value="<?php echo $contact; ?>"  onkeypress="return /[0-9]/i.test(event.key)"required>
+			<input type="text" maxlength="12"name="contact" value="<?php echo $contact; ?>"  onkeypress="return /[0-9]/i.test(event.key)"required>
 		</div>
-		<div class="input-group">	
+		<div class="input-group">
 			<label>Email</label>
-			<input type="text" name="emailinput"value="" maxlength="100"required>
-			<select type="text"name="email">
-				<option value="@gmail.com">gmail.com</option>
-				<option value="@yahoo.com">yahoo.com</option>
-				<option value="@hotmail.com">hotmail.com</option>
-			</select>
+			<input type="email" name="email" value="<?php echo $email; ?>" maxlength="100"required>
 		</div>
 		<div class="input-group">
 			<label>Address</label>
