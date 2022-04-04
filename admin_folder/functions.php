@@ -1,26 +1,21 @@
 <?php
-
+include("db_connect.php");
 function check_login($con)
 {
-// QRcode will be used as a user id 
-    if(isset($_SESSION['QRcode']))
-    {
-        $id = $_SESSION['QRcode'];
-        $query = "SELECT * FROM Allusers_table WHERE QRcode = '$id' limit 1";
+	if(isset($_SESSION['QRcode']))
+	{
+		$id = $_SESSION['QRcode'];
+		$query = "SELECT * FROM Allusers_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
 
-        $result = mysqli_query($con, $query);
-        if($result && mysqli_num_rows($result) > 0)
-        {
-            $user_data = mysqli_fetch_aassoc($result);
-            return $user_data;
-        }
+		$result = mysqli_query($con,$query);
+		if($result && mysqli_num_rows($result) > 0)
+		{
+			$user_data = mysqli_fetch_assoc($result);
+			return $user_data;
+		}
+	} else {
+        //redirect to login
+        header("Location: adminlogin.php");
+        die;
     }
-
-    //redirect to login
-    header("Location: adminlogin.php");
-    // header("Location: http://admin.tracingconnections.com/adminlogin.php");
-    
-    die;
 }
-?>
-
