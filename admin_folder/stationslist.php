@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-	include('db_connect.php');
-	include('functions.php');
-
-	$user_data = check_login($con);
-
-?>
 <!DOCTYPE html>
 <html lang="en-US">
           <head> 
@@ -19,11 +10,11 @@ session_start();
           <body>
                    <div class="sidenav">
                     <ul class="first">
-                              <li> <a  href="index.php">Home</a></li>
+                              <li> <a  href="hadmin.html">Home</a></li>
                               <li> <a href="registeredUsers.php">Users List</a></li>
                               <li> <a href="adminslist.php">Admins List</a></li>
                               <li><a class="active" href="stationslist.php">Stations List</a></li>
-                              <li style="float: right"> <a href="logout.php">Logout</a></li>
+                              <li style="float: right"> <a href="adminlogin.php">Logout</a></li>
                     </ul>
                    </div>
           <main>

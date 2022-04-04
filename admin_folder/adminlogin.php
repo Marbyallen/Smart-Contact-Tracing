@@ -1,30 +1,47 @@
 <?php
 session_start();
-include("db_connect.php");
-include("functions.php");
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $_SESSION['userName'] = $_POST['userName'];
-    $userName = $_POST['userName'];
-    $userPassword = $_POST['userPassword'];
+  include('db_connect.php');
+  include('functions.php');
 
+  if($_SERVER['REQUEST_METHOD'] == 'POST')
+  {
+    //something was posted
+    $user_name = $_POST['user_name'];
+    $password = $_POST['password'];
 
-    $result = mysqli_query($con," SELECT  * FROM Allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
-    if($row = mysqli_fetch_array($result)){
-        echo "username found from db: " . $userName . "<br>";
-        
-        if($row['password'] === $userPassword){
-            echo "password found also";
-            $user_data = mysqli_fetch_assoc($row);
-            $_SESSION['QRcode'] = $row['QRcode'];
+    if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+    {
+
+      
+      //read from db
+      $query = "SELECT * FROM Allusers_table WHERE username = '".$user_name."' limit 1 ";
+      $result = mysqli_query($con, $query);
+
+      if($result)
+      {
+        if($result && mysqli_num_rows($result) > 0)
+        {
+          $user_data = mysqli_fetch_aassoc($result);
+
+          if($user_data['password'] === $password)
+          {
+
+            $_SESSION['QRcode'] = $user_data['QRcode'];
             header("Location: index.php");
-        } else {
-            echo "wrong password";
+            // header("Location: http://admin.tracingconnections.com/index.php");
+            
+            die;
+          }
         }
-    } else {
-       echo "username not found <br> ";
-    }
-    }
+      }
+
+      echo "wrong username or password!";
+    }else
+      {
+        echo"wrong username or password!";
+      }
+  } 
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +66,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="userName" 
-                required autofocus autocomplete = "off">
+                <input type="text" name="user_name">
                 </div>
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="userPassword">
+                <input type="password" name="password">
                 <br>
                 <button type="submit" class="btn btn-primary" value="Login">Login</button>
                 </div>
