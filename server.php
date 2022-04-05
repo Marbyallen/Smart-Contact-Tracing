@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include('connection.php');
+
 $qrcode 	= "";
 $username 	= "";
 $email	  	= "";
@@ -108,6 +109,7 @@ if (isset($_POST['login_user'])) {
 		// $query = "SELECT * FROM Allusers_table WHERE username='$username' AND password='$password'";
 		$query = "SELECT * FROM Allusers_table WHERE username = '".$username."' AND password = '".$password."' limit 1 ";
 		$results = mysqli_query($db, $query);
+		echo var_dump($result);
 		if (mysqli_num_rows($results) == 1) {
 			$_SESSION['username'] = $username;
 			$_SESSION['success']  = "You are now logged in";
