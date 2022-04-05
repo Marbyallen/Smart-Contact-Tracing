@@ -12,7 +12,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $result = mysqli_query($con," SELECT  * FROM Allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
     if($row = mysqli_fetch_array($result)){
         echo "username found from db: " . $userName . "<br>";
-        
+        $_SESSION['QRcode'] = $row['QRcode'];
+        var_dump($_SESSION['QRcode']);
         if($row['password'] === $userPassword){
             echo "password found also";
             $user_data = mysqli_fetch_assoc($row);
