@@ -1,6 +1,5 @@
 <?php
 session_start();
-session_unset();
 include("db_connect.php");
 include("functionLogin.php");
 
@@ -17,9 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if($row['password'] === $userPassword){
             echo "password found also";
             $user_data = mysqli_fetch_assoc($row);
-            // $_SESSION['QRcode'] = $user_data['QRcode'];
             $_SESSION['QRcode'] = $row['QRcode'];
-            //username and password are found then go to home.php
             header("Location: index.php");
         } else {
             echo "wrong password";
