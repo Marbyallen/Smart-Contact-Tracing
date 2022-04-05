@@ -16,3 +16,4 @@ if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
 	die("failed to connect!");
 }
 	
+$db = mysqli_connect('localhost', 'u923368226_tracingconnect', 'Mainsct21!', 'u923368226_contactTracing');

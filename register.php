@@ -28,7 +28,7 @@
 		</div>
 		<div class="input-group">
 			<label>Contact No.</label>
-			<input type="text" minlength="12"name="contact" value="<?php echo $contact; ?>"  onkeypress="return /[0-9]/i.test(event.key)"required>
+			<input type="text" minleng="12" maxlength="12"name="contact" value="<?php echo $contact; ?>"  onkeypress="return /[0-9]/i.test(event.key)"required>
 		</div>
 		<div class="input-group">	
 			<label>Email</label>
