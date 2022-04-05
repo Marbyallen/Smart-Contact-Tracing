@@ -2,7 +2,7 @@
 session_start();
 
 	include('db_connect.php');
-	include('functions.php');
+	include('functionLogin.php');
 
 	$user_data = check_login($con);
 
