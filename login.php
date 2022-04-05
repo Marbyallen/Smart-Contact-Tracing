@@ -9,7 +9,7 @@
     <div class="wrapper">
         <div class="registration">
             <h1>Log In to Contact Tracing</h1>
-            <form method="post">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<?php include('errors.php') ?>
                 <div class="user-detail">
                     <div class="inputs">
