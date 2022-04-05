@@ -1,42 +1,33 @@
 <?php
 session_start();
+session_unset();
+include("dbconnect.php");
+include("functionLogin.php");
 
-  include('db_connect.php');
-  include('functions.php');
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $_SESSION['userName'] = $_POST['userName'];
+    $userName = $_POST['userName'];
+    $userPassword = $_POST['userPassword'];
 
-  if($_SERVER['REQUEST_METHOD'] == 'POST')
-  {
-    $user_name = $_POST['user_name'];
-    $password = $_POST['password'];
 
-    if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
-    {
-      //read from db
-      $query = "SELECT * FROM Allusers_table WHERE username = '".$user_name."' limit 1 ";
-      $result = mysqli_query($con, $query);
-
-      if($result)
-      {
-        if($result && mysqli_num_rows($result) > 0)
-        {
-          $user_data = mysqli_fetch_aassoc($result);
-
-          if($user_data['password'] === $password)
-          {
-
-            $_SESSION['QRcode'] = $user_data['QRcode'];
+    $result = mysqli_query($con," SELECT  * FROM Allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
+    if($row = mysqli_fetch_array($result)){
+        echo "username found from db: " . $userName . "<br>";
+        
+        if($row['password'] === $userPassword){
+            echo "password found also";
+            $user_data = mysqli_fetch_assoc($row);
+            // $_SESSION['QRcode'] = $user_data['QRcode'];
+            $_SESSION['QRcode'] = $row['QRcode'];
+            //username and password are found then go to home.php
             header("Location: index.php");
-            die;
-          }
+        } else {
+            echo "wrong password";
         }
-      }
-
-      echo "wrong username or password!";
-    }else
-      {
-        echo"wrong username or password!";
-      }
-  } 
+    } else {
+       echo "username not found <br> ";
+    }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -61,11 +52,11 @@ session_start();
 
                 <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="user_name">
+                <input type="text" name="userName">
                 </div>
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password">
+                <input type="password" name="userPassword">
                 <br>
                 <button type="submit" class="btn btn-primary" value="Login">Login</button>
                 </div>
