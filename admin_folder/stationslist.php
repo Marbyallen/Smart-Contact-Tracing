@@ -10,7 +10,7 @@
           <body>
                    <div class="sidenav">
                     <ul class="first">
-                              <li> <a  href="hadmin.html">Home</a></li>
+                              <li> <a  href="index.php">Home</a></li>
                               <li> <a href="registeredUsers.php">Users List</a></li>
                               <li> <a href="adminslist.php">Admins List</a></li>
                               <li><a class="active" href="stationslist.php">Stations List</a></li>
