@@ -14,7 +14,6 @@ function check_login($con)
 			return $user_data;
 		}
 	} else {
-        //redirect to login
         header("Location: adminlogin.php");
         die;
     }
