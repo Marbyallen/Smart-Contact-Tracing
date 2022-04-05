@@ -19,6 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $user_data = mysqli_fetch_assoc($row);
             // $_SESSION['QRcode'] = $user_data['QRcode'];
             $_SESSION['QRcode'] = $row['QRcode'];
+            var_dump($_SESSION['QRcode']);
             //username and password are found then go to home.php
             header("Location: index.php");
         } else {
