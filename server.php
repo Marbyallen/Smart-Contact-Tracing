@@ -1,5 +1,6 @@
 <?php 
 session_start();
+include('connection.php');
 $qrcode 	= "";
 $username 	= "";
 $email	  	= "";
@@ -104,15 +105,46 @@ if (isset($_POST['login_user'])) {
 	if (count($errors) == 0) {
 		$password = md5($password);
 
-		$query = "SELECT * FROM Allusers_table WHERE username='$username' AND password='$password'";
-		$results = mysqli_query($db, $query);
-		if (mysqli_num_rows($results) == 1) {
-			$_SESSION['username'] = $username;
-			$_SESSION['success']  = "You are now logged in";
-			header('location: dashboard.php');
-		} else {
-			array_push($errors, "Wrong username or password");
-		}
+		// $query = "SELECT * FROM Allusers_table WHERE username='$username' AND password='$password'";
+		// $results = mysqli_query($db, $query);
+		// if (mysqli_num_rows($results) == 1) {
+		// 	$_SESSION['username'] = $username;
+		// 	$_SESSION['success']  = "You are now logged in";
+		// 	header('location: dashboard.php');
+		// } else {
+		// 	array_push($errors, "Wrong username or password");
+		// }
+
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		{
+	
+		  
+		  //read from db
+		  $query = "SELECT * FROM Allusers_table WHERE username = '".$user_name."' limit 1 ";
+		  $result = mysqli_query($con, $query);
+	
+		  if($result)
+		  {
+			if($result && mysqli_num_rows($result) > 0)
+			{
+			  $user_data = mysqli_fetch_aassoc($result);
+	
+			  if($user_data['password'] === $password)
+			  {
+	
+				$_SESSION['QRcode'] = $user_data['QRcode'];
+				header("Location: dashboard.php");
+				
+				die;
+			  }
+			}
+		  }
+	
+		  echo "wrong username or password!";
+		}else
+		  {
+			echo"wrong username or password!";
+		  }
 	}
 }
 
