@@ -4,7 +4,7 @@ function check_login($con)
 	if(isset($_SESSION['QRcode']))
 	{
 		$id = $_SESSION['QRcode'];
-		$query = "SELECT * FROM allusers_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+		$query = "SELECT * FROM Allusers_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
 
 		$result = mysqli_query($con,$query);
 		if($result && mysqli_num_rows($result) > 0)
