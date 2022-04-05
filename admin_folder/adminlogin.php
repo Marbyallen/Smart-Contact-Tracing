@@ -1,11 +1,7 @@
 <?php
 session_start();
 include("db_connect.php");
-<<<<<<< HEAD
-include("functionLogin.php");
-=======
 include("functions.php");
->>>>>>> parent of 45d3bfb (Revert "Merge branch 'master' of https://github.com/Marbyallen/Smart-Contact-Tracing")
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_SESSION['userName'] = $_POST['userName'];
