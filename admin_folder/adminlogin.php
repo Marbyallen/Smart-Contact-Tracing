@@ -6,14 +6,11 @@ session_start();
 
   if($_SERVER['REQUEST_METHOD'] == 'POST')
   {
-    //something was posted
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
 
     if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
     {
-
-      
       //read from db
       $query = "SELECT * FROM Allusers_table WHERE username = '".$user_name."' limit 1 ";
       $result = mysqli_query($con, $query);
@@ -29,8 +26,6 @@ session_start();
 
             $_SESSION['QRcode'] = $user_data['QRcode'];
             header("Location: index.php");
-            // header("Location: http://admin.tracingconnections.com/index.php");
-            
             die;
           }
         }
