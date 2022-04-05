@@ -6,8 +6,6 @@ session_start();
 
 	$user_data = check_login($con);
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en-US">
           <head> 
@@ -24,16 +22,12 @@ session_start();
                               <li> <a href="registeredUsers.php">Users List</a></li>
                               <li> <a href="adminslist.php">Admins List</a></li>
                               <li><a href="stationslist.php">Stations List</a></li>
-                              <li style="float: right"> <a href="adminlogin.php">Logout</a></li>
+                              <li style="float: right"> <a href="logout.php">Logout</a></li>
                     </ul>
                    </div>
                    <main>
                     <h1>Welcome to Head Admin Page</h1>
-                    Hello, <?php echo $user_data['user_name']; ?>
+                    Hello, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
                    </main>
-                   
-                   
-                    
-                              
           </body>
 </html>
