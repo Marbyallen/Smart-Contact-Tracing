@@ -45,7 +45,6 @@ session_start();
                     <?php
                     include "db_connect.php";
                     $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
-                    // Check connection
                     if (mysqli_connect_errno())
                     {
                     echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -58,17 +57,7 @@ session_start();
                     <!-- display numbr of rows -->
                     <p id="number-of-rows"></p>
                     
-
                     <table>
-                              <!-- <tr>
-                                        <th>QR code</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Contact No.</th>
-                                        <th>Email Address</th>
-                                        <th>Address</th>
-                              </tr> -->
-                              <!-- search first name -->
                               <?php
                               if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $Sfname = $_REQUEST['Sfname'];
@@ -120,7 +109,6 @@ session_start();
                                                             mysqli_close($mysqli);
                                         } else{
                                             $numResults = mysqli_num_rows($result);
-                                            
                                             while($row = mysqli_fetch_array($result))
                                             
                                                 {
