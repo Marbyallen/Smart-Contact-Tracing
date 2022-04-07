@@ -122,16 +122,16 @@ session_start();
                     
                     if($numResults > 0){
                         echo "
-                            <script type="text/javascript">  
+                            results found!
+                        ";
+                    }
+                    ?>
+                    <script type="text/javascript">  
                                 function displaynumRows() {      
                                 var htmlString="$numResults";
                                 alert(htmlString);
                                 }
                             </script>
-                        ";
-                    }
-                    ?>
-                    
                    </main>
           </body>
 </html>
