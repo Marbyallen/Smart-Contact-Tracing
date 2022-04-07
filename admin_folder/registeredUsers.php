@@ -121,7 +121,7 @@ session_start();
                               }
                     ?>
                     <script type="text/javascript">  
-                    function displaynumRows{      
+                    function displaynumRows() {      
                         var htmlString="<?php echo $numResults; ?>";
                         alert(htmlString);
                     }
