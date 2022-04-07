@@ -111,19 +111,18 @@ session_start();
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
                                         } else {
-                                                        $numResults = mysqli_num_rows($result);
-                                                        echo "Number of rows found: " . $result ;
-                                                        do {
-                                                            echo "<tr>";
-                                                            echo "<th>QR code</th>";
-                                                            echo "<th>First Name</th>";
-                                                            echo "<th>Last Name</th>";
-                                                            echo "<th>Contact No.</th>";
-                                                            echo "<th>Email Address</th>";
-                                                            echo "<th>Address</th>";
-                                                            echo "</tr>";
-                                                        }
-                                                        
+                                            if($result){
+                                                $numResults = mysqli_num_rows($result);
+                                                echo "Number of rows found: " . $result ;
+                                                echo "<tr>";
+                                                echo "<th>QR code</th>";
+                                                echo "<th>First Name</th>";
+                                                echo "<th>Last Name</th>";
+                                                echo "<th>Contact No.</th>";
+                                                echo "<th>Email Address</th>";
+                                                echo "<th>Address</th>";
+                                                echo "</tr>";
+                                            }
                                                         while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
