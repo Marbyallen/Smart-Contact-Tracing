@@ -75,13 +75,10 @@ session_start();
                               <!-- search first name -->
                               <?php
                               if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                        // collect value of input field
                                         $Sfname = $_REQUEST['Sfname'];
                                         $Slname = $_REQUEST['Slname'];
-                                        if (!empty($Sfname)) {
-                                                  $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
-                                                  $numResults = mysqli_num_rows($result);
-                                                echo "Number of rows found: " . $result ;
+                                        static $numResults = "";
+                                                echo "Number of rows found: " . $numResults ;
                                                 echo "<tr>";
                                                 echo "<th>QR code</th>";
                                                 echo "<th>First Name</th>";
@@ -90,6 +87,9 @@ session_start();
                                                 echo "<th>Email Address</th>";
                                                 echo "<th>Address</th>";
                                                 echo "</tr>";
+                                        if (!empty($Sfname)) {
+                                                  $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
+                                                  $numResults = mysqli_num_rows($result);
                                                             while($row = mysqli_fetch_array($result))
                                                                       {
                                                                       echo "<tr>";
@@ -120,16 +120,6 @@ session_start();
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
                                         } else{
-                                            $numResults = mysqli_num_rows($result);
-                                                echo "Number of rows found: " . $result ;
-                                                echo "<tr>";
-                                                echo "<th>QR code</th>";
-                                                echo "<th>First Name</th>";
-                                                echo "<th>Last Name</th>";
-                                                echo "<th>Contact No.</th>";
-                                                echo "<th>Email Address</th>";
-                                                echo "<th>Address</th>";
-                                                echo "</tr>";
                                                         while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
