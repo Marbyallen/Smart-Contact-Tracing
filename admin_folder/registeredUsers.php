@@ -110,9 +110,8 @@ session_start();
                                                             }
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
-                                        } else {
-                                            if($result){
-                                                $numResults = mysqli_num_rows($result);
+                                        } elseif(empty($Sfname && $Slname)) {
+                                            $numResults = mysqli_num_rows($result);
                                                 echo "Number of rows found: " . $result ;
                                                 echo "<tr>";
                                                 echo "<th>QR code</th>";
@@ -122,7 +121,6 @@ session_start();
                                                 echo "<th>Email Address</th>";
                                                 echo "<th>Address</th>";
                                                 echo "</tr>";
-                                            }
                                                         while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
