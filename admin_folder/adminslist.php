@@ -29,7 +29,7 @@ session_start();
 
                    <main>
                     <h1>Admins List</h1>
-                    <div class="form-group"><br>
+                    <div class="form-group">
                               <p>Search Name</p>  
                         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
                             <div class="row"><br>
@@ -58,88 +58,73 @@ session_start();
                     $Slname = "";
                     ?>
                     <table>
-                              <!-- <tr>
-                                        <th>QR code</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Contact No.</th>
-                                        <th>Email Address</th>
-                                        <th>Address</th>
-                              </tr> -->
-                              <!-- search first name -->
-                              <?php
-                              if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                        // collect value of input field
-                                        $Sfname = $_REQUEST['Sfname'];
-                                        $Slname = $_REQUEST['Slname'];
-                                        echo "
-                                            <tr>
-                                            <th>QR code</th>
-                                            <th>First Name</th>
-                                            <th>Last Name</th>
-                                            <th>Contact No.</th>
-                                            <th>Email Address</th>
-                                            <th>Address</th>
-                                            </tr>
-                                        ";
-                                        if (!empty($Sfname)) {
-                                                  $result = mysqli_query($mysqli," SELECT  QRcode, firstname, lastname, contactno, email, address FROM admin_table WHERE firstname LIKE '".$Sfname."' ");
-                                                  $numResults = mysqli_num_rows($result);
-                                                  echo "Number of rows found: " . $numResults;
-                                                  while($row = mysqli_fetch_array($result))
-                                                                      {
-                                                                      echo "<tr>";
-                                                                      echo "<td>" . $row['QRcode'] . "</td>";
-                                                                      echo "<td>" . $row['firstname'] . "</td>";
-                                                                      echo "<td>" . $row['lastname'] . "</td>";
-                                                                      echo "<td>" . $row['contactno'] . "</td>";
-                                                                      echo "<td>" . $row['email'] . "</td>";
-                                                                      echo "<td>" . $row['address'] . "</td>";
-                                                                      echo "</tr>";
-                                                                      }
-                                                  echo "</table>";
-                                                  mysqli_close($mysqli);
-                                        } elseif(!empty($Slname)) {
-                                                  
-                                                  $result = mysqli_query($mysqli," SELECT  QRcode, firstname, lastname, contactno, email, address FROM admin_table WHERE lastname LIKE '".$Slname."' ");
-                                                  $numResults = mysqli_num_rows($result);
-                                                  echo "Number of rows found: " . $numResults;
-                                                  while($row = mysqli_fetch_array($result))
-                                                            {
-                                                                      echo "<tr>";
-                                                                      echo "<td>" . $row['QRcode'] . "</td>";
-                                                                      echo "<td>" . $row['firstname'] . "</td>";
-                                                                      echo "<td>" . $row['lastname'] . "</td>";
-                                                                      echo "<td>" . $row['contactno'] . "</td>";
-                                                                      echo "<td>" . $row['email'] . "</td>";
-                                                                      echo "<td>" . $row['address'] . "</td>";
-                                                                      echo "</tr>";
-                                                            }
-                                                            echo "</table>";
-                                                            mysqli_close($mysqli);
-                                        } else {
-                                            $numResults = mysqli_num_rows($result);
-                                            echo "Number of rows found: " . $numResults;      
-                                            while($row = mysqli_fetch_array($result))
-                                                            {
-                                                                      echo "<tr>";
-                                                                      echo "<td>" . $row['QRcode'] . "</td>";
-                                                                      echo "<td>" . $row['firstname'] . "</td>";
-                                                                      echo "<td>" . $row['lastname'] . "</td>";
-                                                                      echo "<td>" . $row['contactno'] . "</td>";
-                                                                      echo "<td>" . $row['email'] . "</td>";
-                                                                      echo "<td>" . $row['address'] . "</td>";
-                                                                      echo "</tr>";
-                                                            }
-                                                  echo "</table>";
-                                                  mysqli_close($mysqli);
-                                                  }
-                              }
-                    ?>
+                    <?php
+                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                        $Sfname = $_REQUEST['Sfname'];
+                        $Slname = $_REQUEST['Slname'];
+                        echo "
+                            <tr>
+                            <th>QR code</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Contact No.</th>
+                            <th>Email Address</th>
+                            <th>Address</th>
+                            </tr>
+                        ";
+                            if (!empty($Sfname)) {
+                                        $result = mysqli_query($mysqli," SELECT  QRcode, firstname, lastname, contactno, email, address FROM admin_table WHERE firstname LIKE '".$Sfname."' ");
+                                        $numResults = mysqli_num_rows($result);
+                                        echo "Number of rows found: " . $numResults;
+                                        while($row = mysqli_fetch_array($result))
+                                            {
+                                            echo "<tr>";
+                                            echo "<td>" . $row['QRcode'] . "</td>";
+                                            echo "<td>" . $row['firstname'] . "</td>";
+                                            echo "<td>" . $row['lastname'] . "</td>";
+                                            echo "<td>" . $row['contactno'] . "</td>";
+                                            echo "<td>" . $row['email'] . "</td>";
+                                            echo "<td>" . $row['address'] . "</td>";
+                                            echo "</tr>";
+                                            }
+                                        echo "</table>";
+                                        mysqli_close($mysqli);
+                            } elseif(!empty($Slname)) {
+                                $result = mysqli_query($mysqli," SELECT  QRcode, firstname, lastname, contactno, email, address FROM admin_table WHERE lastname LIKE '".$Slname."' ");
+                                $numResults = mysqli_num_rows($result);
+                                echo "Number of rows found: " . $numResults;
+                                while($row = mysqli_fetch_array($result))
+                                    {
+                                        echo "<tr>";
+                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                        echo "<td>" . $row['firstname'] . "</td>";
+                                        echo "<td>" . $row['lastname'] . "</td>";
+                                        echo "<td>" . $row['contactno'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['address'] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                        echo "</table>";
+                                        mysqli_close($mysqli);
+                            } else {
+                                $numResults = mysqli_num_rows($result);
+                                echo "Number of rows found: " . $numResults;      
+                                while($row = mysqli_fetch_array($result))
+                                    {
+                                        echo "<tr>";
+                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                        echo "<td>" . $row['firstname'] . "</td>";
+                                        echo "<td>" . $row['lastname'] . "</td>";
+                                        echo "<td>" . $row['contactno'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['address'] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                        echo "</table>";
+                                        mysqli_close($mysqli);
+                                        }
+                    }
+                ?>
                    </main>
-                   
-                   
-                    
-                              
           </body>
 </html>
