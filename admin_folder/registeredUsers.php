@@ -142,7 +142,7 @@ session_start();
                     <script type="text/javascript">  
                         var rowsResult = <?php echo json_encode($numResults) ?>;
                         function displaynumRows(){      
-                            document.getElementById("number-of-rows").innerHTML = "Results found:" + rowResult;
+                            document.getElementById("number-of-rows").innerHTML = "Results found:" + rowsResult;
                         }
                     </script>
             </main>
