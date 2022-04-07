@@ -119,19 +119,7 @@ session_start();
                                                   mysqli_close($mysqli);
                                                   }
                               }
-                    
-                    if($numResults > 0){
-                        echo "
-                            results found!
-                        ";
-                    }
                     ?>
-                    <script type="text/javascript">  
-                                function displaynumRows() {      
-                                var htmlString="$numResults";
-                                alert(htmlString);
-                                }
-                            </script>
                    </main>
           </body>
 </html>
