@@ -72,6 +72,7 @@ session_start();
                                         $Slname = $_REQUEST['Slname'];
                                         if (!empty($Sfname)) {
                                                   $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
+                                                  $numResults = mysqli_num_rows($result);
                                                             while($row = mysqli_fetch_array($result))
                                                                       {
                                                                       echo "<tr>";
@@ -102,7 +103,8 @@ session_start();
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
                                         } else {
-                                                  while($row = mysqli_fetch_array($result))
+                                                        $numResults = mysqli_num_rows($result);
+                                                        while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
                                                                       echo "<td>" . $row['QRcode'] . "</td>";
@@ -117,6 +119,11 @@ session_start();
                                                   mysqli_close($mysqli);
                                                   }
                               }
+                            <script type="text/javascript">  
+                            // notice the quotes around the ?php tag         
+                            var htmlString="<?php echo $numResults; ?>";
+                            alert(htmlString);
+                            </script>
                     ?>
                    </main>
           </body>
