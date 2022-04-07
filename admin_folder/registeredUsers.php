@@ -119,16 +119,18 @@ session_start();
                                                   mysqli_close($mysqli);
                                                   }
                               }
-                    echo "
-                    <script type="text/javascript">  
-                    function displaynumRows() {      
-                        var htmlString="<?php echo $numResults; ?>";
-                        alert(htmlString);
+                    
+                    if($numResults > 0){
+                        echo "
+                        <script type="text/javascript">  
+                            function displaynumRows() {      
+                            var htmlString="$numResults";
+                            alert(htmlString);
+                            }
+                        </script>
                     }
-                    
-                    </script>
-                    
                     ";
+                    
                     ?>
                     
                    </main>
