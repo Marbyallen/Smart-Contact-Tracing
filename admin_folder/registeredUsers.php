@@ -35,7 +35,7 @@ session_start();
                                             <div class="row"><br>
                                                 <div class="col-md-4">
                                                     <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                                    <button type="submit" class="btn btn-primary" onclick="displaynumRows()" >Search</button>   
+                                                    <button type="button" class="btn btn-primary" onclick="displaynumRows()" >Search</button>   
                                                 </div>
                                                 <div class="col-md-4">
                                                     <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
