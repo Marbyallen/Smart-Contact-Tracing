@@ -81,6 +81,15 @@ session_start();
                                         if (!empty($Sfname)) {
                                                   $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
                                                   $numResults = mysqli_num_rows($result);
+                                                echo "Number of rows found: " . $result ;
+                                                echo "<tr>";
+                                                echo "<th>QR code</th>";
+                                                echo "<th>First Name</th>";
+                                                echo "<th>Last Name</th>";
+                                                echo "<th>Contact No.</th>";
+                                                echo "<th>Email Address</th>";
+                                                echo "<th>Address</th>";
+                                                echo "</tr>";
                                                             while($row = mysqli_fetch_array($result))
                                                                       {
                                                                       echo "<tr>";
