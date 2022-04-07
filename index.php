@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="index.css">
-    <title>THESIS</title>
+    <title>Tracing Connections</title>
 </head>
 <header>
 <nav class="nav">
-    <div class="logo"><a href="index.PHP">CONTACT <span>TRACING</span></a></div>
+    <div class="logo"><a href="index.PHP">Tracing<span></span>Connections</a></div>
     <ul class="nav_link">
         <li><a href="#"></a></li>
         <li><a href="#"></a></li>

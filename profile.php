@@ -17,11 +17,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="profile.css">
-    <title>SMARTC</title>
+    <title>Profile</title>
 </head>
 <header>
 <nav class="nav">
-    <div class="logo"><a href="index.php">CONTACT <span>TRACING</span></a></div>
+    <div class="logo"><a href="index.php">Tracing<span>Connections</span></a></div>
     <ul class="nav_link">
     </ul>
     <div class="nav_button">
