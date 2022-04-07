@@ -35,7 +35,7 @@ session_start();
                                             <div class="row"><br>
                                                 <div class="col-md-4">
                                                     <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                                    <button type="button" class="btn btn-primary" onclick="displaynumRows()" >Search</button>   
+                                                    <button type="submit" class="btn btn-primary" onclick="displaynumRows()" >Search</button>   
                                                 </div>
                                                 <div class="col-md-4">
                                                     <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
@@ -55,14 +55,15 @@ session_start();
                     $Sfname =  "";
                     $Slname = "";
                     ?>
-                    <!-- display numbr of rows -->
+                    <!-- display numbr of rows
                     <p id="number-of-rows"></p>
                     <script type="text/javascript">  
                         function displaynumRows(){      
                             document.getElementById("number-of-rows").innerHTML = "Results found: <?php echo $numResults; ?>"
                         }
-                    </script>
-                    <table>
+                    </script> -->
+
+                    <!-- <table>
                               <tr>
                                         <th>QR code</th>
                                         <th>First Name</th>
@@ -70,7 +71,7 @@ session_start();
                                         <th>Contact No.</th>
                                         <th>Email Address</th>
                                         <th>Address</th>
-                              </tr>
+                              </tr> -->
                               <!-- search first name -->
                               <?php
                               if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -111,6 +112,16 @@ session_start();
                                                             mysqli_close($mysqli);
                                         } else {
                                                         $numResults = mysqli_num_rows($result);
+                                                        echo "Number of rows found: " . $result ;
+                                                        echo "<table>";
+                                                        echo "<tr>";
+                                                        echo "<th>QR code</th>";
+                                                        echo "<th>First Name</th>";
+                                                        echo "<th>Last Name</th>";
+                                                        echo "<th>Contact No.</th>";
+                                                        echo "<th>Email Address</th>";
+                                                        echo "<th>Address</th>";
+                                                        echo "</tr>";
                                                         while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
