@@ -57,6 +57,11 @@ session_start();
                     ?>
                     <!-- display numbr of rows -->
                     <p id="number-of-rows"></p>
+                    <script type="text/javascript">  
+                        function displaynumRows(){      
+                            document.getElementById("number-of-rows").innerHTML = "Results found: <?php echo $numResults; ?>"
+                        }
+                    </script>
                     <table>
                               <tr>
                                         <th>QR code</th>
@@ -122,13 +127,6 @@ session_start();
                                                   }
                               }
                     ?>
-
-<script type="text/javascript">  
-    function displaynumRows(){      
-        document.getElementById("number-of-rows").innerHTML = "Results found: <?php echo $numResults; ?>"
-    }
-</script>
-
             </main>
         </body>
 </html>
