@@ -55,6 +55,8 @@ session_start();
                     $Sfname =  "";
                     $Slname = "";
                     ?>
+                    <!-- display numbr of rows -->
+                    <p id="number-of-rows"></p>
                     <table>
                               <tr>
                                         <th>QR code</th>
@@ -122,9 +124,8 @@ session_start();
                     ?>
 
 <script type="text/javascript">  
-    function displaynumRows{      
-        var htmlString="<?php echo $numResults; ?>";
-        alert(htmlString);
+    function displaynumRows(){      
+        document.getElementById("number-of-rows").innerHTML = "Results found: <?php echo $numResults; ?>"
     }
 </script>
 
