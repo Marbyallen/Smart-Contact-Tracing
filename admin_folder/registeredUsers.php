@@ -119,7 +119,7 @@ session_start();
                                                   mysqli_close($mysqli);
                                                   }
                               }
-                    ?>
+                    echo "
                     <script type="text/javascript">  
                     function displaynumRows() {      
                         var htmlString="<?php echo $numResults; ?>";
@@ -127,6 +127,10 @@ session_start();
                     }
                     
                     </script>
+                    
+                    ";
+                    ?>
+                    
                    </main>
           </body>
 </html>
