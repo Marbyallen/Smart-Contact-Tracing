@@ -55,9 +55,9 @@ session_start();
                     $Sfname =  "";
                     $Slname = "";
                     ?>
-                    <!-- display numbr of rows
+                    <!-- display numbr of rows -->
                     <p id="number-of-rows"></p>
-                    <script type="text/javascript">  
+                    <!-- <script type="text/javascript">  
                         function displaynumRows(){      
                             document.getElementById("number-of-rows").innerHTML = "Results found: <?php echo $numResults; ?>"
                         }
@@ -77,25 +77,16 @@ session_start();
                               if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $Sfname = $_REQUEST['Sfname'];
                                         $Slname = $_REQUEST['Slname'];
-                                        // static $numResults = "";
-                                                echo "Number of rows found: " . $numResults ;
-                                                // echo "<tr>";
-                                                // echo "<th>QR code</th>";
-                                                // echo "<th>First Name</th>";
-                                                // echo "<th>Last Name</th>";
-                                                // echo "<th>Contact No.</th>";
-                                                // echo "<th>Email Address</th>";
-                                                // echo "<th>Address</th>";
-                                                // echo "</tr>";
+                                                // echo "Number of rows found: " . $numResults ;
                                                 echo "
-                                                <tr>
-                                        <th>QR code</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Contact No.</th>
-                                        <th>Email Address</th>
-                                        <th>Address</th>
-                                        </tr>
+                                                    <tr>
+                                                    <th>QR code</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Contact No.</th>
+                                                    <th>Email Address</th>
+                                                    <th>Address</th>
+                                                    </tr>
                                                 ";
 
                                         if (!empty($Sfname)) {
@@ -132,22 +123,30 @@ session_start();
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
                                         } else{
-                                                        $numResults = mysqli_num_rows($result);
-                                                        while($row = mysqli_fetch_array($result))
-                                                        
-                                                            {
-                                                                      echo "<tr>";
-                                                                      echo "<td>" . $row['QRcode'] . "</td>";
-                                                                      echo "<td>" . $row['firstname'] . "</td>";
-                                                                      echo "<td>" . $row['lastname'] . "</td>";
-                                                                      echo "<td>" . $row['contactno'] . "</td>";
-                                                                      echo "<td>" . $row['email'] . "</td>";
-                                                                      echo "<td>" . $row['address'] . "</td>";
-                                                                      echo "</tr>";
-                                                            }
-                                                  echo "</table>";
-                                                  mysqli_close($mysqli);
-                                                  }
+                                            $numResults = mysqli_num_rows($result);
+                                            echo "
+                                            <script type="text/javascript">  
+                                            function displaynumRows(){      
+                                                document.getElementById("number-of-rows").innerHTML = "Results found: $numResults"
+                                            }
+                                            </script>
+                                            
+                                            ";
+                                            while($row = mysqli_fetch_array($result))
+                                            
+                                                {
+                                                            echo "<tr>";
+                                                            echo "<td>" . $row['QRcode'] . "</td>";
+                                                            echo "<td>" . $row['firstname'] . "</td>";
+                                                            echo "<td>" . $row['lastname'] . "</td>";
+                                                            echo "<td>" . $row['contactno'] . "</td>";
+                                                            echo "<td>" . $row['email'] . "</td>";
+                                                            echo "<td>" . $row['address'] . "</td>";
+                                                            echo "</tr>";
+                                                }
+                                            echo "</table>";
+                                            mysqli_close($mysqli);
+                                        }
                               }
                     ?>
             </main>
