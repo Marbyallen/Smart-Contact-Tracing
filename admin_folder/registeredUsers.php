@@ -74,7 +74,7 @@ session_start();
                                                   $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
                                                             while($row = mysqli_fetch_array($result))
                                                                       {
-                                                                      echo $result "results found";    
+                                                                      echo $row "results found";    
                                                                       echo "<tr>";
                                                                       echo "<td>" . $row['QRcode'] . "</td>";
                                                                       echo "<td>" . $row['firstname'] . "</td>";
