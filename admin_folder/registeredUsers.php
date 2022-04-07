@@ -54,20 +54,12 @@ session_start();
                     $Sfname =  "";
                     $Slname = "";
                     ?>
-                    <!-- display numbr of rows -->
-                    <p id="number-of-rows"></p>
                     
                     <table>
                               <?php
                               if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $Sfname = $_REQUEST['Sfname'];
                                         $Slname = $_REQUEST['Slname'];
-                                                // echo "Number of rows found: " . $numResults ;
-                                                //fname
-                                                // $result_fname = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
-                                                //   $numResults = mysqli_num_rows($result);
-                                                //lname
-                                                //empty
                                                 echo "
                                                     <tr>
                                                     <th>QR code</th>
