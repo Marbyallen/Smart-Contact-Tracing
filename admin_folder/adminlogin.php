@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $userPassword = $_POST['userPassword'];
 
 
-    $result = mysqli_query($con," SELECT  * FROM Allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
+    $result = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$userName."' LIMIT 1");
     if($row = mysqli_fetch_array($result)){
         echo "username found from db: " . $userName . "<br>";
         $_SESSION['QRcode'] = $row['QRcode'];
