@@ -8,7 +8,7 @@
 $dbhost = "localhost";
 $dbuser = "u923368226_tracingconnect";
 $dbpass = "Mainsct21!";
-$dbname = "registration";
+$dbname = "u923368226_contactTracing";
 
 if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
 {

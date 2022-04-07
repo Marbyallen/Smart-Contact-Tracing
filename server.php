@@ -13,7 +13,6 @@ $address	= "";
 $admin_customer = "";
 $errors   = array();
 $emailinput = "";
-
 $db = mysqli_connect('localhost', 'u923368226_tracingconnect', 'Mainsct21!', 'u923368226_contactTracing');
 if (isset($_POST['reg_user'])) {
 
