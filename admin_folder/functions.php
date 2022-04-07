@@ -18,9 +18,4 @@ function check_login($con)
         die;
     }
 }
-
-function displaynumRows() {      
-	var htmlString="$numResults";
-	alert(htmlString);
-}
 ?>
