@@ -35,7 +35,7 @@ session_start();
                                             <div class="row"><br>
                                                 <div class="col-md-4">
                                                     <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md"><br>
-                                                    <button type="submit" class="btn btn-primary" onclick="displaynumRows()" >Search</button>   
+                                                    <button type="submit" class="btn btn-primary">Search</button>   
                                                 </div>
                                                 <div class="col-md-4">
                                                     <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md"><br>
@@ -63,6 +63,11 @@ session_start();
                                         $Sfname = $_REQUEST['Sfname'];
                                         $Slname = $_REQUEST['Slname'];
                                                 // echo "Number of rows found: " . $numResults ;
+                                                //fname
+                                                // $result_fname = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
+                                                //   $numResults = mysqli_num_rows($result);
+                                                //lname
+                                                //empty
                                                 echo "
                                                     <tr>
                                                     <th>QR code</th>
@@ -77,6 +82,7 @@ session_start();
                                         if (!empty($Sfname)) {
                                                   $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE firstname LIKE '".$Sfname."' ");
                                                   $numResults = mysqli_num_rows($result);
+                                                  echo "Number of rows found: " . $numResults;
                                                             while($row = mysqli_fetch_array($result))
                                                                       {
                                                                       echo "<tr>";
@@ -94,6 +100,7 @@ session_start();
                                                   
                                                   $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE lastname = '".$Slname."' ");
                                                   $numResults = mysqli_num_rows($result);
+                                                  echo "Number of rows found: " . $numResults;
                                                             while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
@@ -109,8 +116,8 @@ session_start();
                                                             mysqli_close($mysqli);
                                         } else{
                                             $numResults = mysqli_num_rows($result);
+                                            echo "Number of rows found: " . $numResults;
                                             while($row = mysqli_fetch_array($result))
-                                            
                                                 {
                                                             echo "<tr>";
                                                             echo "<td>" . $row['QRcode'] . "</td>";
