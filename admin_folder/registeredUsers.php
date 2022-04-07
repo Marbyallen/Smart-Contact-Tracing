@@ -119,12 +119,12 @@ session_start();
                                                   mysqli_close($mysqli);
                                                   }
                               }
-                            <script type="text/javascript">  
-                            // notice the quotes around the ?php tag         
-                            var htmlString="<?php echo $numResults; ?>";
-                            alert(htmlString);
-                            </script>
                     ?>
+                    <script type="text/javascript">  
+                    // notice the quotes around the ?php tag         
+                    var htmlString="<?php echo $numResults; ?>";
+                    alert(htmlString);
+                    </script>
                    </main>
           </body>
 </html>
