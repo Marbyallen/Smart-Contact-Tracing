@@ -57,11 +57,7 @@ session_start();
                     ?>
                     <!-- display numbr of rows -->
                     <p id="number-of-rows"></p>
-                    <!-- <script type="text/javascript">  
-                        function displaynumRows(){      
-                            document.getElementById("number-of-rows").innerHTML = "Results found: <?php echo $numResults; ?>"
-                        }
-                    </script> -->
+                    
 
                     <table>
                               <!-- <tr>
@@ -124,14 +120,7 @@ session_start();
                                                             mysqli_close($mysqli);
                                         } else{
                                             $numResults = mysqli_num_rows($result);
-                                            echo "
-                                            <script type="text/javascript">  
-                                            function displaynumRows(){      
-                                                document.getElementById("number-of-rows").innerHTML = "Results found: $numResults"
-                                            }
-                                            </script>
                                             
-                                            ";
                                             while($row = mysqli_fetch_array($result))
                                             
                                                 {
@@ -148,7 +137,14 @@ session_start();
                                             mysqli_close($mysqli);
                                         }
                               }
+                    
                     ?>
+                    <script type="text/javascript">  
+                        var rowsResult = <?php echo json_encode($numResults) ?>;
+                        function displaynumRows(){      
+                            document.getElementById("number-of-rows").innerHTML = "Results found:" + rowResult;
+                        }
+                    </script>
             </main>
         </body>
 </html>
