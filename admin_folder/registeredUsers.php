@@ -63,8 +63,8 @@ session_start();
                         }
                     </script> -->
 
-                    <!-- <table>
-                              <tr>
+                    <table>
+                              <!-- <tr>
                                         <th>QR code</th>
                                         <th>First Name</th>
                                         <th>Last Name</th>
@@ -113,7 +113,6 @@ session_start();
                                         } else {
                                                         $numResults = mysqli_num_rows($result);
                                                         echo "Number of rows found: " . $result ;
-                                                        echo "<table>";
                                                         echo "<tr>";
                                                         echo "<th>QR code</th>";
                                                         echo "<th>First Name</th>";
