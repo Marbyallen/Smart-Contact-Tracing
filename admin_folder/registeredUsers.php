@@ -110,7 +110,7 @@ session_start();
                                                             }
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
-                                        } elseif(empty($Sfname && $Slname)) {
+                                        } else{
                                             $numResults = mysqli_num_rows($result);
                                                 echo "Number of rows found: " . $result ;
                                                 echo "<tr>";
