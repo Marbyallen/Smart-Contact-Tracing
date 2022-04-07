@@ -77,7 +77,7 @@ session_start();
                               if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         $Sfname = $_REQUEST['Sfname'];
                                         $Slname = $_REQUEST['Slname'];
-                                        static $numResults = "";
+                                        // static $numResults = "";
                                                 echo "Number of rows found: " . $numResults ;
                                                 echo "<tr>";
                                                 echo "<th>QR code</th>";
