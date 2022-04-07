@@ -106,6 +106,7 @@ session_start();
                                         } elseif(!empty($Slname)) {
                                                   
                                                   $result = mysqli_query($mysqli," SELECT  * FROM customers_table WHERE lastname = '".$Slname."' ");
+                                                  $numResults = mysqli_num_rows($result);
                                                             while($row = mysqli_fetch_array($result))
                                                             {
                                                                       echo "<tr>";
@@ -120,7 +121,9 @@ session_start();
                                                             echo "</table>";
                                                             mysqli_close($mysqli);
                                         } else{
+                                                        $numResults = mysqli_num_rows($result);
                                                         while($row = mysqli_fetch_array($result))
+                                                        
                                                             {
                                                                       echo "<tr>";
                                                                       echo "<td>" . $row['QRcode'] . "</td>";
