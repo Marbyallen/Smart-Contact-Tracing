@@ -13,8 +13,7 @@ $address	= "";
 $admin_customer = "";
 $errors   = array();
 $emailinput = "";
-
-$db = mysqli_connect('localhost', 'u923368226_tracingconnect', 'Mainsct21!', 'registration');
+$db = mysqli_connect('localhost', 'u923368226_tracingconnect', 'Mainsct21!', 'u923368226_contactTracing');
 if (isset($_POST['reg_user'])) {
 
 	$qrcode 	= mysqli_real_escape_string($db, $_POST['qrcode']);
@@ -61,7 +60,7 @@ if (isset($_POST['reg_user'])) {
 		array_push($errors, "-Password is required");
 	}
 
-	$user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+	$user_check_query = "SELECT * FROM allusers_table WHERE username='$username' OR email='$email' LIMIT 1";
 	$result = mysqli_query($db, $user_check_query);
 	$user = mysqli_fetch_assoc($result);
 
@@ -81,7 +80,7 @@ if (isset($_POST['reg_user'])) {
 	// Insert New Data
 	if (count($errors) == 0) {
 		$password = md5($password_1);
-		$query = "INSERT INTO users (qrcode,firstname,lastname,gender,contact, email,address,username, password,admin_customer) VALUES ('$qrcode','$firstname','$lastname','$gender','$contact','$emailinput$email','$address','$username', '$password','$admin_customer')";
+		$query = "INSERT INTO allusers_table (qrcode,firstname,lastname,gender,contact, email,address,username, password,admin_customer) VALUES ('$qrcode','$firstname','$lastname','$gender','$contact','$emailinput$email','$address','$username', '$password','$admin_customer')";
 		mysqli_query($db, $query);
 		$_SESSION['username'] = $username;
 		$_SESSION['success']  = "You're now logged in";
@@ -107,7 +106,7 @@ if (isset($_POST['login_user'])) {
 		$password = md5($password);
 
 		// $query = "SELECT * FROM Allusers_table WHERE username='$username' AND password='$password'";
-		$query = "SELECT * FROM Allusers_table WHERE username = '".$username."' AND password = '".$password."' limit 1 ";
+		$query = "SELECT * FROM allusers_table WHERE username = '".$username."' AND password = '".$password."' limit 1 ";
 		$results = mysqli_query($con, $query);
 		if (mysqli_num_rows($results) == 1) {
 			$_SESSION['username'] = $username;
