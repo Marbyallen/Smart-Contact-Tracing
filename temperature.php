@@ -10,7 +10,6 @@
 		unset($_SESSION['username']);
 		header("location: login.php");
 	}
-  $url = "https://chart.googleapis.com/chart?cht=qr&chl={$_SESSION['username']}&chs=200x200&chld=L|0";
 ?>
 
 
@@ -31,7 +30,6 @@
 </header>
 <body>
     <div c  lass="wrapper">
-    <img src="<?php echo $url?>">
 
 
     </div>
