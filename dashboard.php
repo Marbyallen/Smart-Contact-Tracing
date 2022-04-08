@@ -15,11 +15,11 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="dashboard.css">
-    <title>Dashboard</title>
+    <title>THESIS</title>
 </head>
 <header>
 <nav class="nav">
-    <div class="logo"><a href="index.php">Tracing<span>Connections</span></a></div>
+    <div class="logo"><a href="index.php">CONTACT<span>TRACING</span></a></div>
     <ul class="nav_link">
     </ul>
     <div class="nav_button">

@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign Up</title>
+	<title>Registration System</title>
 	<link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
 	<div class="header">
-		<h2>Register to Tracing Connections</h2>
+		<h2>Register to SmartC</h2>
 	</div>
 
 	<form method="post" action="register.php">

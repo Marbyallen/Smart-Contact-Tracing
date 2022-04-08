@@ -5,12 +5,12 @@ include('server.php');
 <head>
 </head>
     <link rel="stylesheet" href="login.css">
-    <title>Log In</title>
+    <title>SMARTC</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="registration">
-            <h1>Log In to Tracing Connections</h1>
+            <h1>Log In to Contact Tracing</h1>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<?php include('errors.php') ?>
                 <div class="user-detail">
