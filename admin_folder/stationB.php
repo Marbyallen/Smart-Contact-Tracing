@@ -76,7 +76,7 @@ session_start();
                         $QRcode = "";
                     ?>
                     <table class="table table-bordered">
-                        <tr>
+                        <!-- <tr>
                                   <th>QR code</th>
                                   <th>First Name</th>
                                   <th>Last Name</th>
@@ -87,15 +87,29 @@ session_start();
                                   <th>Date</th>
                                   <th>Time</th>
                                   <th>Body Heat Temperature</th>
-                        </tr>
+                        </tr> -->
                     <?php
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                  // collect value of input field
-                                  $Sfname = $_REQUEST['Sfname'];
-                                  $Slname = $_REQUEST['Slname'];
-                                  $QRcode = $_REQUEST['QRcode'];
-                                  $date1 = $_REQUEST['date1'];
-                                  $date2 = $_REQUEST['date2'];
+                            // collect value of input field
+                            $Sfname = $_REQUEST['Sfname'];
+                            $Slname = $_REQUEST['Slname'];
+                            $QRcode = $_REQUEST['QRcode'];
+                            $date1 = $_REQUEST['date1'];
+                            $date2 = $_REQUEST['date2'];
+                            echo "
+                            <tr>
+                            <th>QR code</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Contact No.</th>
+                            <th>Email Address</th>
+                            <th>Station</th>
+                            <th>Facial recognition image</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Body Heat Temperature</th>
+                            </tr>
+                            ";
                                   if (!empty($Sfname)) {
                                             $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE firstname LIKE '".$Sfname."' ");
                                                       while($row = mysqli_fetch_array($result))
