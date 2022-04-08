@@ -113,7 +113,9 @@ session_start();
 
                                   if (!empty($Sfname)) {
                                             $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete WHERE firstname LIKE '".$Sfname."' ");
-                                                      while($row = mysqli_fetch_array($result))
+                                            $numResults = mysqli_num_rows($result);
+                                            echo "Number of rows found: " . $numResults;          
+                                            while($row = mysqli_fetch_array($result))
                                                                 {
                                                                     // station facialimg date time bodyheat_temp
                                                                 echo "<tr>";
@@ -132,7 +134,8 @@ session_start();
                                             echo "</table>";
                                             mysqli_close($mysqli);
                                   } elseif(!empty($Slname)) {
-                                            
+                                            $numResults = mysqli_num_rows($result);
+                                            echo "Number of rows found: " . $numResults;
                                             $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete WHERE lastname = '".$Slname."' ");
                                                       while($row = mysqli_fetch_array($result))
                                                       {
@@ -154,6 +157,8 @@ session_start();
 
                                  } elseif(!empty($QRcode)){
                                     $result = mysqli_query($mysqli," SELECT  * FROM stationA_complete WHERE QRcode = '".$QRcode."' ");
+                                    $numResults = mysqli_num_rows($result);
+                                    echo "Number of rows found: " . $numResults;
                                                         while($row = mysqli_fetch_array($result))
                                                         {
                                                                 echo "<tr>";
@@ -173,6 +178,8 @@ session_start();
                                                         mysqli_close($mysqli);
                                   } elseif(!empty($date1) && !empty($date2)){
                                     $result = mysqli_query($mysqli, "SELECT * FROM `stationA_complete` WHERE `date` BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
+                                    $numResults = mysqli_num_rows($result);
+                                    echo "Number of rows found: " . $numResults;
                                     while($row = mysqli_fetch_array($result))
                                     {
                                             echo "<tr>";
@@ -191,6 +198,8 @@ session_start();
                                     echo "</table>";
                                     mysqli_close($mysqli);
                                   } else {
+                                    $numResults = mysqli_num_rows($result);
+                                    echo "Number of rows found: " . $numResults;
                                     while($row = mysqli_fetch_array($result))
                                     {
                                               echo "<tr>";
