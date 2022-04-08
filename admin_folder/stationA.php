@@ -58,7 +58,7 @@ session_start();
                         </div><br>
                         <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
                     </form> <br>
-                    <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button>
+                    <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br>
                         <!-- Display Table -->
                     <?php
                         include "db_connect.php";
