@@ -56,7 +56,7 @@
             </div>
             <div class="sidebar_bottom">
                  <ul>
-                    <li><button><a href="index.php?logout='1'" >LOG OUT</a></button></li>
+                    <li><button><a href="logout.php" >LOG OUT</a></button></li>
                   
                 </ul>
             </div>

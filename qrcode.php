@@ -11,18 +11,17 @@
 		header("location: login.php");
 	}
   $url = "https://chart.googleapis.com/chart?cht=qr&chl={$_SESSION['username']}&chs=200x200&chld=L|0";
+  include('function.php');
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="qrcode.css">
-      <title>QR Code Generator</title>
+    <title>QR CODE</title>
 </head>
 <header>
 <nav class="nav">
-    <div class="logo"><a href="index.php">CONTACT <span>TRACING</span></a></div>
+    <div class="logo"><a href="index.php">Tracing<span>Connections</span></a></div>
     <ul class="nav_link">
     </ul>
     <div class="nav_button">
@@ -30,25 +29,25 @@
 </nav>
 </header>
 <body>
-    <div c  lass="wrapper">
-    <img src="<?php echo $url?>">
-
-
-    </div>
-    <div class="sidebar">
-        <ul>
-            <li><button><a href="dashboard.php">DASHBOARD</a></button></li>
-            <li><button><a href="profile.php">PROFILE</a> </button></li>
-            <li><button><a href="qrcode.php">QR CODE</a></button></li>
-            <li><button><a href="temperature.php">TEMPERATURE</a></button></li>
-        </ul>
-    </div>
-    <div class="sidebar_bottom">
-        <ul>
-            <li><button><a href="index.php?logout='1'" >LOG OUT</a></button></li>
-        </ul>
-    </div>
-  
+        <div class="wrapper">
+        <img src="<?php echo $url?>">
+        </div>
+            <div class="sidebar">   
+                <ul>
+                    <li><button><a href="dashboard.php">DASHBOARD</a></button></li>
+                    <li><button><a href="profile.php">PROFILE</a> </button></li>
+                    <li><button><a href="qrcode.php">QR CODE</a></button></li>
+                    <li><button><a href="temperature.php">TEMPERATURE</a></button></li>
+                </ul>
+            </div>
+            <div class="sidebar_bottom">
+                 <ul>
+                    <li><button><a href="logout.php" >LOG OUT</a></button></li>
+                  
+                </ul>
+            </div>
+                
+      </div>
 </body>
 
 </html>

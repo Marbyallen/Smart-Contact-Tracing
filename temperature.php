@@ -1,5 +1,6 @@
 <?php
 	session_start();
+    include('function.php');
 
 	if (!isset($_SESSION['username'])) {
 		$_SESSION['msg'] = "You must log in first";
@@ -10,6 +11,7 @@
 		unset($_SESSION['username']);
 		header("location: login.php");
 	}
+    
 ?>
 
 
@@ -43,7 +45,7 @@
     </div>
     <div class="sidebar_bottom">
         <ul>
-            <li><button><a href="index.php?logout='1'" >LOG OUT</a></button></li>
+            <li><button><a href="logout.php" >LOG OUT</a></button></li>
         </ul>
     </div>
   
