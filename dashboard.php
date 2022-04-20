@@ -24,11 +24,11 @@
         <div class="wrapper">
                 <div class="main-top">
                     <?php 
-                    // if (isset($_SESSION['QRcode'])) : ?>
+                    if (isset($_SESSION['QRcode'])) : ?>
                         <p>Welcome <strong><?php 
-                        // echo $user_data['firstname']; echo $user_data['lastname'];  ?><strong></p>
+                        echo $user_data['firstname']; echo $user_data['lastname'];  ?><strong></p>
                     <?php 
-                    // endif ?>
+                    endif ?>
                 </div>
                 <div class="sidebar">   
                     <ul>
