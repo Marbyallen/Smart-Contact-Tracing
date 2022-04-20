@@ -72,8 +72,12 @@ input:focus,input:valid{
 }
 
 .success {
-  color: #3c763d; 
-  background: #dff0d8; 
-  border: 1px solid #3c763d;
-  margin-bottom: 20px;
-}
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border-radius: 5px; 
+	text-align: left;
+  }

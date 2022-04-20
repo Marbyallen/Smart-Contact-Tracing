@@ -2,12 +2,11 @@
 
 session_start();
 
-if(isset($_SESSION['username']))
+if(isset($_SESSION['QRcode']))
 {
-	unset($_SESSION['username']);
+	unset($_SESSION['QRcode']);
 
 }
 
 header("Location: login.php");
-die; 
-?>
+die;

@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.nav_button button{
+    padding: 5px 12px;
+    border: solid 1px cornflowerblue;
+    border-radius: 10%/20%;
+    color: rgb(52, 53, 53);
+    background-color: rgb(89, 174, 196);
+    cursor: pointer;
+}
+
+header{
+    background-color: rgb(66, 65, 65);
+    font-size: 1.3em;
+    display: flex;
+    font-weight: 200;
+    justify-content: space-around;
+    border-bottom: 7px solid rgb(84, 165, 165);
+}
+.nav{
+    margin: 0px;
+    font-family: sans-serif,Arial;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 8vh;
+    overflow-x:hidden;
+}
+.nav a{
+    color: rgb(170, 165, 165);
+}
+.logo{
+    width: 80%;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.logo a{
+    color:rgb(75, 197, 197);
+}
+.logo span{
+    color: rgb(170, 165, 165);
+
+}
+
+.nav:nth-child(1){
+    margin-left: 40px;
+}
+.nav_link{
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    color: black;
+    justify-content: space-between;
+    width: 190%;
+    margin-left: 100px;
+}
+.nav_link li{
+    padding: 8px;
+}
+.nav_link a:hover{
+    color:rgb(75, 197, 197);
+}
+.nav_button{
+    
+    display: flex;
+    align-items: center;
+    color: black;
+    justify-content:flex-end;
+    width: 100%;
+}
+.nav_button li{
+    padding-left: 40px;
+}
+.nav_button a{
+    font-size: 1.4em;
+    color: rgba(26, 25, 25, 0.877);
+}
+.nav_button button:hover{
+    background-color: rgba(108, 212, 238, 0.89);
+}
+/* End of Navigation */
+
+body{
+    background-color: rgb(223, 231, 238);
+    height: 1100px;
+    overflow-y: scroll;
+    overflow-x:hidden;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.inside{
+    background-color: aliceblue;
+    width: 1024px;
+    height: 1100px;
+    left: 0;
+    right: 0;
+    margin:auto;
+    position: absolute;
+}
+.profilepic{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(98, 98, 105);
+    margin: 30px auto 0px auto;
+    border: 5px solid rgb(140, 159, 160);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%; 
+}
+.profilepic p{
+    color: azure ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detail_wrapper{
+    
+    background-color: rgba(179, 179, 179, 0.884);
+    width: 900px;
+    height: 400px;
+    margin: 40px auto 0px auto;
+    border-radius: 5%/10%
+}
+.detail_header{
+    width: 900px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+.detail_header p{
+    margin: 40px 0px 60px 0px;
+}
+.detail-row-1{
+    display: flex;
+    justify-content: space-around;
+    margin-top:50px;
+    font-size: 1.2em;
+}
+.detail-row-1 ul{
+    font-weight: bold;
+}
+.detail-row-1 li{
+    padding-top: 20px;
+    color: rgb(64, 132, 209);;
+}
+
+.detail-row-2{
+    display: flex;
+    justify-content: space-around;
+    margin-top:100px;
+    font-size: 1.2em;
+}
+.detail-row-2 ul{
+    font-weight: bold;
+}
+.detail-row-2 li{
+    padding-top: 20px;
+    color: rgb(64, 132, 209);
+}
+.button_edit{
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.inside .button_edit button{
+    padding: 10px 30px 10px 30px ;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color:  rgb(64, 132, 209);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 0.3 all ease-in-out;
+    list-style: none;
+    border: 1px solid rgb(75, 73, 73);
+    margin: auto;
+}
+.inside .button_edit button:hover{
+    background-color:  rgb(82, 144, 214);
+}
+.sidebar{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin-top: 300px;
+    position: fixed;
+    width: 150px;
+    height: 250px;
+    background-color: rgb(66, 65, 65);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 7px solid rgb(84, 165, 165);
+    border-top: 7px solid rgb(84, 165, 165);
+    border-right: 7px solid rgb(84, 165, 165);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.qr-code {
+    max-width: 200px;
+    margin: 60px;
+  }
+.sidebar a{
+    color: black;
+    font-family: sans-serif;
+    font-weight:600;
+}
+.sidebar_bottom a{
+    color: black;
+    font-family: sans-serif;
+    font-weight:bold;
+}   
+.sidebar li{
+    font-size: 0.8em;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+.sidebar li button{
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(75, 197, 197);
+    border: 3px solid rgb(128, 168, 168);
+    transition: 0.3 all ease-in-out;
+}
+.sidebar li button:hover{
+    background-color: rgba(92, 233, 233, 0.993);
+}
+
+
+.sidebar_bottom{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom:0;
+    margin-top: 580px;
+    position: fixed;
+    width: 150px;
+    height: 70px;
+    background-color: rgb(66, 65, 65);
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    border-bottom: 7px solid rgb(84, 165, 165);
+    border-top: 7px solid rgb(84, 165, 165);
+    border-right: 7px solid rgb(84, 165, 165);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.sidebar_bottom li{
+    font-size: 0.8em;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+.sidebar_bottom li button{
+    cursor: pointer;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(75, 197, 197);
+    border: 3px solid rgb(128, 168, 168);
+    transition: 0.3 all ease-in-out;
+}
+.sidebar_bottom li button:hover{
+    background-color: rgba(92, 233, 233, 0.993);
+}
+
+/* table */
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:hover {background-color: coral;}
+th, td {
+    padding: 15px;
+    text-align: left;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+table{
+    width: 100%;
+}
+
+th {
+    height: 70px;
+    background-color: #04AA6D;
+    color: white;
+}
+td {
+    text-align: center;
+  }
+
+
+  /* class */
+.second-header{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.mylogs-table{
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
