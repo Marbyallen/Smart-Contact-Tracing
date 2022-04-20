@@ -1,19 +1,28 @@
 <?php
 function check_login($con)
 {
-    if(isset($_SESSION['user_id']))
-    {
-        $id = $_SESSION['user_id'];
-        $query = "select * from Allusers_table where user_id = '$id' limit 1";
-        $result = mysqli_query($con,$query);
-        if($result && mysqli_num_rows($result) > 0)
-        {
-            $user_data = mysqli_fetch_assoc($result);
-            return $user_data;
-        }
+
+	if(isset($_SESSION['QRcode']))
+	{
+
+		$id = $_SESSION['QRcode'];
+		$query = "SELECT * FROM allusers_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+
+		$result = mysqli_query($con,$query);
+		if($result && mysqli_num_rows($result) > 0)
+		{
+
+			$user_data = mysqli_fetch_assoc($result);
+			return $user_data;
+		}
+	} else {
+        //redirect to login
+        header("Location: login.php");
+        die;
     }
-    die;
 }
+
+
 
 function encrypt_decrypt($string, $action = 'encrypt')
 {
@@ -36,13 +45,13 @@ function encrypt_decrypt($string, $action = 'encrypt')
 
 function qrdisplay($string){
 	
-    $link1 = "https://chart.googleapis.com/chart?cht=qr&chl=";
-    $link3 = "&chs=160x160&chld=L|0";
+$link1 = "https://chart.googleapis.com/chart?cht=qr&chl=";
+$link3 = "&chs=160x160&chld=L|0";
 
-    $qrcode = $link1 . $string . $link3;
+$qrcode = $link1 . $string . $link3;
 
-    return $qrcode;
+return $qrcode;
 
 }
 
-?> 
+?>
