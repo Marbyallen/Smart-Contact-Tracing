@@ -4,7 +4,7 @@ function check_login($con)
     if(isset($_SESSION['user_id']))
     {
         $id = $_SESSION['user_id'];
-        $query = "select * from allusers_table where user_id = '$id' limit 1";
+        $query = "select * from Allusers_table where user_id = '$id' limit 1";
         $result = mysqli_query($con,$query);
         if($result && mysqli_num_rows($result) > 0)
         {
@@ -36,12 +36,12 @@ function encrypt_decrypt($string, $action = 'encrypt')
 
 function qrdisplay($string){
 	
-$link1 = "https://chart.googleapis.com/chart?cht=qr&chl=";
-$link3 = "&chs=160x160&chld=L|0";
+    $link1 = "https://chart.googleapis.com/chart?cht=qr&chl=";
+    $link3 = "&chs=160x160&chld=L|0";
 
-$qrcode = $link1 . $string . $link3;
+    $qrcode = $link1 . $string . $link3;
 
-return $qrcode;
+    return $qrcode;
 
 }
 
