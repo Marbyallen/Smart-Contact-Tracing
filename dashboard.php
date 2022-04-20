@@ -25,7 +25,8 @@
                 <div class="main-top">
                     <?php 
                     // if (isset($_SESSION['QRcode'])) : ?>
-                        <p>Welcome <strong><?php echo $user_data['firstname']; echo $user_data['lastname'];  ?><strong></p>
+                        <p>Welcome <strong><?php 
+                        // echo $user_data['firstname']; echo $user_data['lastname'];  ?><strong></p>
                     <?php 
                     // endif ?>
                 </div>
