@@ -1,15 +1,9 @@
 <?php
 	session_start();
-
-	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
-	}
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: login.php");
-	}
+    include('functionLogin.php');
+    include('connection.php');
+    $user_data = check_login($con);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,29 +23,16 @@
 <body>
       <div class="wrapper">
             <div class="main-top">
-            <?php if (isset($_SESSION['success'])) : ?>
-		<div class="error success">
-             <!--
-			<h3>
-				<?php 
-					echo $_SESSION['success'];
-					unset($_SESSION['success']);
-				?>
-			</h3>
-            -->
-		</div>
-	<?php endif ?>
-
-	<?php if (isset($_SESSION['username'])) : ?>
-		<p>Welcome <strong><?php echo $_SESSION['username']; ?><strong></p>
-	<?php endif ?>
-            
+                <?php if (isset($_SESSION['QRcode'])) : ?>
+                    <p>Welcome <strong><?php echo $user_data['firstname']; echo $user_data['lastname'];  ?><strong></p>
+                <?php endif ?>
+            </div>
             <div class="sidebar">   
                 <ul>
                     <li><button><a href="dashboard.php">DASHBOARD</a></button></li>
                     <li><button><a href="profile.php">PROFILE</a> </button></li>
                     <li><button><a href="qrcode.php">QR CODE</a></button></li>
-                    <li><button><a href="temperature.php">TEMPERATURE</a></button></li>
+                    <li><button><a href="mylogs.php">MY LOGS</a></button></li>
                 </ul>
             </div>
             <div class="sidebar_bottom">

@@ -1,5 +1,33 @@
 <?php 
-include('server.php');
+// include('server.php');
+session_start();
+include("connection.php");
+include("functionLogin.php");
+$errors   = array();
+$success   = array();
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $userName = $_POST['userName'];
+    $userPassword = $_POST['userPassword'];
+    $_SESSION['userName'] = $_POST['userName'];
+
+    $result = mysqli_query($con," SELECT  * FROM allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
+    if($row = mysqli_fetch_array($result)){
+        // echo "username found from db: " . $userName . "<br>";
+        
+        if($row['password'] === $userPassword){
+            echo "password found also";
+            $user_data = mysqli_fetch_assoc($row);
+            $_SESSION['QRcode'] = $row['QRcode'];
+            header("Location: dashboard.php");
+        } else {
+            // echo "wrong password";
+            array_push($errors, "Wrong username or password");
+        }
+    } else {
+    //    echo "username not found <br> ";
+    array_push($errors, "Wrong username or password");
+    }
+    }
  ?>
 <!DOCTYPE html>
 <head>
@@ -16,11 +44,11 @@ include('server.php');
                 <div class="user-detail">
                     <div class="inputs">
                         <h3 class="details">Username</h3>
-                        <input type="username" name="username" placeholder="Username" required>
+                        <input type="text" name="userName" placeholder="Username" required>
                     </div>
                     <div class="inputs">
                         <h3 class="details">Password</h3>
-                        <input type="password" name="password" placeholder="Password" minlength = "6"required>
+                        <input type="password" name="userPassword" placeholder="Password" required>
                     </div>
                     
                     <div class="submit">
