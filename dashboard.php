@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    include('functionLogin.php');
+    include('function.php');
     include('connection.php');
     $user_data = check_login($con);
     

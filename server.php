@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include('connection.php');
-include('functionLogin.php');
+include('function.php');
 $username 	= "";
 $email	  	= "";
 $firstname	= "";
@@ -29,7 +29,7 @@ if (isset($_POST['reg_user'])) {
 	$username = $_POST['username'];
 	$password_1 = $_POST['password_1'];
 
-	$user_check_query = "SELECT * FROM allusers_table WHERE username='$username' OR email='$email' LIMIT 1";
+	$user_check_query = "SELECT * FROM Allusers_table WHERE username='$username' OR email='$email' LIMIT 1";
 	$result = mysqli_query($con, $user_check_query);
 	$user = mysqli_fetch_assoc($result);
 
@@ -51,7 +51,7 @@ if (isset($_POST['reg_user'])) {
 		$link2 = $username . $contactno;
 		$pwd = encrypt_decrypt($link2, 'encrypt');
 		$qrcode = $link1 . $username . $contactno . $link3;
-		$query = "INSERT INTO allusers_table (qrcode,firstname,lastname,gender,contactno, email,address,username, password,admin_customer) 
+		$query = "INSERT INTO Allusers_table (qrcode,firstname,lastname,gender,contactno, email,address,username, password,admin_customer) 
 		VALUES ('$pwd','$firstname','$lastname','$gender','$contactno','$emailinput$email','$address','$username', '$password_1','$admin_customer')";
 		if (mysqli_query($con, $query)) {
 			array_push($success, "Register success, you may login");
@@ -80,7 +80,7 @@ if (isset($_POST['login_user'])) {
 		$password = md5($password);
 
 		// $query = "SELECT * FROM Allusers_table WHERE username='$username' AND password='$password'";
-		$query = "SELECT * FROM allusers_table WHERE username = '".$username."' AND password = '".$password."' limit 1 ";
+		$query = "SELECT * FROM Allusers_table WHERE username = '".$username."' AND password = '".$password."' limit 1 ";
 		$results = mysqli_query($con, $query);
 		if (mysqli_num_rows($results) == 1) {
 			$_SESSION['username'] = $username;

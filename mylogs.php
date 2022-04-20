@@ -1,6 +1,6 @@
 <?php
 	session_start();
-    include('functionLogin.php');
+    include('function.php');
     include('connection.php');
     $user_data = check_login($con);
     $userQRcode = $_SESSION['QRcode'];
@@ -37,7 +37,7 @@
             <?php
                 // SELECT QRcode, firstname, lastname, station, facialimg, date, time, bodyheat_temp
                 // FROM usersAndStations_table WHERE QRcode LIKE 'qr8' 
-                $result = mysqli_query($con," SELECT  * FROM usersandstations_table WHERE QRcode LIKE '".$userQRcode."' ");
+                $result = mysqli_query($con," SELECT  * FROM usersAndStations_table WHERE QRcode LIKE '".$userQRcode."' ");
                 
                     echo "
                         <tr>
