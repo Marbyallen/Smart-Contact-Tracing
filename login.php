@@ -2,7 +2,7 @@
 // include('server.php');
 session_start();
 include("connection.php");
-include("functionLogin.php");
+include("function.php");
 $errors   = array();
 $success   = array();
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $userPassword = $_POST['userPassword'];
     $_SESSION['userName'] = $_POST['userName'];
 
-    $result = mysqli_query($con," SELECT  * FROM allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
+    $result = mysqli_query($con," SELECT  * FROM Allusers_table WHERE username LIKE '".$userName."' LIMIT 1");
     if($row = mysqli_fetch_array($result)){
         // echo "username found from db: " . $userName . "<br>";
         
