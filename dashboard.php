@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
     <title>Dashboard</title>
 </head>
 <header>
