@@ -24,6 +24,7 @@
         <div class="wrapper">
                 <div class="main-top">
                     <?php 
+                    echo var_dump($row);
                     if (isset($_SESSION['QRcode'])) : ?>
                         <p>Welcome <strong><?php 
                         echo $_SESSION['firstname']; echo $_SESSION['lastname'];  ?><strong></p>
