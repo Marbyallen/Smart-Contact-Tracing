@@ -8,6 +8,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="dashboard.css">
+    <link rel="shortcut icon" href="#">
     <title>Dashboard</title>
 </head>
 <header>
