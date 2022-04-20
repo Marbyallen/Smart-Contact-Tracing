@@ -10,3 +10,4 @@ if(isset($_SESSION['QRcode']))
 
 header("Location: login.php");
 die;
+?>
