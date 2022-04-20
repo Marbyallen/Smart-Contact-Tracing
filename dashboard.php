@@ -3,7 +3,7 @@
     include('function.php');
     include('connection.php');
     $user_data = check_login($con);
-    echo var_dump($user_data);
+    echo var_dump($row);
 ?>
 <!DOCTYPE html>
 <html lang="en">
