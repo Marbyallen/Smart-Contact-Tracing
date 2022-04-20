@@ -8,6 +8,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="dashboard.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Dashboard</title>
     </head>
     <header>
