@@ -45,7 +45,7 @@ include("admin_functions.php");
             echo var_dump($_SESSION['QRcode']);
 
             $id = $_SESSION['QRcode'];
-            echo var_dump($id);
+            echo "id: ".var_dump($id);
         echo "<br>id = ". var_dump($id);
         $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
         
