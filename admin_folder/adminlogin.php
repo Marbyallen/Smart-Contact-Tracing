@@ -46,7 +46,7 @@ include("db_connect.php");
             echo var_dump($_SESSION['QRcode']);
 
             echo "<br> user_data <br>";
-            echo var_dump($user_data['QRcode']);
+            echo var_dump($user_data);
 
             //functions
             echo "<br> function <br>";
