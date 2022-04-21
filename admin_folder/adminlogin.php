@@ -8,13 +8,15 @@ include("db_connect.php");
       $userName = $_POST['userName'];
       $userPassword = $_POST['userPassword'];
 
-
       $result = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$userName."' LIMIT 1");
       if($row = mysqli_fetch_array($result)){
+
           echo "username found from db: " . $userName . "<br>";
           $_SESSION['QRcode'] = $row['QRcode'];
           var_dump($_SESSION['QRcode']);
+
             if($row['password'] === $userPassword){
+
                 echo "password found also";
                 // $user_data = mysqli_fetch_assoc($row);
                 $_SESSION['QRcode'] = $row['QRcode'];
@@ -27,42 +29,39 @@ include("db_connect.php");
       }
   }
 
-    //testing
-    // $t_username = "Hady";
-    // $t_password = "grana21";
+    testing
+    $t_username = "Hady";
+    $t_password = "grana21";
 
-    // $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
-    // if($row = mysqli_fetch_array($testQuery)){
-    //   echo "username found from db: " . $t_username . "<br>";
-    //   $_SESSION['QRcode'] = $row['QRcode'];
-    //   var_dump($_SESSION['QRcode']);
+    $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
+    if($row = mysqli_fetch_array($testQuery)){
+      echo "username found from db: " . $t_username . "<br>";
+      $_SESSION['QRcode'] = $row['QRcode'];
+      var_dump($_SESSION['QRcode']);
 
-    //     if($row['password'] === $t_password){
-    //         echo "<br>password found also";
-    //         // $user_data = mysqli_fetch_assoc($row);
+        if($row['password'] === $t_password){
+            echo "<br>password found also";
+            // $user_data = mysqli_fetch_assoc($row);
 
-    //         $_SESSION['QRcode'] = $row['QRcode'];
-    //         echo "<br> QRcode <br>";
-    //         echo var_dump($_SESSION['QRcode']);
+            $_SESSION['QRcode'] = $row['QRcode'];
+            echo "<br> QRcode <br>";
+            echo var_dump($_SESSION['QRcode']);
 
-    //         echo "<br> user_data <br>";
-    //         echo var_dump($user_data);
-
-    //         //functions
-    //         echo "<br> function <br>";
-    //         $id = $_SESSION['QRcode'];
-    //         $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+            //functions
+            echo "<br> function <br>";
+            $id = $_SESSION['QRcode'];
+            $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
         
-    //         $t_result = mysqli_query($con,$testQuery2);
+            $t_result = mysqli_query($con,$testQuery2);
 
-    //         if($t_result && mysqli_num_rows($t_result) > 0)
-    //         {
-    //           $user_data = mysqli_fetch_assoc($t_result);
-    //           echo "<br> user data <br>";
-    //           echo var_dump($user_data);
-    //         }
-    //     }
-    //   }
+            if($t_result && mysqli_num_rows($t_result) > 0)
+            {
+              $user_data = mysqli_fetch_assoc($t_result);
+              echo "<br> user data <br>";
+              echo var_dump($user_data);
+            }
+        }
+      }
 
 
 
