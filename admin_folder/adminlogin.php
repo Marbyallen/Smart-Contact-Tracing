@@ -50,6 +50,7 @@ include("db_connect.php");
 
             //functions
             echo "<br> function <br>";
+            $id = $_SESSION['QRcode'];
             $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
         
             $t_result = mysqli_query($con,$testQuery2);
