@@ -27,7 +27,7 @@
                     <?php 
                     if (isset($user_data['QRcode'])) : ?>
                         <p>Welcome <strong><?php 
-                        echo $user_data['firstname'] . " "; echo $user_data['lastname'];  ?><strong></p>
+                        echo $user_data['firstname'] ." ". $user_data['lastname'];  ?><strong></p>
                     <?php 
                     endif ?>
                 </div>
