@@ -28,40 +28,40 @@ include("admin_functions.php");
   }
 
     //testing
-    $t_username = "Hady";
-    $t_password = "grana21";
+  //   $t_username = "Hady";
+  //   $t_password = "grana21";
 
-    $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
-    if($row = mysqli_fetch_array($testQuery)){
-      echo "username found from db: " . $t_username . "<br>";
-      $_SESSION['QRcode'] = $row['QRcode'];
-      var_dump($_SESSION['QRcode']);
+  //   $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
+  //   if($row = mysqli_fetch_array($testQuery)){
+  //     echo "username found from db: " . $t_username . "<br>";
+  //     $_SESSION['QRcode'] = $row['QRcode'];
+  //     var_dump($_SESSION['QRcode']);
 
-        if($row['password'] === $t_password){
-            echo "<br>password found also";
-            $user_data = mysqli_fetch_assoc($row);
-            $_SESSION['QRcode'] = $row['QRcode'];
-            echo "<br> QRcode <br>";
-            echo var_dump($_SESSION['QRcode']);
-            echo "<br>";
-            $id = $_SESSION['QRcode'];
-        $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+  //       if($row['password'] === $t_password){
+  //           echo "<br>password found also";
+  //           $user_data = mysqli_fetch_assoc($row);
+  //           $_SESSION['QRcode'] = $row['QRcode'];
+  //           echo "<br> QRcode <br>";
+  //           echo var_dump($_SESSION['QRcode']);
+  //           echo "<br>";
+  //           $id = $_SESSION['QRcode'];
+  //       $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
         
-        $t_result = mysqli_query($con,$testQuery2);
+  //       $t_result = mysqli_query($con,$testQuery2);
 
-          if($t_result && mysqli_num_rows($t_result) > 0)
-          {
-            $user_data = mysqli_fetch_assoc($t_result);
-            echo "<br> user data <br>";
-            echo var_dump($user_data);
-          }
+  //         if($t_result && mysqli_num_rows($t_result) > 0)
+  //         {
+  //           $user_data = mysqli_fetch_assoc($t_result);
+  //           echo "<br> user data <br>";
+  //           echo var_dump($user_data);
+  //         }
 
-        } else {
-            echo "wrong password";
-        }
-      } else {
-      echo "username not found <br> ";
-  }
+  //       } else {
+  //           echo "wrong password";
+  //       }
+  //     } else {
+  //     echo "username not found <br> ";
+  // }
 
 
 ?>
