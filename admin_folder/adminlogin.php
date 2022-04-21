@@ -45,7 +45,6 @@ include("admin_functions.php");
             echo var_dump($row);
             echo "<br>";
             $id = $_SESSION['QRcode'];
-            echo "id: ".var_dump($id);
         $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
         
         $t_result = mysqli_query($con,$testQuery2);
@@ -53,6 +52,7 @@ include("admin_functions.php");
           if($t_result && mysqli_num_rows($t_result) > 0)
           {
             $user_data = mysqli_fetch_assoc($t_result);
+            echo "<br> user data <br>"
             echo "<br>user data: " . var_dump($user_data);
           }
 
