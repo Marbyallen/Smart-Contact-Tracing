@@ -1,5 +1,4 @@
 <?php
-
 function check_login($con)
 {
 	if(isset($_SESSION['QRcode']))
@@ -28,6 +27,5 @@ function check_login($con)
         die;
     }
 }
-
 
 ?>
