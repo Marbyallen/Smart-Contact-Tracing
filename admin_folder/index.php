@@ -30,12 +30,6 @@ session_start();
                    <main>
                     <h1>Head Admin Page</h1>
                     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
-
-                  <?php
-                    echo "<br>";
-                    echo var_dump($result);
-                    
-                  ?>
                    </main>
           </body>
 </html>

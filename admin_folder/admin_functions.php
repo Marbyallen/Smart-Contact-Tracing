@@ -15,15 +15,15 @@ function check_login($con)
 		}
 	} else {
         //redirect to login
-        // header("Location: adminlogin.php");
+        header("Location: adminlogin.php");
 
 		//test 
-		echo var_dump($_SESSION['QRcode']);
-		echo "<br> user data <br>";
-		echo var_dump($user_data);
+		// echo var_dump($_SESSION['QRcode']);
+		// echo "<br> user data <br>";
+		// echo var_dump($user_data);
 
-		echo "<br> row<br>";
-		echo var_dump($row);
+		// echo "<br> row<br>";
+		// echo var_dump($row);
         die;
     }
 }
