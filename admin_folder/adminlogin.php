@@ -43,7 +43,20 @@ include("admin_functions.php");
             $_SESSION['QRcode'] = $row['QRcode'];
             echo "<br>";
             echo var_dump($_SESSION['QRcode']);
-            header("#");
+
+            $id = $_SESSION['QRcode'];
+        echo "<br>id = ". var_dump($id);
+        $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+        
+        $t_result = mysqli_query($con,$testQuery2);
+
+          if($result && mysqli_num_rows($result) > 0)
+          {
+            $user_data = mysqli_fetch_assoc($result);
+            echo "<br>user data: " . var_dump($user_data);
+            return $user_data;
+          }
+
         } else {
             echo "wrong password";
         }
@@ -51,11 +64,6 @@ include("admin_functions.php");
       echo "username not found <br> ";
   }
 
-      $id = $_SESSION['QRcode'];
-        
-        $query = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
-
-        $result = mysqli_query($con,$query);
 
 ?>
 
