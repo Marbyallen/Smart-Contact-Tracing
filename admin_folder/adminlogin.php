@@ -47,6 +47,12 @@ include("db_connect.php");
   //     echo "username not found <br> ";
   // }
 
+      // $id = $_SESSION['QRcode'];
+        
+      //   $query = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+
+      //   $result = mysqli_query($con,$query);
+
 ?>
 
 <!DOCTYPE html>
