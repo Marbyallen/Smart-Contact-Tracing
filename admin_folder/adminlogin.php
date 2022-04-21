@@ -39,27 +39,31 @@ include("db_connect.php");
 
         if($row['password'] === $t_password){
             echo "<br>password found also";
-            $user_data = mysqli_fetch_assoc($row);
+            // $user_data = mysqli_fetch_assoc($row);
+
             $_SESSION['QRcode'] = $row['QRcode'];
             echo "<br> QRcode <br>";
             echo var_dump($_SESSION['QRcode']);
 
             echo "<br> user_data <br>";
             echo var_dump($user_data['QRcode']);
+
+            //functions
+            $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+        
+            $t_result = mysqli_query($con,$testQuery2);
+
+            if($t_result && mysqli_num_rows($t_result) > 0)
+            {
+              $user_data = mysqli_fetch_assoc($t_result);
+              echo "<br> user data <br>";
+              echo var_dump($user_data);
+            }
         }
       }
 
 
-  //       $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
-        
-  //       $t_result = mysqli_query($con,$testQuery2);
 
-  //         if($t_result && mysqli_num_rows($t_result) > 0)
-  //         {
-  //           $user_data = mysqli_fetch_assoc($t_result);
-  //           echo "<br> user data <br>";
-  //           echo var_dump($user_data);
-  //         }
 
 
 ?>
