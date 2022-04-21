@@ -50,9 +50,9 @@ include("admin_functions.php");
         
         $t_result = mysqli_query($con,$testQuery2);
 
-          if($result && mysqli_num_rows($result) > 0)
+          if($t_result && mysqli_num_rows($t_result) > 0)
           {
-            $user_data = mysqli_fetch_assoc($result);
+            $user_data = mysqli_fetch_assoc($t_result);
             echo "<br>user data: " . var_dump($user_data);
             return $user_data;
           }
