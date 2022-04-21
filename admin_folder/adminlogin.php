@@ -43,8 +43,9 @@ include("db_connect.php");
             $_SESSION['QRcode'] = $row['QRcode'];
             echo "<br> QRcode <br>";
             echo var_dump($_SESSION['QRcode']);
-            echo "<br>";
-            $id = $_SESSION['QRcode'];
+
+            echo "<br> user_data <br>";
+            echo var_dump($user_data['QRcode']);
         }
       }
 
@@ -59,13 +60,6 @@ include("db_connect.php");
   //           echo "<br> user data <br>";
   //           echo var_dump($user_data);
   //         }
-
-  //       } else {
-  //           echo "wrong password";
-  //       }
-  //     } else {
-  //     echo "username not found <br> ";
-  // }
 
 
 ?>
