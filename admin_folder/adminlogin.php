@@ -28,30 +28,31 @@ include("admin_functions.php");
   }
 
     //testing
-  //   $t_username = "Hady";
-  //   $t_password = "grana21";
-  //   $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
-  //   if($row = mysqli_fetch_array($testQuery)){
-  //     echo "username found from db: " . $t_username . "<br>";
-  //     $_SESSION['QRcode'] = $row['QRcode'];
-  //     var_dump($_SESSION['QRcode']);
-  //     if($row['password'] === $userPassword){
-  //         echo "password found also";
-  //         $user_data = mysqli_fetch_assoc($row);
-  //         $_SESSION['QRcode'] = $row['QRcode'];
-  //         header("Location: index.php");
-  //     } else {
-  //         echo "wrong password";
-  //     }
-  //     } else {
-  //     echo "username not found <br> ";
-  // }
+    $t_username = "Hady";
+    $t_password = "grana21";
 
-      // $id = $_SESSION['QRcode'];
+    $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
+    if($row = mysqli_fetch_array($testQuery)){
+      echo "username found from db: " . $t_username . "<br>";
+      $_SESSION['QRcode'] = $row['QRcode'];
+      var_dump($_SESSION['QRcode']);
+      if($row['password'] === $userPassword){
+          echo "password found also";
+          $user_data = mysqli_fetch_assoc($row);
+          $_SESSION['QRcode'] = $row['QRcode'];
+          header("#");
+      } else {
+          echo "wrong password";
+      }
+      } else {
+      echo "username not found <br> ";
+  }
+
+      $id = $_SESSION['QRcode'];
         
-      //   $query = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+        $query = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
 
-      //   $result = mysqli_query($con,$query);
+        $result = mysqli_query($con,$query);
 
 ?>
 
