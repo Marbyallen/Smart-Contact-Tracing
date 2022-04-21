@@ -36,7 +36,7 @@ session_start();
 
                   <?php
                     echo "<br>";
-                    echo var_dump($user_data);
+                    echo var_dump($result);
                     
                   ?>
                    </main>
