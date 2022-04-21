@@ -51,22 +51,21 @@ include("db_connect.php");
             $user_data = mysqli_fetch_assoc($row);
             echo "<br> user_data <br>";
             echo var_dump($user_data);
-
-
-            //functions
-            echo "<br> function <br>";
-            $id = $_SESSION['QRcode'];
-            $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
-        
-            $t_result = mysqli_query($con,$testQuery2);
-
-            if($t_result && mysqli_num_rows($t_result) > 0)
-            {
-              $user_data = mysqli_fetch_assoc($t_result);
-              echo "<br> user data <br>";
-              echo var_dump($user_data);
-            }
         }
+        //functions
+        echo "<br> function <br>";
+        $id = $_SESSION['QRcode'];
+        $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
+    
+        $t_result = mysqli_query($con,$testQuery2);
+
+        if($t_result && mysqli_num_rows($t_result) > 0)
+        {
+          $user_data = mysqli_fetch_assoc($t_result);
+          echo "<br> user data <br>";
+          echo var_dump($user_data);
+        }
+
       }
 
 
