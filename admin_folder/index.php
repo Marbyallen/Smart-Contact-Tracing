@@ -5,6 +5,9 @@ session_start();
 	include('admin_functions.php');
 
 	$user_data = check_login($con);
+  
+  echo var_dump($user_data);
+  // echo var_dump($user)
 ?>
 
 
