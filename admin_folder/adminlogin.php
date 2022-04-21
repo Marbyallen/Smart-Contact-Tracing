@@ -42,7 +42,7 @@ include("admin_functions.php");
             $user_data = mysqli_fetch_assoc($row);
             $_SESSION['QRcode'] = $row['QRcode'];
             echo "<br>";
-            echo var_dump($user_data);
+            echo var_dump($row);
             echo "<br>";
             $id = $_SESSION['QRcode'];
             echo "id: ".var_dump($id);
@@ -54,7 +54,6 @@ include("admin_functions.php");
           {
             $user_data = mysqli_fetch_assoc($t_result);
             echo "<br>user data: " . var_dump($user_data);
-            return $user_data;
           }
 
         } else {
