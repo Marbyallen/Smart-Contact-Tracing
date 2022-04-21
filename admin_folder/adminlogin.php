@@ -47,8 +47,7 @@ include("db_connect.php");
             echo "<br> QRcode <br>";
             echo var_dump($_SESSION['QRcode']);
 
-            $t_result2 = mysqli_query($con,$testQuery);
-            $user_data = mysqli_fetch_assoc($t_result2);
+            $user_data = mysqli_fetch_assoc($row);
             echo "<br> user_data <br>";
             echo var_dump($user_data);
 
