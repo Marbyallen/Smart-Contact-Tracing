@@ -21,6 +21,7 @@ include("db_connect.php");
                 $user_data = mysqli_fetch_assoc($row);
                 $_SESSION['QRcode'] = $row['QRcode'];
                 header("Location: index.php");
+                die;
             } else {
                 echo "wrong password";
             }
