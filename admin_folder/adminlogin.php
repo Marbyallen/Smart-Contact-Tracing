@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("db_connect.php");
-// include("functions.php");
+include("admin_functions.php");
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
       $_SESSION['userName'] = $_POST['userName'];

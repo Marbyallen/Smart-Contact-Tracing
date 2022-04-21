@@ -13,10 +13,12 @@ function check_login($con)
 		{
 			$user_data = mysqli_fetch_assoc($result);
 			return $user_data;
-		}
-	} else {
+		}else {
         header("Location: adminlogin.php");
         die;
+		}
     }
 }
+
+
 ?>
