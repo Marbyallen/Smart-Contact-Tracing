@@ -41,8 +41,8 @@ include("admin_functions.php");
             echo "<br>password found also";
             $user_data = mysqli_fetch_assoc($row);
             $_SESSION['QRcode'] = $row['QRcode'];
-            echo "<br>";
-            echo var_dump($row);
+            echo "<br> first user data <br>";
+            echo var_dump($user_data);
             echo "<br>";
             $id = $_SESSION['QRcode'];
         $testQuery2 = "SELECT * FROM admin_table WHERE QRcode LIKE  '".$id."' LIMIT 1";
@@ -53,7 +53,7 @@ include("admin_functions.php");
           {
             $user_data = mysqli_fetch_assoc($t_result);
             echo "<br> user data <br>";
-            echo "<br>user data: " . var_dump($user_data);
+            echo var_dump($user_data);
           }
 
         } else {
