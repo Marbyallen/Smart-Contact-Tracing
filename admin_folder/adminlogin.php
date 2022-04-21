@@ -41,6 +41,7 @@ include("admin_functions.php");
             echo "password found also";
             $user_data = mysqli_fetch_assoc($row);
             $_SESSION['QRcode'] = $row['QRcode'];
+            echo var_dump($_SESSION['QRcode']);
             header("#");
         } else {
             echo "wrong password";
