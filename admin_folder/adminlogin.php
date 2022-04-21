@@ -3,29 +3,50 @@ session_start();
 include("db_connect.php");
 // include("functions.php");
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $_SESSION['userName'] = $_POST['userName'];
-    $userName = $_POST['userName'];
-    $userPassword = $_POST['userPassword'];
+  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+      $_SESSION['userName'] = $_POST['userName'];
+      $userName = $_POST['userName'];
+      $userPassword = $_POST['userPassword'];
 
 
-    $result = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$userName."' LIMIT 1");
-    if($row = mysqli_fetch_array($result)){
-        echo "username found from db: " . $userName . "<br>";
-        $_SESSION['QRcode'] = $row['QRcode'];
-        var_dump($_SESSION['QRcode']);
-        if($row['password'] === $userPassword){
-            echo "password found also";
-            $user_data = mysqli_fetch_assoc($row);
-            $_SESSION['QRcode'] = $row['QRcode'];
-            header("Location: index.php");
-        } else {
-            echo "wrong password";
-        }
-    } else {
-       echo "username not found <br> ";
-    }
-    }
+      $result = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$userName."' LIMIT 1");
+      if($row = mysqli_fetch_array($result)){
+          echo "username found from db: " . $userName . "<br>";
+          $_SESSION['QRcode'] = $row['QRcode'];
+          var_dump($_SESSION['QRcode']);
+          if($row['password'] === $userPassword){
+              echo "password found also";
+              $user_data = mysqli_fetch_assoc($row);
+              $_SESSION['QRcode'] = $row['QRcode'];
+              header("Location: index.php");
+          } else {
+              echo "wrong password";
+          }
+          } else {
+          echo "username not found <br> ";
+      }
+  }
+
+    //testing
+  //   $t_username = "Hady";
+  //   $t_password = "grana21";
+  //   $testQuery = mysqli_query($con," SELECT  * FROM admin_table WHERE username LIKE '".$t_username."' LIMIT 1");
+  //   if($row = mysqli_fetch_array($testQuery)){
+  //     echo "username found from db: " . $t_username . "<br>";
+  //     $_SESSION['QRcode'] = $row['QRcode'];
+  //     var_dump($_SESSION['QRcode']);
+  //     if($row['password'] === $userPassword){
+  //         echo "password found also";
+  //         $user_data = mysqli_fetch_assoc($row);
+  //         $_SESSION['QRcode'] = $row['QRcode'];
+  //         header("Location: index.php");
+  //     } else {
+  //         echo "wrong password";
+  //     }
+  //     } else {
+  //     echo "username not found <br> ";
+  // }
+
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +76,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 </div>
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="userPassword" required>
+                <input type="password" name="userPassword">
                 <br>
                 <button type="submit" class="btn btn-primary" value="Login">Login</button>
                 </div>
