@@ -35,7 +35,7 @@ session_start();
                     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
 
                   <?php
-                    
+                    echo "<br>";
                     echo var_dump($user_data);
                     
                   ?>
