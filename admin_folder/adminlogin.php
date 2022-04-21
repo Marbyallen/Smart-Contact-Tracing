@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("db_connect.php");
-include("admin_functions.php");
+// include("admin_functions.php");
 
   if($_SERVER['REQUEST_METHOD'] == 'POST'){
       $_SESSION['userName'] = $_POST['userName'];
@@ -14,14 +14,14 @@ include("admin_functions.php");
           echo "username found from db: " . $userName . "<br>";
           $_SESSION['QRcode'] = $row['QRcode'];
           var_dump($_SESSION['QRcode']);
-          if($row['password'] === $userPassword){
-              echo "password found also";
-              $user_data = mysqli_fetch_assoc($row);
-              $_SESSION['QRcode'] = $row['QRcode'];
-              header("Location: index.php");
-          } else {
-              echo "wrong password";
-          }
+            if($row['password'] === $userPassword){
+                echo "password found also";
+                $user_data = mysqli_fetch_assoc($row);
+                $_SESSION['QRcode'] = $row['QRcode'];
+                header("Location: index.php");
+            } else {
+                echo "wrong password";
+            }
           } else {
           echo "username not found <br> ";
       }
