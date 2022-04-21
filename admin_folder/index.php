@@ -28,8 +28,8 @@ session_start();
                     </ul>
                    </div>
                    <main>
-                    <h1>Welcome to Head Admin Page</h1>
-                    Hello, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
+                    <h1>Head Admin Page</h1>
+                    Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
                    </main>
           </body>
 </html>
