@@ -16,8 +16,12 @@ function check_login($con)
 		}
 	} else {
         //redirect to login
-		echo var_dump($_SESSION['QRcode']);
         // header("Location: adminlogin.php");
+
+		//test 
+		echo var_dump($_SESSION['QRcode']);
+		echo "<br> user data <br>";
+		echo var_dump($user_data);
         die;
     }
 }
