@@ -18,7 +18,7 @@ include("db_connect.php");
             if($row['password'] === $userPassword){
 
                 echo "password found also";
-                // $user_data = mysqli_fetch_assoc($row);
+                $user_data = mysqli_fetch_assoc($row);
                 $_SESSION['QRcode'] = $row['QRcode'];
                 header("Location: index.php");
             } else {
