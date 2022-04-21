@@ -26,9 +26,9 @@
                 <div class="main-top">
                     <?php 
                     echo var_dump($row);
-                    if (isset($_SESSION['QRcode'])) : ?>
+                    if (isset($user_data['QRcode'])) : ?>
                         <p>Welcome <strong><?php 
-                        echo $_SESSION['firstname']; echo $_SESSION['lastname'];  ?><strong></p>
+                        echo $user_data['firstname']; echo $user_data['lastname'];  ?><strong></p>
                     <?php 
                     endif ?>
                 </div>
