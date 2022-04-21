@@ -52,7 +52,7 @@ include("admin_functions.php");
           if($t_result && mysqli_num_rows($t_result) > 0)
           {
             $user_data = mysqli_fetch_assoc($t_result);
-            echo "<br> user data <br>"
+            echo "<br> user data <br>";
             echo "<br>user data: " . var_dump($user_data);
           }
 
