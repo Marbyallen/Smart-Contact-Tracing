@@ -1,5 +1,5 @@
 <?php
-include("db_connect.php");
+
 function check_login($con)
 {
 	if(isset($_SESSION['QRcode']))
