@@ -19,7 +19,7 @@ include("db_connect.php");
 
                 echo "password found also";
                 $user_data = mysqli_fetch_assoc($row);
-                // $_SESSION['QRcode'] = $row['QRcode'];
+                $_SESSION['QRcode'] = $row['QRcode'];
                 header("Location: index.php");
             } else {
                 echo "wrong password";

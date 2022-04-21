@@ -22,6 +22,9 @@ function check_login($con)
 		echo var_dump($_SESSION['QRcode']);
 		echo "<br> user data <br>";
 		echo var_dump($user_data);
+
+		echo "<br> row<br>";
+		echo var_dump($row);
         die;
     }
 }
