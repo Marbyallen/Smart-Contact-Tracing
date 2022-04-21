@@ -36,14 +36,15 @@ include("admin_functions.php");
       echo "username found from db: " . $t_username . "<br>";
       $_SESSION['QRcode'] = $row['QRcode'];
       var_dump($_SESSION['QRcode']);
-      if($row['password'] === $userPassword){
-          echo "password found also";
-          $user_data = mysqli_fetch_assoc($row);
-          $_SESSION['QRcode'] = $row['QRcode'];
-          header("#");
-      } else {
-          echo "wrong password";
-      }
+
+        if($row['password'] === $t_password){
+            echo "password found also";
+            $user_data = mysqli_fetch_assoc($row);
+            $_SESSION['QRcode'] = $row['QRcode'];
+            header("#");
+        } else {
+            echo "wrong password";
+        }
       } else {
       echo "username not found <br> ";
   }
