@@ -29,7 +29,7 @@ include("db_connect.php");
       }
   }
 
-    testing
+      // testing
     $t_username = "Hady";
     $t_password = "grana21";
 
