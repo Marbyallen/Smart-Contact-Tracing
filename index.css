@@ -108,7 +108,7 @@ section{
 .feature{
     width: 200px;
     height: 30px;
-    background-color: rgb(76, 90, 150);
+    background-color: rgb(66, 65, 65);
     color:azure;
     border: 3px solid rgb(153, 153, 153);
     display: flex;
@@ -165,11 +165,22 @@ section{
 }
 .background_message section p{
     margin: 20px;
+   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 .background_message p{
     padding-bottom: 14px;
 }
-
+.identity{
+    color: rgb(202, 231, 17);
+}
+fieldset{
+    background-color: rgba(16, 16, 16, 0.416);
+    margin: 40px 20px 40px 20;
+}
+legend{
+    margin-left: 20px;
+    padding: 0px 20px 0px 20px;
+}
 footer{
     font-size: 0.8em;
     color:rgb(75, 197, 197);

@@ -6,7 +6,7 @@
 </head>
 <header>
 <nav class="nav">
-    <div class="logo"><a href="index.PHP">Tracing<span></span>Connections</a></div>
+    <div class="logo"><a href="index.PHP">Tracing<span>Connections</span></a></div>
     <ul class="nav_link">
         <li><a href="#"></a></li>
         <li><a href="#"></a></li>
@@ -21,10 +21,27 @@
 <body>
       <div class="wrapper">
         <div class="background_message">
-            <section><p>COVID-19</p></section>
-            <section><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolore, harum, iure incidunt nisi doloremque corporis officiis aut dolorum molestiae quasi ea odio earum quos nobis! Facere nisi nemo autem? Quos voluptatum, id molestiae temporibus dolorum eos, asperiores alias soluta harum dicta, facere aut perferendis fugit quae possimus eius excepturi.</p></section>
-            <section><p>MISSION</p></section>
-            <section><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum tempore quae quam. Minus minima molestias tempora nihil omnis accusamus, ab porro suscipit illo inventore nulla blanditiis nemo sequi repellendus mollitia delectus? Ratione quaerat quod adipisci ullam. Pariatur modi quia nisi.</p></section>
+            
+            <fieldset>
+                <legend>WHAT IS OUR MISSION AND VISION</legend>
+                <section><p>
+                    The mission of Tracing connections is to connect people who are inside a populated establishment. The vision of Tracing Connections is to spread the system throughout the country to easily locate and trace the people.
+                </p></section>
+            </fieldset><br><br><br>
+
+            <fieldset>
+                <legend>WHAT IS OUR SERVICE</legend>
+                <section><p>
+                    Tracing connections offers <span class ="identity">IDENTIFICATION</span> </class>, <span class ="identity">EASY ACCESS</span>(both user and administrator), <span class ="identity">TEMPERATIRE</span>, <span class ="identity">QR CODE SCANS</span> and <span class ="identity">FACE RECOGNITION</span>.
+                </p></section>
+            </fieldset><br><br><br>
+
+            <fieldset>
+                <legend>CAUSE</legend>
+                <section><p>The spread of diseases today is at large, specially Corona Virus known as Covid19. People can easily be infected at places where there are a lot of people at a closed spaced area.</p></section>
+            </fieldset>
+        
+
         </div>
         <section class="sidebar">
             <section class="feature"><p>FEATURE</p></section>
@@ -35,6 +52,6 @@
       </div>
 </body>
 <footer>
-    <h1>CONTACT <span>TRACING</span> &copy;, 2021</h1>
+    <h1>Tracing <span>Connections</span> &copy;, 2022</h1>
 </footer>
 </html>

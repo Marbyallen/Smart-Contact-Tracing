@@ -62,58 +62,84 @@ body{
     margin:auto;
     position: absolute;
 }
-.profilepic{
-    width: 200px;
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: sans-serif;
+    margin-top: 60px;
+}
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.temperature{
+    display: block;
+    float:left;
+    width: 250px;
+    height: 250px;
+    background-color: aqua;
+}
+.qrcode{
+    float:left;
+    width: 250px;
+    height: 250px;
+    background-color: rgb(98, 113, 113);
+}
+.block legend{
+    margin: auto;
+    padding: 10px;
+}
+.Mainfeatures{
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 1024px;
     height: 200px;
-    background-color: rgb(67, 67, 75);
-    margin: 30px auto 0px auto;
-    border: 5px solid rgb(140, 159, 160);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15%; 
+    
 }
-.profilepic p{
-    color: azure ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Mainfeatures button{
+    padding: 40px 60px 40px 60px;
+    background-color:rgba(92, 233, 233, 0.993);
+    font-size: 1em;
+    font-weight: bold;
 }
-.main-bottom{
-    display: flex;
+.Mainfeatures a{    
+    float: left;
+    padding: 25px 40px 25px 40px;
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    width: 25%; 
+    text-align: center;
+    background-color: aqua;
+    border-bottom: black;
 }
-.main-bottom .qr_code{
-    width: 250px;
-    height: 250px;
-    background-color: rgb(67, 67, 75);
-    margin: 30px auto 0px auto;
-    border: 5px solid rgb(140, 159, 160);
-    position: relative;
+.Mainfeatures fieldset{
+    position: absolute;
+    bottom: 0;
     display: flex;
+    justify-content:space-around;
     align-items: center;
-    justify-content: center;
-    border-radius: 15%; 
+    padding: 20px;
+    width: 900px;
+    background-color: rgba(66, 65, 65, 0.521);
+    border-radius: 10%/90%;
+    color: black;
 }
-.main-bottom{
-    color: azure ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
+.Mainfeatures button a{
+        font-weight: bold; 
+        background-color: lightgrey; 
+        display:inline-block; 
+        height:100%; 
+        width:100%; 
+        text-decoration:none;
 }
-.main-bottom .temperature{
-    background-image: url("/image/temp_pic.jfif");
-    width: 250px;
-    height: 250px;
-    background-color: rgb(67, 67, 75);
-    margin: 30px auto 0px auto;
-    border: 5px solid rgb(140, 159, 160);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15%; 
+.Mainfeatures legend{
+    margin: auto;
+    padding: 0px 20px 0px 20px;
 }
 /* MAIN END */
 /* SIDE BAR START */ 
