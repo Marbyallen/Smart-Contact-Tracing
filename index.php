@@ -6,7 +6,7 @@
 </head>
 <header>
 <nav class="nav">
-    <div class="logo"><a href="index.php">Tracing<span>Connections</span></a></div>
+    <div class="logo"><a href="index.PHP">Tracing<span>Connections</span></a></div>
     <ul class="nav_link">
         <li><a href="#"></a></li>
         <li><a href="#"></a></li>
