@@ -68,42 +68,48 @@ body{
     align-items: center;
     justify-content: space-around;
     margin-top: 20px;
-    
 }
-.welcome fieldset{
-    padding: 20px 120px 40px 120px;
-    background-color: rgba(66, 65, 65, 0.521);
-}
-.welcome legend{
-    font-weight: bold;
-    padding: 20px;
-    font-size: 1.2em;
-}
-.block{
+.welcome p{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 0px;
+    width: 500px;
+    height: 100px;
+    background-color: #828282ad;
+    border-radius: 14px;
+    box-shadow: 5px 10px #888888;
 }
-.block fieldset{
-    background-color: rgba(66, 65, 65, 0.521);
-}
-.block legend{
-    font-weight: bold;
-    padding: 20px;
-    font-size:1.2em;
+.block{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    
 }
 .temperature{
     float:left;
-    width: 450px;
-    height: 200px;
-    
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 240px;
+    background-color: #828282ad;
+    border-radius: 14px;
+    box-shadow: 5px 10px #888888;
+    font-weight: bold;
+    padding-top:10px;
 }
 
 .qrcode{
     float:left;
-    width: 450px;
-    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 240px;
+    background-color: #828282ad;
+    border-radius: 14px;
+    box-shadow: 5px 10px #888888;
+    font-weight: bold;
+    padding-top:10px;
 }
 .Mainfeatures{
     display: flex;
@@ -112,28 +118,65 @@ body{
     margin-top: 40px;
 }
 .Mainfeatures button{
-    padding: 25px 40px 25px 40px;
-    background-color:rgba(92, 233, 233, 0.993);
     color: black;
     font-size: 0.8em;
     font-weight: bold;
 }
-.Mainfeatures fieldset{
+.profile1{
+    float:left;
     display: flex;
-    justify-content:space-around;
-    align-items: center;
-    padding: 20px;
-    width: 900px;
-    background-color: rgba(66, 65, 65, 0.521);
-    border-radius: 10%/90%;
-    color: black;
-}
-.Mainfeatures legend{
-    margin: auto;
-    padding: 0px 20px 0px 20px;
+    justify-content: space-around;
+    width: 20%;
+    height: 80px;
+    background-color: #828282ad;
+    border-radius: 14px;
+    box-shadow: 5px 10px #888888;
     font-weight: bold;
-    font-size: 1.2em;
+    padding-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    border:none;
+    text-decoration: none;
 }
+.qrcode2{
+    float:left;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    height: 80px;
+    background-color: #828282ad;
+    border-radius: 14px;
+    box-shadow: 5px 10px #888888;
+    font-weight: bold;
+    padding-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    border:none;
+    text-decoration: none;
+}
+.mylogs3{
+    float:left;
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    height: 80px;
+    background-color: #828282ad;
+    border-radius: 14px;
+    box-shadow: 5px 10px #888888;
+    font-weight: bold;
+    padding-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    border: none;
+    text-decoration: none;
+}
+
 /* MAIN END */
 /* SIDE BAR START */ 
 .sidebar{
