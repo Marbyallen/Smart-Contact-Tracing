@@ -25,33 +25,22 @@
         <div class="wrapper">
                 <div class="main-top">
                     <div class="welcome">
-                        <fieldset>
-                            
                         <?php 
                         if (isset($user_data['QRcode'])) : ?>
-                            <legend>Welcome! </legend><p><strong>Hi, <?php 
+                            <p><strong>Welcome,  <?php 
                             echo $user_data['firstname'] ." ". $user_data['lastname'];  ?>! </strong></p>
                         <?php 
                         endif ?>
-                        </fieldset>
                     </div>
                     <div class="block">
-                        <fieldset>
-                        <legend>TEMPERATURE</legend>
-                        <div class="temperature"></div>
-                        </fieldset>
-                        <fieldset>
-                        <legend>QR CODE</legend>
-                        <div class="qrcode"></div>
-                        </fieldset>
+                        <div class="temperature">TEMPERATURE</div>
+                        <div class="qrcode">QR CODE</div>
                     </div>
                     <div class="Mainfeatures">
-                        <fieldset>
-                            <legend>ACTIVITIES</legend>
-                            <button class="">PROFILE</button>
-                            <button class="">QR CODE</button>
-                            <button class="">MY LOGS</button>
-                        </fieldset>
+                            
+                            <button class="profile1"><a href="profile.php">PROFILE </a></button>
+                            <button class="qrcode2"> <a href="qrcode.php">QR CODE</a></button>
+                            <button class="mylogs3"><a href="mylogs.php">MY LOGS</a></button>
                     </div>
                 </div>
                 
