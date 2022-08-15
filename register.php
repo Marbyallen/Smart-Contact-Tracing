@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0";>
 	<title>Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="register.css">
 </head>
@@ -15,11 +16,11 @@
 		<?php include('errors.php') ?>
 		<div class="input-group">
 			<label>Firstname</label>
-			<input type="text" name="firstname" id="firstname" value="" maxlength="50"required onkeyup='saveValue(this);'/>
+			<input class="whole-input"; type="text" name="firstname" id="firstname" value="" maxlength="50"required onkeyup='saveValue(this);'/>
 		</div>
 		<div class="input-group">
 			<label>Last name</label>
-			<input type="text" name="lastname" id="lastname" value="" maxlength="50" required onkeyup='saveValue(this);'/>
+			<input class="whole-input"; type="text" name="lastname" id="lastname" value="" maxlength="50" required onkeyup='saveValue(this);'/>
 		</div>
 		<div class="input-group">
 			<label>Gender</label>
@@ -29,28 +30,28 @@
 		</div>
 		<div class="input-group">
 			<label>Contact No.</label>
-			<input type="text" minleng="12" maxlength="12" name="contactno" id="contactno" value="" placeholder="639"  onkeypress="return /[0-9]/i.test(event.key)"required onkeyup='saveValue(this);'/>
+			<input class="whole-input"; type="text" minleng="12" maxlength="12" name="contactno" id="contactno" value="" placeholder="+639"  onkeypress="return /[0-9]/i.test(event.key)"required onkeyup='saveValue(this);'/>
 		</div>
 		<div class="input-group">	
 			<label>Email</label>
-			<input type="text" name="emailinput" id="emailinput" value="" maxlength="20"required onkeyup='saveValue(this);'/>
+			<input class="inputemail"; type="text" name="emailinput" id="emailinput" value="" maxlength="20"required onkeyup='saveValue(this);'/>
 			<select type="text"name="email">
-				<option value="@gmail.com">gmail.com</option>
-				<option value="@yahoo.com">yahoo.com</option>
-				<option value="@hotmail.com">hotmail.com</option>
+				<option value="@gmail.com">@gmail.com</option>
+				<option value="@yahoo.com">@yahoo.com</option>
+				<option value="@hotmail.com">@hotmail.com</option>
 			</select>
 		</div>
 		<div class="input-group">
 			<label>Address</label>
-			<input type="text" name="address" id="address" value=""maxlength="120"required onkeyup='saveValue(this);'/>
+			<input class="whole-input"; type="text" name="address" id="address" value=""maxlength="120"required onkeyup='saveValue(this);'/>
 		</div>
 		<div class="input-group">
 			<label>Username</label>
-			<input type="text" name="username" id="username"  value="" maxlength="50"required onkeyup='saveValue(this);'/>
+			<input class="whole-input"; type="text" name="username" id="username"  value="" maxlength="50"required onkeyup='saveValue(this);'/>
 		</div>
 		<div class="input-group">
 			<label>Password</label>
-			<input type="password" name="password_1" id="password_1" minlength="6" required>
+			<input class="whole-input"; type="password" name="password_1" id="password_1" minlength="6" required>
 		</div>
 		<!-- <div class="input-group">
 			<label>Confirm password</label>

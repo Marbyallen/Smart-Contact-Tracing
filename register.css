@@ -37,10 +37,9 @@ form, .content {
 	text-align: left;
 	margin: 3px;
 }
-
-.input-group input {
+.whole-input {
 	height: 30px;
-	width: 93%;
+	width: 90%;
 	padding: 5px 10px;
 	font-size: 16px;
 	border-radius: 5px;
@@ -48,8 +47,34 @@ form, .content {
     border-bottom-width: 4px;
     transition: all 0.3 ease-in-out;
 }
+.inputemail{
+	height: 30px;
+	width: 60%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+    border-bottom-width: 4px;
+    transition: all 0.3 ease-in-out;
+}
+
+/* 
+.input-group input {
+	height: 30px;
+	width: 80%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+    border-bottom-width: 4px;
+    transition: all 0.3 ease-in-out;
+}
+*/
 input:focus,input:valid{
     border-color: rgba(40, 98, 207, 0.8);
+}
+.input-group select{
+	float:inline-start
 }
 .btn {
 	padding: 10px;
@@ -58,6 +83,7 @@ input:focus,input:valid{
 	background: rgb(84, 165, 165);
 	border: none;
 	border-radius: 5px;
+	cursor:pointer;
 }
 
 .error {
@@ -81,3 +107,54 @@ input:focus,input:valid{
 	border-radius: 5px; 
 	text-align: left;
   }
+
+
+  select{
+	width: 80px;
+	height: 40px;
+	border-radius: 5px;
+  }	
+  /*
+------------------------------------------------------------------------------------------------------------------
+  */
+
+  @media all and (max-width:500px){
+	.header {
+		width: 60%;
+		padding: 20px;
+  }
+  
+form, .content {
+	max-width: 60%;
+	width: 60%;
+}
+.inputemail{
+	height: 30px;
+	width: 40%;
+}
+select{
+	width: 70px;
+	height: 40px;
+	border-radius: 5px;
+  }
+}
+@media all and (max-width:900px){
+	.header {
+		width: 60%;
+		padding: 20px;
+  }
+  
+form, .content {
+	max-width: 60%;
+	width: 60%;
+}
+.inputemail{
+	height: 30px;
+	width: 60%;
+}
+select{
+	width: 70px;
+	height: 40px;
+	border-radius: 5px;
+  }
+}
