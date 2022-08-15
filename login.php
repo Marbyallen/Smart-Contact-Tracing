@@ -32,13 +32,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 <head>
 </head>
     <link rel="stylesheet" type="text/css" href="login.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Log In</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="registration">
-            <h1>Log In to Tracing Connections</h1>
+            <h1><p>Log In to Tracing Connections</p></h1>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 				<?php include('errors.php') ?>
                 <div class="user-detail">
