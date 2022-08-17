@@ -12,7 +12,7 @@
 		<h2>Register to Tracing Connections</h2>
 	</div>
 
-	<form method="post" action="https://tracingconnections.com/login.php">
+	<form method="post" action="register.php">
 		<?php include('errors.php') ?>
 		<div class="input-group">
 			<label>Firstname</label>
@@ -60,7 +60,6 @@
 
 		<div class="input-group">
 			<button type="submit" class="btn" name="reg_user" id="register_btn">Register</button>
-
 		</div>
 		
 		<p>Already a member? <a href="login.php">Sign in</a></p>
