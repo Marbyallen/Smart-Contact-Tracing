@@ -33,6 +33,10 @@ if (isset($_POST['reg_user'])) {
 	$result = mysqli_query($con, $user_check_query);
 	$user = mysqli_fetch_assoc($result);
 
+	if ($password_1 != $password_2) {
+		array_push ($errors, "Password you typed doesn't match");
+	} 
+
 	// Checking user in database
 	if ($user) {
 		if ($user['username'] === $username) {
@@ -42,23 +46,18 @@ if (isset($_POST['reg_user'])) {
 		if ($user['email'] === $email) {
 			array_push($errors, "Email already exists");
 		}
-		if ($password_1 != $password_2) {
-		array_push ($errors, "-Password you typed doesn't match");
-		} 
 	}
 
 
 	// Insert New Data
 	if (count($errors) == 0) {
-		if ($password_1 != $password_2) {
-		array_push ($errors, "-Password you typed doesn't match");
-	} 
-		$password = md5($password_1);
+		
+		//$password = $password_1;
 		$link2 = $username . $contactno;
 		$pwd = encrypt_decrypt($link2, 'encrypt');
 		$qrcode = $link1 . $username . $contactno . $link3;
 		$query = "INSERT INTO Allusers_table (qrcode,firstname,lastname,gender,contactno, email,address,username, password,admin_customer) 
-		VALUES ('$pwd','$firstname','$lastname','$gender','$contactno','$emailinput$email','$address','$username', '$password','$admin_customer')";
+		VALUES ('$pwd','$firstname','$lastname','$gender','$contactno','$emailinput$email','$address','$username', '$password_1','$admin_customer')";
 		if (mysqli_query($con, $query)) {
 			array_push($success, "Register success, you may login");
 			} else {
