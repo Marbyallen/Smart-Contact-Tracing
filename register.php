@@ -53,6 +53,10 @@
 			<label>Password</label>
 			<input class="whole-input"; type="password" name="password_1" id="password_1" minlength="6" required>
 		</div>
+		<div class="input-group">
+			<label>Confirm password</label>
+			<input class="whole-input"; type="password" name="password_2" id="password_2" minlength="6" required>
+		</div>
 		<!-- <div class="input-group">
 			<label>Confirm password</label>
 			<input type="password" name="password_2" id="password_2" minlength="6"required>
