@@ -46,7 +46,7 @@ session_start();
                         <!-- Date input -->
                         <div class="row">
                                     <div class="col-md-4">
-                                    <label>Date:</label>
+                                    <label>From:</label>
                                     <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
                                     </div>
                                     <div class="col-md-4">
