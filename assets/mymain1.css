@@ -120,6 +120,10 @@ a.btn.btn-primary {
   margin-bottom: 15px;
 }
 
+.divStations-btn { 
+  width: auto;
+}
+
 /*-------------------------------------------------Table*/
 
 /* td,
