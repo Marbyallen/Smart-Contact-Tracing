@@ -25,6 +25,7 @@ include("db_connect.php");
             } else {
               //testing purposes
                 //echo "wrong password";
+                echo "username or password is invalid <br> ";
             }
           } else {
           echo "username or password is invalid <br> ";
