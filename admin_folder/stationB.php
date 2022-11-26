@@ -55,7 +55,7 @@ session_start();
                                     </div>
                                     <br>
                         </div><br>
-                        <!-- <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br> -->
+                        <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
                         <!-- printableTable -->
                   <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
                   <script>
@@ -69,7 +69,7 @@ session_start();
                     }
                   </script>
                     </form> <br>
-                    <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br>
+                    <!-- <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br> -->
                         <!-- Display Table -->
                         <?php
                         include "db_connect.php";
