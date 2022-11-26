@@ -57,7 +57,7 @@ session_start();
                         </div><br>
                         <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
                 </form> <br>
-                    <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br>
+                    <!-- <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br> -->
                     <!-- printableTable -->
                   <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
                   <script>
