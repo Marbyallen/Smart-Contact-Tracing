@@ -80,7 +80,7 @@ session_start();
                     $QRcode = "";
                     ?>
                     <div id = printableTable>
-                    <table class="table table-bordered">
+                      <table class="table table-bordered">
                         <?php
                           if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $Sfname = $_REQUEST['Sfname'];
@@ -215,7 +215,7 @@ session_start();
                           }
                            
                         ?>
-                        </div>
+                    </div>
 </main>
   </body>
 </html>
