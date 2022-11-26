@@ -55,7 +55,19 @@ session_start();
                                     </div>
                                     <br>
                         </div><br>
-                        <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
+                        <!-- <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br> -->
+                        <!-- printableTable -->
+                  <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
+                  <script>
+                    function printDiv(printableTable){
+                      var printContents = document.getElementById(printableTable).innerHTML;
+                      var originalContents = document.body.innerHTML;
+
+                      document.body.innerHTML = printContents;
+                      window.print();
+                      document.body.innerHTML = originalContents;
+                    }
+                  </script>
                     </form> <br>
                     <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br>
                         <!-- Display Table -->
@@ -73,138 +85,140 @@ session_start();
                         $Slname = "";
                         $QRcode = "";
                     ?>
-                    <table class="table table-bordered">
-                    <?php
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            // collect value of input field
-                            $Sfname = $_REQUEST['Sfname'];
-                            $Slname = $_REQUEST['Slname'];
-                            $QRcode = $_REQUEST['QRcode'];
-                            $date1 = $_REQUEST['date1'];
-                            $date2 = $_REQUEST['date2'];
-                            echo "
-                            <tr>
-                            <th>QR code</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Contact No.</th>
-                            <th>Email Address</th>
-                            <th>Station</th>
-                            <th>Facial recognition image</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Body Heat Temperature</th>
-                            </tr>
-                            ";
-                        if (!empty($Sfname)) {
-                            $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE firstname LIKE '".$Sfname."' ");
+                    <div id = printableTable>
+                        <table class="table table-bordered">
+                        <?php
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                // collect value of input field
+                                $Sfname = $_REQUEST['Sfname'];
+                                $Slname = $_REQUEST['Slname'];
+                                $QRcode = $_REQUEST['QRcode'];
+                                $date1 = $_REQUEST['date1'];
+                                $date2 = $_REQUEST['date2'];
+                                echo "
+                                <tr>
+                                <th>QR code</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Contact No.</th>
+                                <th>Email Address</th>
+                                <th>Station</th>
+                                <th>Facial recognition image</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Body Heat Temperature</th>
+                                </tr>
+                                ";
+                            if (!empty($Sfname)) {
+                                $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE firstname LIKE '".$Sfname."' ");
+                                $numResults = mysqli_num_rows($result);
+                                echo "Number of rows found: " . $numResults;          
+                                    while($row = mysqli_fetch_array($result))
+                                                        {
+                                                            // station facialimg date time bodyheat_temp
+                                                        echo "<tr>";
+                                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                                        echo "<td>" . $row['firstname'] . "</td>";
+                                                        echo "<td>" . $row['lastname'] . "</td>";
+                                                        echo "<td>" . $row['contactno'] . "</td>";
+                                                        echo "<td>" . $row['email'] . "</td>";
+                                                        echo "<td>" . $row['station'] . "</td>";
+                                                        echo "<td>" . $row['facialimg'] . "</td>";
+                                                        echo "<td>" . $row['date'] . "</td>";
+                                                        echo "<td>" . $row['time'] . "</td>";
+                                                        echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                                        echo "</tr>";
+                                                        }
+                                    echo "</table>";
+                                    mysqli_close($mysqli);
+                            } elseif(!empty($Slname)) {
+                                    $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE lastname = '".$Slname."' ");
+                                    $numResults = mysqli_num_rows($result);
+                                    echo "Number of rows found: " . $numResults;
+                                                while($row = mysqli_fetch_array($result))
+                                                {
+                                                        echo "<tr>";
+                                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                                        echo "<td>" . $row['firstname'] . "</td>";
+                                                        echo "<td>" . $row['lastname'] . "</td>";
+                                                        echo "<td>" . $row['contactno'] . "</td>";
+                                                        echo "<td>" . $row['email'] . "</td>";
+                                                        echo "<td>" . $row['station'] . "</td>";
+                                                        echo "<td>" . $row['facialimg'] . "</td>";
+                                                        echo "<td>" . $row['date'] . "</td>";
+                                                        echo "<td>" . $row['time'] . "</td>";
+                                                        echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                                        echo "</tr>";
+                                                }
+                                                echo "</table>";
+                                                mysqli_close($mysqli);
+
+                            } elseif(!empty($QRcode)){
+                            $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE QRcode = '".$QRcode."' ");
                             $numResults = mysqli_num_rows($result);
-                            echo "Number of rows found: " . $numResults;          
-                                while($row = mysqli_fetch_array($result))
-                                                    {
-                                                        // station facialimg date time bodyheat_temp
-                                                    echo "<tr>";
-                                                    echo "<td>" . $row['QRcode'] . "</td>";
-                                                    echo "<td>" . $row['firstname'] . "</td>";
-                                                    echo "<td>" . $row['lastname'] . "</td>";
-                                                    echo "<td>" . $row['contactno'] . "</td>";
-                                                    echo "<td>" . $row['email'] . "</td>";
-                                                    echo "<td>" . $row['station'] . "</td>";
-                                                    echo "<td>" . $row['facialimg'] . "</td>";
-                                                    echo "<td>" . $row['date'] . "</td>";
-                                                    echo "<td>" . $row['time'] . "</td>";
-                                                    echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                                    echo "</tr>";
-                                                    }
-                                echo "</table>";
-                                mysqli_close($mysqli);
-                        } elseif(!empty($Slname)) {
-                                $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE lastname = '".$Slname."' ");
+                            echo "Number of rows found: " . $numResults;
+                                                while($row = mysqli_fetch_array($result))
+                                                {
+                                                        echo "<tr>";
+                                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                                        echo "<td>" . $row['firstname'] . "</td>";
+                                                        echo "<td>" . $row['lastname'] . "</td>";
+                                                        echo "<td>" . $row['contactno'] . "</td>";
+                                                        echo "<td>" . $row['email'] . "</td>";
+                                                        echo "<td>" . $row['station'] . "</td>";
+                                                        echo "<td>" . $row['facialimg'] . "</td>";
+                                                        echo "<td>" . $row['date'] . "</td>";
+                                                        echo "<td>" . $row['time'] . "</td>";
+                                                        echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                                        echo "</tr>";
+                                                }
+                                                echo "</table>";
+                                                mysqli_close($mysqli);
+                            } elseif(!empty($date1) && !empty($date2)){
+                                $result = mysqli_query($mysqli, "SELECT * FROM `stationB_complete` WHERE `date` BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
                                 $numResults = mysqli_num_rows($result);
                                 echo "Number of rows found: " . $numResults;
-                                            while($row = mysqli_fetch_array($result))
-                                            {
-                                                    echo "<tr>";
-                                                    echo "<td>" . $row['QRcode'] . "</td>";
-                                                    echo "<td>" . $row['firstname'] . "</td>";
-                                                    echo "<td>" . $row['lastname'] . "</td>";
-                                                    echo "<td>" . $row['contactno'] . "</td>";
-                                                    echo "<td>" . $row['email'] . "</td>";
-                                                    echo "<td>" . $row['station'] . "</td>";
-                                                    echo "<td>" . $row['facialimg'] . "</td>";
-                                                    echo "<td>" . $row['date'] . "</td>";
-                                                    echo "<td>" . $row['time'] . "</td>";
-                                                    echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                                    echo "</tr>";
-                                            }
-                                            echo "</table>";
-                                            mysqli_close($mysqli);
-
-                        } elseif(!empty($QRcode)){
-                        $result = mysqli_query($mysqli," SELECT  * FROM stationB_complete WHERE QRcode = '".$QRcode."' ");
-                        $numResults = mysqli_num_rows($result);
-                        echo "Number of rows found: " . $numResults;
-                                            while($row = mysqli_fetch_array($result))
-                                            {
-                                                    echo "<tr>";
-                                                    echo "<td>" . $row['QRcode'] . "</td>";
-                                                    echo "<td>" . $row['firstname'] . "</td>";
-                                                    echo "<td>" . $row['lastname'] . "</td>";
-                                                    echo "<td>" . $row['contactno'] . "</td>";
-                                                    echo "<td>" . $row['email'] . "</td>";
-                                                    echo "<td>" . $row['station'] . "</td>";
-                                                    echo "<td>" . $row['facialimg'] . "</td>";
-                                                    echo "<td>" . $row['date'] . "</td>";
-                                                    echo "<td>" . $row['time'] . "</td>";
-                                                    echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                                    echo "</tr>";
-                                            }
-                                            echo "</table>";
-                                            mysqli_close($mysqli);
-                        } elseif(!empty($date1) && !empty($date2)){
-                            $result = mysqli_query($mysqli, "SELECT * FROM `stationB_complete` WHERE `date` BETWEEN '$date1' AND '$date2'") or die(mysqli_error());
+                                while($row = mysqli_fetch_array($result))
+                                {
+                                        echo "<tr>";
+                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                        echo "<td>" . $row['firstname'] . "</td>";
+                                        echo "<td>" . $row['lastname'] . "</td>";
+                                        echo "<td>" . $row['contactno'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['station'] . "</td>";
+                                        echo "<td>" . $row['facialimg'] . "</td>";
+                                        echo "<td>" . $row['date'] . "</td>";
+                                        echo "<td>" . $row['time'] . "</td>";
+                                        echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                        echo "</tr>";
+                                }
+                                echo "</table>";
+                                mysqli_close($mysqli);
+                            } else {
                             $numResults = mysqli_num_rows($result);
                             echo "Number of rows found: " . $numResults;
                             while($row = mysqli_fetch_array($result))
                             {
-                                    echo "<tr>";
-                                    echo "<td>" . $row['QRcode'] . "</td>";
-                                    echo "<td>" . $row['firstname'] . "</td>";
-                                    echo "<td>" . $row['lastname'] . "</td>";
-                                    echo "<td>" . $row['contactno'] . "</td>";
-                                    echo "<td>" . $row['email'] . "</td>";
-                                    echo "<td>" . $row['station'] . "</td>";
-                                    echo "<td>" . $row['facialimg'] . "</td>";
-                                    echo "<td>" . $row['date'] . "</td>";
-                                    echo "<td>" . $row['time'] . "</td>";
-                                    echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                    echo "</tr>";
+                                        echo "<tr>";
+                                        echo "<td>" . $row['QRcode'] . "</td>";
+                                        echo "<td>" . $row['firstname'] . "</td>";
+                                        echo "<td>" . $row['lastname'] . "</td>";
+                                        echo "<td>" . $row['contactno'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['station'] . "</td>";
+                                        echo "<td>" . $row['facialimg'] . "</td>";
+                                        echo "<td>" . $row['date'] . "</td>";
+                                        echo "<td>" . $row['time'] . "</td>";
+                                        echo "<td>" . $row['bodyheat_temp'] . "</td>";
+                                        echo "</tr>";
                             }
                             echo "</table>";
                             mysqli_close($mysqli);
-                        } else {
-                        $numResults = mysqli_num_rows($result);
-                        echo "Number of rows found: " . $numResults;
-                        while($row = mysqli_fetch_array($result))
-                        {
-                                    echo "<tr>";
-                                    echo "<td>" . $row['QRcode'] . "</td>";
-                                    echo "<td>" . $row['firstname'] . "</td>";
-                                    echo "<td>" . $row['lastname'] . "</td>";
-                                    echo "<td>" . $row['contactno'] . "</td>";
-                                    echo "<td>" . $row['email'] . "</td>";
-                                    echo "<td>" . $row['station'] . "</td>";
-                                    echo "<td>" . $row['facialimg'] . "</td>";
-                                    echo "<td>" . $row['date'] . "</td>";
-                                    echo "<td>" . $row['time'] . "</td>";
-                                    echo "<td>" . $row['bodyheat_temp'] . "</td>";
-                                    echo "</tr>";
-                        }
-                        echo "</table>";
-                        mysqli_close($mysqli);
-                        }
-                        }
-                    ?>
+                            }
+                            }
+                        ?>
+                    </div>
                               </main>
                    </main>
                    
