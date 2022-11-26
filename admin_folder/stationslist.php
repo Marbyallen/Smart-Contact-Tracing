@@ -65,7 +65,7 @@ session_start();
                   </div><br>
                   <!-- <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br> -->
                   <!-- printableTable -->
-                  <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "print a Div" /><br>
+                  <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
                   <script>
                     function printDiv(printableTable){
                       var printContents = document.getElementById(printableTable).innerHTML;
