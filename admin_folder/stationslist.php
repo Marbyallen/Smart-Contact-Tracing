@@ -63,7 +63,6 @@ session_start();
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.php' ">Station B</button>
                   </div><br>
-                  <!-- <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br> -->
                   <!-- printableTable -->
                   <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
                   <script>
@@ -77,18 +76,18 @@ session_start();
                     }
                   </script>
                     <?php
-                    include "db_connect.php";
-                    $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
-                    // Check connection
-                    if (mysqli_connect_errno())
-                    {
-                    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                    }
+                      include "db_connect.php";
+                      $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
+                      // Check connection
+                      if (mysqli_connect_errno())
+                      {
+                      echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                      }
 
-                    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table");
-                    $Sfname =  "";
-                    $Slname = "";
-                    $QRcode = "";
+                      $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table");
+                      $Sfname =  "";
+                      $Slname = "";
+                      $QRcode = "";
                     ?>
                     <div id = printableTable>
                       <table class="table table-bordered">
