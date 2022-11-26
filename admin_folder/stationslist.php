@@ -63,7 +63,8 @@ session_start();
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.php' ">Station B</button>
                   </div><br>
-                  <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br>
+                  <!-- <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br> -->
+                  <!-- printableTable -->
                   <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "print a Div" /><br>
                   <script>
                     function printDiv(printableTable){
