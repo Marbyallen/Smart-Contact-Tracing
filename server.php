@@ -29,6 +29,14 @@ if (isset($_POST['reg_user'])) {
 	$username = $_POST['username'];
 	$password_1 = $_POST['password_1'];
 	$password_2 =$_POST['password_2'];
+	//remove whitespaces before and after string
+	$firstname = trim($firstname);
+	$lastname = trim($lastname);
+	$contactno = trim($contactno);
+	$emailinput = trim($emailinput);
+	$username = trim($username);
+	$password_1 = trim($password_1);
+
 	$user_check_query = "SELECT * FROM Allusers_table WHERE username='$username' OR email='$email' LIMIT 1";
 	$result = mysqli_query($con, $user_check_query);
 	$user = mysqli_fetch_assoc($result);
