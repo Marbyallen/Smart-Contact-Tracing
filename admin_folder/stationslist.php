@@ -64,7 +64,17 @@ session_start();
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationB.php' ">Station B</button>
                   </div><br>
                   <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br>
+                  <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "print a Div" /><br>
+                  <script>
+                    function printDiv(printableTable){
+                      var printContents = document.getElementById(printableTable).innerHTML;
+                      var originalContents = document.body.innerHTML;
 
+                      document.body.innerHTML = printContents;
+                      window.print();
+                      document.body.innerHTML = originalContents;
+                    }
+                  </script>
                     <?php
                     include "db_connect.php";
                     $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
