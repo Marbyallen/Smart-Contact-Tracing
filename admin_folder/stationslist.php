@@ -206,7 +206,7 @@ session_start();
                             while($row = mysqli_fetch_array($result))
                             { 
                                                 
-                              echo "<tr data-href = "www.google.com/">";
+                              echo "<tr>";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
                               echo "<td>" . $row['lastname'] . "</td>";
@@ -226,8 +226,9 @@ session_start();
                            
                         ?>
                     </div>
+
                     <script>
-                      $(document).ready(function(){
+                      $(document).ready(function() {
                         $(document.body).on("click", "tr[data-href]", function() {
                           window.location.href = this.dataset.href;
                         });
