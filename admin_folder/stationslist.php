@@ -95,6 +95,7 @@ session_start();
                             $date1 = $_REQUEST['date1'];
                             $date2 = $_REQUEST['date2'];
                             $id = "redirectPage";
+                            $temparray = array();
 
                             echo "
                               <tr>
