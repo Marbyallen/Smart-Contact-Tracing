@@ -15,7 +15,11 @@ session_start();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Stations List</title>
   </head>
-
+  <style>
+    tr[data-href]{
+      cursor: pointer;
+    }
+  </style>
   <body>
     <div class="sidenav">
       <ul class="first">
@@ -120,7 +124,7 @@ session_start();
                               while($row = mysqli_fetch_array($result))
                                 {
                                     // station facialimg date time bodyheat_temp
-                                echo "<tr>";
+                                echo "<tr data-href = 'https://www.google.com/'>";
                                 echo "<td>" . $row['QRcode'] . "</td>";
                                 echo "<td>" . $row['firstname'] . "</td>";
                                 echo "<td>" . $row['lastname'] . "</td>";
@@ -141,7 +145,7 @@ session_start();
                                 echo "Number of rows found: " . $numResults;          
                                 while($row = mysqli_fetch_array($result))
                                   {
-                                    echo "<tr>";
+                                    echo "<tr data-href = 'https://www.google.com/'>";
                                     echo "<td>" . $row['QRcode'] . "</td>";
                                     echo "<td>" . $row['firstname'] . "</td>";
                                     echo "<td>" . $row['lastname'] . "</td>";
@@ -162,7 +166,7 @@ session_start();
                                 echo "Number of rows found: " . $numResults;                    
                                 while($row = mysqli_fetch_array($result))
                                 {
-                                  echo "<tr>";
+                                  echo "<tr data-href = 'https://www.google.com/'>";
                                   echo "<td>" . $row['QRcode'] . "</td>";
                                   echo "<td>" . $row['firstname'] . "</td>";
                                   echo "<td>" . $row['lastname'] . "</td>";
@@ -185,7 +189,7 @@ session_start();
                             echo "Number of rows found: " . $numResults;
                             while($row = mysqli_fetch_array($result))
                             {
-                              echo "<tr>";
+                              echo "<tr data-href = 'https://www.google.com/'>";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
                               echo "<td>" . $row['lastname'] . "</td>";
