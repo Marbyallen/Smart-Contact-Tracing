@@ -235,6 +235,10 @@ session_start();
                         document.body.innerHTML = originalContents;
                       }
 
+                      function confirmUser{
+                        
+                      }
+
                       document.getElementById("redirectPage").addEventListener("click", function() {
                         // alert(document.write(x));
                         // window.location.href = "http://google.com";
