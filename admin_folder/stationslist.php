@@ -16,7 +16,8 @@ session_start();
     <title>Stations List</title>
   </head>
   <style>
-    tr[data-href]{
+    /* tr[data-href]{ */
+    #redirectPage{
       cursor: pointer;
     }
   </style>
@@ -69,25 +70,7 @@ session_start();
                   </div><br>
                   <!-- printableTable -->
                   <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
-                  <script>
-                    function printDiv(printableTable){
-                      var printContents = document.getElementById(printableTable).innerHTML;
-                      var originalContents = document.body.innerHTML;
 
-                      document.body.innerHTML = printContents;
-                      window.print();
-                      document.body.innerHTML = originalContents;
-                    }
-                    //onclick row table
-                    // $(document).ready(function() {
-                    //   $(document.body).on("click", "tr[data-href]", function() {
-                    //     window.location.href = this.dataset.href;
-                    //   });
-                    // });
-                    document.getElementById("redirectPage").addEventListener("click", function() {
-                    alert("Hello World!");
-                    });
-                  </script>
                     <?php
                       include "db_connect.php";
                       $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
@@ -239,7 +222,25 @@ session_start();
                           }
                         ?>
                     </div>
-                    
+                    <script>
+                      function printDiv(printableTable){
+                        var printContents = document.getElementById(printableTable).innerHTML;
+                        var originalContents = document.body.innerHTML;
+
+                        document.body.innerHTML = printContents;
+                        window.print();
+                        document.body.innerHTML = originalContents;
+                      }
+                      //onclick row table
+                      // $(document).ready(function() {
+                      //   $(document.body).on("click", "tr[data-href]", function() {
+                      //     window.location.href = this.dataset.href;
+                      //   });
+                      // });
+                      document.getElementById("redirectPage").addEventListener("click", function() {
+                      alert("Hello World!");
+                      });
+                  </script>
 </main>
   </body>
 </html>
