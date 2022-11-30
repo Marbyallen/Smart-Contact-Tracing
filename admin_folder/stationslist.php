@@ -220,7 +220,7 @@ session_start();
                             mysqli_close($mysqli);
                             }
                           }
-                          echo console.log(json_encode($temparray));
+                          echo json_encode($temparray);
                         ?>
                     </div>
                     <script>
