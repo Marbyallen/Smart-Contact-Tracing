@@ -102,7 +102,7 @@ session_start();
                             $QRcode = $_REQUEST['QRcode'];
                             $date1 = $_REQUEST['date1'];
                             $date2 = $_REQUEST['date2'];
-                            $webpage = "google.com";
+                            $webpage = "https://google.com/";
 
                             echo "
                               <tr>
@@ -228,17 +228,21 @@ session_start();
                             mysqli_close($mysqli);
                             }
                           }
+
+                          echo "
+                          <script>
+                          $(document).ready(function() {
+                            $(document.body).on("click", "tr[data-href]", function() {
+                              window.location.href = this.dataset.href;
+                            });
+                          });
+                          </script>
+                          "
                            
                         ?>
                     </div>
 
-                    <script>
-                      $(document).ready(function() {
-                        $(document.body).on("click", "tr[data-href]", function() {
-                          window.location.href = this.dataset.href;
-                        });
-                      });
-                    </script>
+                    
 </main>
   </body>
 </html>
