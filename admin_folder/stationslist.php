@@ -78,6 +78,12 @@ session_start();
                       window.print();
                       document.body.innerHTML = originalContents;
                     }
+                    //onclick row table
+                    $(document).ready(function() {
+                      $(document.body).on("click", "tr[data-href]", function() {
+                        window.location.href = this.dataset.href;
+                      });
+                    });
                   </script>
                     <?php
                       include "db_connect.php";
@@ -230,13 +236,6 @@ session_start();
                           }
                         ?>
                     </div>
-                    <script>
-                          $(document).ready(function() {
-                            $(document.body).on("click", "tr[data-href]", function() {
-                              window.location.href = this.dataset.href;
-                            });
-                          });
-                    </script>
                     
 </main>
   </body>
