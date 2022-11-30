@@ -233,8 +233,8 @@ session_start();
                       }
 
                       document.getElementById("redirectPage").addEventListener("click", function() {
-                        var x = "<?php $echo "Hello " . $row['firstname'] . " " . $row['lastname'] . " QRcode: " . $row['QRcode'] ?>";
-                        alert(document.write(x));
+                        // var x = "<?php $echo "Hello " . $row['firstname'] . " " . $row['lastname'] . " QRcode: " . $row['QRcode'] ?>";
+                        // alert(document.write(x));
                         // window.location.href = "http://google.com";
                         window.open(
                         "http://google.com", "_blank");
