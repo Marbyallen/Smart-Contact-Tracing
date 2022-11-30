@@ -202,7 +202,7 @@ session_start();
                             echo "Number of rows found: " . $numResults;
                             while($row = mysqli_fetch_array($result))
                             { 
-                                                
+                              array_push($temparray,$row);                  
                               echo "<tr id = " . $id . ">";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
@@ -220,6 +220,7 @@ session_start();
                             mysqli_close($mysqli);
                             }
                           }
+                          echo console.log(json_encode($temparray));
                         ?>
                     </div>
                     <script>
