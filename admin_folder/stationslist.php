@@ -79,10 +79,13 @@ session_start();
                       document.body.innerHTML = originalContents;
                     }
                     //onclick row table
-                    $(document).ready(function() {
-                      $(document.body).on("click", "tr[data-href]", function() {
-                        window.location.href = this.dataset.href;
-                      });
+                    // $(document).ready(function() {
+                    //   $(document.body).on("click", "tr[data-href]", function() {
+                    //     window.location.href = this.dataset.href;
+                    //   });
+                    // });
+                    document.getElementById("redirectPage").addEventListener("click", function() {
+                    alert("Hello World!");
                     });
                   </script>
                     <?php
@@ -108,7 +111,7 @@ session_start();
                             $QRcode = $_REQUEST['QRcode'];
                             $date1 = $_REQUEST['date1'];
                             $date2 = $_REQUEST['date2'];
-                            $webpage = "https://google.com/";
+                            $id = "redirectPage";
 
                             echo "
                               <tr>
@@ -173,7 +176,7 @@ session_start();
                                 echo "Number of rows found: " . $numResults;                    
                                 while($row = mysqli_fetch_array($result))
                                 {
-                                  echo "<tr data-href = 'https://www.google.com/'>";
+                                  echo "<tr>";
                                   echo "<td>" . $row['QRcode'] . "</td>";
                                   echo "<td>" . $row['firstname'] . "</td>";
                                   echo "<td>" . $row['lastname'] . "</td>";
@@ -217,7 +220,7 @@ session_start();
                             while($row = mysqli_fetch_array($result))
                             { 
                                                 
-                              echo "<tr data-href = " . $webpage . ">";
+                              echo "<tr data-href = " . $id . ">";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
                               echo "<td>" . $row['lastname'] . "</td>";
