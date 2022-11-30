@@ -239,7 +239,9 @@ session_start();
                       // });
                       document.getElementById("redirectPage").addEventListener("click", function() {
                         // alert("Hello World!");
-                        window.location.href = "http://google.com", '_blank';
+                        // window.location.href = "http://google.com";
+                        window.open(
+                        "http://google.com", "_blank");
                       });
                   </script>
 </main>
