@@ -231,14 +231,13 @@ session_start();
                         window.print();
                         document.body.innerHTML = originalContents;
                       }
-                      //onclick row table
-                      // $(document).ready(function() {
-                      //   $(document.body).on("click", "tr[data-href]", function() {
-                      //     window.location.href = this.dataset.href;
-                      //   });
-                      // });
+                      function confirmUser(){
+
+                      }
+                      
                       document.getElementById("redirectPage").addEventListener("click", function() {
-                        // alert("Hello World!");
+                        var x = "<?php $echo "Hello " .$row['firstname']. " " . $row['lastname'] . " QRcode: " . $row['QRcode'] ?>";
+                        alert(document.write(x));
                         // window.location.href = "http://google.com";
                         window.open(
                         "http://google.com", "_blank");
