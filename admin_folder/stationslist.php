@@ -238,7 +238,8 @@ session_start();
                       //   });
                       // });
                       document.getElementById("redirectPage").addEventListener("click", function() {
-                      alert("Hello World!");
+                        // alert("Hello World!");
+                        window.location.href = "http://google.com";
                       });
                   </script>
 </main>
