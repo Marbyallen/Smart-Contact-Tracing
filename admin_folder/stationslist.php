@@ -239,7 +239,7 @@ session_start();
                       // });
                       document.getElementById("redirectPage").addEventListener("click", function() {
                         // alert("Hello World!");
-                        window.location.href = "http://google.com";
+                        window.location.href = "http://google.com", '_blank';
                       });
                   </script>
 </main>
