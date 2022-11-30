@@ -102,6 +102,7 @@ session_start();
                             $QRcode = $_REQUEST['QRcode'];
                             $date1 = $_REQUEST['date1'];
                             $date2 = $_REQUEST['date2'];
+                            $webpage = "google.com";
 
                             echo "
                               <tr>
@@ -210,7 +211,7 @@ session_start();
                             while($row = mysqli_fetch_array($result))
                             { 
                                                 
-                              echo "<tr data-href = 'https://www.google.com/'>";
+                              echo "<tr data-href = " . $webpage . ">";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
                               echo "<td>" . $row['lastname'] . "</td>";
