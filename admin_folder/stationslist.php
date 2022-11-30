@@ -219,8 +219,9 @@ session_start();
                             echo "</table>";
                             mysqli_close($mysqli);
                             }
+                            echo json_encode($temparray);
                           }
-                          echo json_encode($temparray);
+                          
                         ?>
                     </div>
                     <script>
