@@ -206,7 +206,7 @@ session_start();
                             while($row = mysqli_fetch_array($result))
                             { 
                                                 
-                              echo "<tr data-href = "www.google.com/">";
+                              echo "<tr data-href = ""http://www.google.com/"">";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
                               echo "<td>" . $row['lastname'] . "</td>";
