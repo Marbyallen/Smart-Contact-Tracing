@@ -262,8 +262,11 @@ session_start();
                       //test 3
                       //
                       var class_users = document.getElementsByClassName("redirectPage");
-                      //pass array from php array to JS
+                      //pass array from php array to JS(object)
                       var obj = <?php echo json_encode($temparray); ?>;
+                      //object to array
+                      const toArray = Object.entries(obj); 
+                      console.log("typeof toArray: ", toArray);
                       //
                       var userArray = [];
                       
@@ -271,8 +274,7 @@ session_start();
                         class_users[i].onclick = function(){
                               alert("generate report that is near to this user?");
 
-                              const toArray = Object.entries(obj); 
-                              console.log("typeof toArray: ", toArray);
+                              
                               userArray.push(obj[i]);
                               console.log(typeof userArray);
                               console.info("userArray: ", userArray);
