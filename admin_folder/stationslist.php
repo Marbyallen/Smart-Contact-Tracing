@@ -240,7 +240,6 @@ session_start();
                         if (confirm("Generate Report that is near to this user?")){
                           location.href = "http://youtube.com";
                         } else {
-                          return = "";
                           console.log("cancel autogenerate");
                         }
                       }
