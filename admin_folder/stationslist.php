@@ -275,7 +275,7 @@ session_start();
                               alert("generate report that is near to this user?");
 
                               
-                              userArray.push(obj[i]);
+                              userArray.push(toArray[i][1][7], toArray[i][1][8]);
                               console.log(typeof userArray);
                               console.info("userArray: ", userArray);
                               console.log(typeof obj);
