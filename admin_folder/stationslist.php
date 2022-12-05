@@ -245,16 +245,28 @@ session_start();
                           console.log("cancel autogenerate");
                         }
                       }
+                      //test 1
                       // document.getElementById("redirectPage").addEventListener("click", function() {
                       //   window.location.href = "http://google.com", "_blank";
                       //   console.log("button is clicked!");
                       //   // window.open(
                       //   // "http://google.com", "_blank");
                       // });
+                      //test 2
                       document.getElementsByClassName("redirectPage").addEventListener("click", function() {
                         let x = autoGen();
                         document.getElementByClass("redirectPage").innerHTML = x;
                       });
+
+                      //test 3
+                      // const box = null;
+
+                      if (typeof redirectPage === 'object' && box !== null && 'addEventListener' in box) {
+                        box.addEventListener('click', function onClick() {
+                          console.log('link clicked');
+                        });
+                      }
+
                   </script>
 </main>
   </body>
