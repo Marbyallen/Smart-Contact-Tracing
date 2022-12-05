@@ -243,7 +243,7 @@ session_start();
                         }
                       }
                       document.getElementById("redirectPage").addEventListener("click", function() {
-                        window.location.href = "http://google.com";
+                        window.location.href = "http://google.com", "_blank";
                         console.log("button is clicked!");
                         // window.open(
                         // "http://google.com", "_blank");
