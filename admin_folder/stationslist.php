@@ -261,8 +261,8 @@ session_start();
                       //test 3
                       const redirectPage = null;
 
-                      if (typeof redirectPage === 'object' && box !== null && 'addEventListener' in box) {
-                        box.addEventListener('click', function onClick() {
+                      if (typeof redirectPage === 'object' && redirectPage !== null && 'addEventListener' in redirectPage) {
+                        redirectPage.addEventListener('click', function onClick() {
                           console.log('link clicked');
                         });
                       }
