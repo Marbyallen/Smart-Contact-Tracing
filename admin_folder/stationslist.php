@@ -260,17 +260,19 @@ session_start();
                       // });
 
                       //test 3
+                      //
                       var class_users = document.getElementsByClassName("redirectPage");
-
+                      //pass array from php array to JS
+                      var obj = <?php echo json_encode($temparray); ?>;
+                      //
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
-                              alert("you clicked: " + obj[i]);
-                              console.info(class_users[i] + " is clicked");
+                              alert("generate report that is near to this user?");
+                              console.log(obj[i][1] + " " + obj[i][2] + ": " + obj[i][0]);
                           }
                       };
 
-                      //pass array from php array to JS
-                      var obj = <?php echo json_encode($temparray); ?>;
+                      
 
                   </script>
 </main>
