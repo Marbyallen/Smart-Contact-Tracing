@@ -264,7 +264,7 @@ session_start();
 
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
-                              alert("Finaly!");
+                              alert("Finaly!" + class_users[i]);
                           }
                       };
 
