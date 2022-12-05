@@ -269,7 +269,7 @@ session_start();
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                               alert("generate report that is near to this user?");
-                              userArray.push(obj[i][0]);
+                              userArray.push(obj[i]);
                               console.info("userArray: ", userArray);
                               console.info("my Obj: ", obj);
                               console.info("my class_users: ", class_users);
