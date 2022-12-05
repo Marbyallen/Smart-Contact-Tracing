@@ -236,10 +236,11 @@ session_start();
                       }
 
                       function autoGen(){
+                        let userGen; 
                         if (confirm("Generate Report that is near to this user?")){
                           location.href = "http://youtube.com";
                         } else {
-                          
+                          console.log("cancel autogenerate");
                         }
                       }
                       // document.getElementById("redirectPage").addEventListener("click", function() {
@@ -248,7 +249,7 @@ session_start();
                       //   // window.open(
                       //   // "http://google.com", "_blank");
                       // });
-                      document.addEventListener("click", function(){
+                      document.getElementById("redirectPage").addEventListener("click", function() {
                         let x = autoGen();
                         document.getElementById("redirectPage").innerHTML = x;
                       });
