@@ -261,6 +261,7 @@ session_start();
 
                       //test 3
                       //
+                      //TODO: print string from Array or Object
                       var class_users = document.getElementsByClassName("redirectPage");
                       //pass array from php array to JS(object)
                       var obj = <?php echo json_encode($temparray); ?>;
