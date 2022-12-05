@@ -251,7 +251,7 @@ session_start();
                       //   // window.open(
                       //   // "http://google.com", "_blank");
                       // });
-                      document.getElementByClass("redirectPage").addEventListener("click", function() {
+                      document.getElementsByClassName("redirectPage").addEventListener("click", function() {
                         let x = autoGen();
                         document.getElementByClass("redirectPage").innerHTML = x;
                       });
