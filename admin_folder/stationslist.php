@@ -94,7 +94,7 @@ session_start();
                             $QRcode = $_REQUEST['QRcode'];
                             $date1 = $_REQUEST['date1'];
                             $date2 = $_REQUEST['date2'];
-                            $id = "redirectPage";
+                            $class = "redirectPage";
                             $temparray = array();
 
                             echo "
@@ -118,7 +118,7 @@ session_start();
                               while($row = mysqli_fetch_array($result))
                                 {
                                     // station facialimg date time bodyheat_temp
-                                echo "<tr data-href = 'https://www.google.com/'>";
+                                echo "<tr>";
                                 echo "<td>" . $row['QRcode'] . "</td>";
                                 echo "<td>" . $row['firstname'] . "</td>";
                                 echo "<td>" . $row['lastname'] . "</td>";
@@ -139,7 +139,7 @@ session_start();
                                 echo "Number of rows found: " . $numResults;          
                                 while($row = mysqli_fetch_array($result))
                                   {
-                                    echo "<tr data-href = 'https://www.google.com/'>";
+                                    echo "<tr>";
                                     echo "<td>" . $row['QRcode'] . "</td>";
                                     echo "<td>" . $row['firstname'] . "</td>";
                                     echo "<td>" . $row['lastname'] . "</td>";
@@ -204,7 +204,7 @@ session_start();
                             while($row = mysqli_fetch_array($result))
                             { 
                               array_push($temparray,$row);                  
-                              echo "<tr id = " . $id . ">";
+                              echo "<tr class = " . $class . ">";
                               echo "<td>" . $row['QRcode'] . "</td>";
                               echo "<td>" . $row['firstname'] . "</td>";
                               echo "<td>" . $row['lastname'] . "</td>";
@@ -220,7 +220,7 @@ session_start();
                             echo "</table>";
                             mysqli_close($mysqli);
                             }
-                            echo json_encode($temparray);
+                            // echo json_encode($temparray);
                           }
                           
                         ?>
