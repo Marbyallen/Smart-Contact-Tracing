@@ -17,7 +17,7 @@ session_start();
   </head>
   <style>
     /* tr[data-href]{ */
-    #redirectPage{
+    .redirectPage{
       cursor: pointer;
     }
   </style>
