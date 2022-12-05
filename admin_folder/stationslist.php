@@ -253,10 +253,10 @@ session_start();
                       //   // "http://google.com", "_blank");
                       // });
                       //test 2
-                      document.getElementsByClassName("redirectPage").addEventListener("click", function() {
-                        let x = autoGen();
-                        document.getElementByClass("redirectPage").innerHTML = x;
-                      });
+                      // document.getElementsByClassName("redirectPage").addEventListener("click", function() {
+                      //   let x = autoGen();
+                      //   document.getElementByClass("redirectPage").innerHTML = x;
+                      // });
 
                       //test 3
                       const redirectPage = null;
