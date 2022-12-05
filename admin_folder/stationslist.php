@@ -269,6 +269,9 @@ session_start();
                           }
                       };
 
+                      //pass array from php array to JS
+                      var obj = <?php echo json_encode($temparray); ?>;
+
                   </script>
 </main>
   </body>
