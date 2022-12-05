@@ -268,7 +268,7 @@ session_start();
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                               alert("generate report that is near to this user?");
-                              console.log(obj[i][1] + " " + obj[i][2] + ": " + obj[i][0]);
+                              console.log(obj[i]);
                           }
                       };
 
