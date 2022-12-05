@@ -259,7 +259,7 @@ session_start();
                       // });
 
                       //test 3
-                      const redirectPage = null;
+                      // const redirectPage = null;
 
                       if (typeof redirectPage === 'object' && redirectPage !== null && 'addEventListener' in redirectPage) {
                         redirectPage.addEventListener('click', function onClick() {
