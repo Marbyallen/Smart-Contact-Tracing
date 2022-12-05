@@ -270,6 +270,8 @@ session_start();
                               alert("generate report that is near to this user?");
                               console.info(obj);
                               console.info(class_users);
+                              console.info(obj[i]);
+                              console.info(class_users[i]);
                           }
                       };
 
