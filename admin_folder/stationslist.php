@@ -259,7 +259,7 @@ session_start();
                       });
 
                       //test 3
-                      // const box = null;
+                      const redirectPage = null;
 
                       if (typeof redirectPage === 'object' && box !== null && 'addEventListener' in box) {
                         box.addEventListener('click', function onClick() {
