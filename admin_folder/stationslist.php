@@ -240,6 +240,7 @@ session_start();
                         let text = "Generate Report that is near to this user?";
                         if (confirm(text) == true){
                           location.href = "http://youtube.com";
+                          console.log("user is clicked");
                         } else {
                           txt = "";
                           console.log("cancel autogenerate");
