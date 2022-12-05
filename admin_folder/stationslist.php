@@ -242,11 +242,15 @@ session_start();
                           
                         }
                       }
-                      document.getElementById("redirectPage").addEventListener("click", function() {
-                        window.location.href = "http://google.com", "_blank";
-                        console.log("button is clicked!");
-                        // window.open(
-                        // "http://google.com", "_blank");
+                      // document.getElementById("redirectPage").addEventListener("click", function() {
+                      //   window.location.href = "http://google.com", "_blank";
+                      //   console.log("button is clicked!");
+                      //   // window.open(
+                      //   // "http://google.com", "_blank");
+                      // });
+                      document.addEventListener("click", function(){
+                        let x = autoGen();
+                        document.getElementById("redirectPage").innerHTML = x;
                       });
                   </script>
 </main>
