@@ -266,7 +266,7 @@ session_start();
                         class_users[i].onclick = function(){
                               alert("Finaly!");
                               let z = class_users.toString();
-                              console.log(z);
+                              console.log(z[i]);
                           }
                       };
 
