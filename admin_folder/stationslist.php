@@ -235,8 +235,14 @@ session_start();
                         document.body.innerHTML = originalContents;
                       }
 
+                      function autoGen(){
+                        if (confirm("Generate Report that is near to this user?")){
+                          location.href = "youtube.com";
+                        } else {
+                          
+                        }
+                      }
                       document.getElementById("redirectPage").addEventListener("click", function() {
-                        alert(document.write(x));
                         window.location.href = "http://google.com";
                         // window.open(
                         // "http://google.com", "_blank");
