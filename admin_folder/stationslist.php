@@ -251,9 +251,9 @@ session_start();
                       //   // window.open(
                       //   // "http://google.com", "_blank");
                       // });
-                      document.getElementById("redirectPage").addEventListener("click", function() {
+                      document.getElementByClass("redirectPage").addEventListener("click", function() {
                         let x = autoGen();
-                        document.getElementById("redirectPage").innerHTML = x;
+                        document.getElementByClass("redirectPage").innerHTML = x;
                       });
                   </script>
 </main>
