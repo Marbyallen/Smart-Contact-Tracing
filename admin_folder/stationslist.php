@@ -260,13 +260,13 @@ session_start();
                       // });
 
                       //test 3
-                      // const redirectPage = null;
+                      var class_users = document.getElementsByClassName("redirectPage");
 
-                      if (typeof redirectPage === 'object' && redirectPage !== null && 'addEventListener' in redirectPage) {
-                        redirectPage.addEventListener('click', function onClick() {
-                          console.log('link clicked');
-                        });
-                      }
+                      for (var i=0; i < class_users.length; i++) {
+                        class_users[i].onclick = function(){
+                              alert("Finaly!");
+                          }
+                      };
 
                   </script>
 </main>
