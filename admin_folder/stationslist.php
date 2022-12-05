@@ -237,7 +237,7 @@ session_start();
 
                       function autoGen(){
                         if (confirm("Generate Report that is near to this user?")){
-                          location.href = "youtube.com";
+                          location.href = "http://youtube.com";
                         } else {
                           
                         }
