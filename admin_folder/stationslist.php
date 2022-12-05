@@ -266,11 +266,13 @@ session_start();
                       var obj = <?php echo json_encode($temparray); ?>;
                       //
                       var userArray = [];
+                      
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                               alert("generate report that is near to this user?");
 
-                              
+                              const toArray = Object.entries(obj); 
+                              console.log("typeof toArray: ", toArray);
                               userArray.push(obj[i]);
                               console.log(typeof userArray);
                               console.info("userArray: ", userArray);
