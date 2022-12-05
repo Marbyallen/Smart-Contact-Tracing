@@ -237,11 +237,10 @@ session_start();
 
                       function autoGen(){
                         let userGen; 
-                        var x;
                         if (confirm("Generate Report that is near to this user?")){
                           location.href = "http://youtube.com";
                         } else {
-                          x = "";
+                          return = "";
                           console.log("cancel autogenerate");
                         }
                       }
