@@ -225,22 +225,23 @@ session_start();
                           
                         ?>
                     </div>
-                    <script src="http://code.jquery.com/jquery-3.1.1.js">
+                    <script>
+                    // <script src="http://code.jquery.com/jquery-3.1.1.js">
                       //Auto Refresh
                       // function autoRefresh() {
                       //     window.location = window.location.href;
                       // }
                       // setInterval('autoRefresh()', 5000);
                       
-                      function doRefresh() {
-                          $(printableTable).load(printableTable);
-                          document.getElementById(printableTable).innerHTML = Math.random();
-                          console.log("do refresh is working1");
-                      }
-                      $(function () {
-                          setInterval(doRefresh, 5000);
-                          console.log("do refresh is working2");
-                      });
+                      // function doRefresh() {
+                      //     $(printableTable).load(printableTable);
+                      //     document.getElementById(printableTable).innerHTML = Math.random();
+                      //     console.log("do refresh is working1");
+                      // }
+                      // $(function () {
+                      //     setInterval(doRefresh, 5000);
+                      //     console.log("do refresh is working2");
+                      // });
 
                       function printDiv(printableTable){
                         var printContents = document.getElementById(printableTable).innerHTML;
