@@ -274,19 +274,19 @@ session_start();
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                               alert("generate report that is near to this user?");
-                              var secondDimension = 2;
-                              var dateLoc = 7;
-                              var timeLoc = 8;
+                              // var secondDimension = 2;
+                              // var dateLoc = 7;
+                              // var timeLoc = 8;
                               
-                              userArray.push(toArray[i][secondDimension][dateLoc], toArray[i][secondDimension][timeLoc]);
-                              console.log(typeof userArray);
-                              console.info("userArray: ", userArray);
-                              console.log(typeof obj);
-                              console.info("my Obj: ", obj);
-                              console.log(typeof class_users);
-                              console.info("my class_users: ", class_users);
+                              // userArray.push(toArray[i][secondDimension][dateLoc], toArray[i][secondDimension][timeLoc]);
+                              // console.log(typeof userArray);
+                              // console.info("userArray: ", userArray);
+                              // console.log(typeof obj);
+                              // console.info("my Obj: ", obj);
+                              // console.log(typeof class_users);
+                              // console.info("my class_users: ", class_users);
                           }
-                      };
+                      }
 
                       
 
