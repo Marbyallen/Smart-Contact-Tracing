@@ -80,7 +80,7 @@ session_start();
                       echo "Failed to connect to MySQL: " . mysqli_connect_error();
                       }
 
-                      $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table");
+                      $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
                       $Sfname =  "";
                       $Slname = "";
                       $QRcode = "";
