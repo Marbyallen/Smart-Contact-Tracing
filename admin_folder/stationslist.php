@@ -235,9 +235,11 @@ session_start();
                       function doRefresh() {
                           $(printableTable).load(printableTable);
                           document.getElementById(printableTable).innerHTML = Math.random();
+                          console.log("do refresh is working1");
                       }
                       $(function () {
                           setInterval(doRefresh, 5000);
+                          console.log("do refresh is working2");
                       });
 
                       function printDiv(printableTable){
