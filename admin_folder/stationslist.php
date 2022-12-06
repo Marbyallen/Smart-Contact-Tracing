@@ -225,12 +225,20 @@ session_start();
                           
                         ?>
                     </div>
-                    <script>
+                    <script src="http://code.jquery.com/jquery-3.1.1.js">
                       //Auto Refresh
-                      function autoRefresh() {
-                          window.location = window.location.href;
+                      // function autoRefresh() {
+                      //     window.location = window.location.href;
+                      // }
+                      // setInterval('autoRefresh()', 5000);
+                      
+                      function doRefresh() {
+                          $(printableTable).load(printableTable);
+                          document.getElementById(printableTable).innerHTML = Math.random();
                       }
-                      setInterval('autoRefresh()', 5000);
+                      $(function () {
+                          setInterval(doRefresh, 5000);
+                      });
 
                       function printDiv(printableTable){
                         var printContents = document.getElementById(printableTable).innerHTML;
