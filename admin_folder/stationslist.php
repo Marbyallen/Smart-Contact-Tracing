@@ -294,9 +294,11 @@ session_start();
                   <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
                   <script type="text/javascript">
                       function doRefresh(){
-                          $("#show").load("LOG.txt");
+                          console.log("doRefresh1 is working");
+                          $("#printableTable").load("printableTable");
                       }
                       $(function() {
+                          console.log("doRefresh2 is working");
                           setInterval(doRefresh, 5000);
                       });
                   </script>
