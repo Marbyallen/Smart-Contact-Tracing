@@ -291,6 +291,15 @@ session_start();
                       
 
                   </script>
+                  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+                  <script type="text/javascript">
+                      function doRefresh(){
+                          $("#show").load("LOG.txt");
+                      }
+                      $(function() {
+                          setInterval(doRefresh, 5000);
+                      });
+                  </script>
 </main>
   </body>
 </html>
