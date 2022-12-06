@@ -235,6 +235,16 @@ session_start();
                         document.body.innerHTML = originalContents;
                       }
 
+                      //Auto refresh table
+                      function reload(){
+                          var container = document.getElementById("printableTable");
+                          var content = container.innerHTML;
+                          container.innerHTML= content; 
+                          
+                        //this line is to watch the result in console , you can remove it later	
+                          console.log("Refreshed"); 
+                      }
+
                       function autoGen(){
                         let userGen; 
                         let text = "Generate Report that is near to this user?";
@@ -288,20 +298,11 @@ session_start();
                           }
                       }
 
+
                       
 
                   </script>
-                  <!-- <script src="http://code.jquery.com/jquery-3.1.1.js"></script> -->
-                  <script type="text/javascript">
-                      function doRefresh(){
-                          console.log("doRefresh1 is working");
-                          $("#printableTable").load("printableTable");
-                      }
-                      $(function() {
-                          console.log("doRefresh2 is working");
-                          setInterval(doRefresh, 5000);
-                      });
-                  </script>
+                  
 </main>
   </body>
 </html>
