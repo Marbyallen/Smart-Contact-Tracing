@@ -244,6 +244,7 @@ session_start();
                         //this line is to watch the result in console , you can remove it later	
                           console.log("Refreshed"); 
                       }
+                      setInterval(reload, 10000);
 
                       function autoGen(){
                         let userGen; 
