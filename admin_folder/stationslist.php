@@ -226,6 +226,12 @@ session_start();
                         ?>
                     </div>
                     <script>
+                      //Auto Refresh
+                      function autoRefresh() {
+                          window.location = window.location.href;
+                      }
+                      setInterval('autoRefresh()', 5000);
+
                       function printDiv(printableTable){
                         var printContents = document.getElementById(printableTable).innerHTML;
                         var originalContents = document.body.innerHTML;
