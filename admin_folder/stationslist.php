@@ -312,8 +312,8 @@ session_start();
                       setInterval('autoRefresh()', 5000);
                       
                       function doRefresh() {
-                          $(printableTable).load(printableTable);
-                          document.getElementById(printableTable).innerHTML = Math.random();
+                          $("printableTable").load("printableTable");
+                          document.getElementById("printableTable").innerHTML = Math.random();
                           console.log("do refresh is working1");
                       }
                       $(function () {
