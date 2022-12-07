@@ -246,6 +246,7 @@ session_start();
                       // }
                       // setInterval(reload, 10000);
 
+                      //Auto generate report after clicking button
                       // function autoGen(){
                       //   let userGen; 
                       //   let text = "Generate Report that is near to this user?";
@@ -303,7 +304,7 @@ session_start();
                       
 
                   </script>
-                  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
                   <script>
                       //Auto Refresh
                       function autoRefresh() {
@@ -313,14 +314,14 @@ session_start();
                       
                       function doRefresh() {
                           $("printableTable").load("printableTable");
-                          document.getElementById("printableTable").innerHTML = Math.random();
+                          document.getElementsByClassName("printableTable").innerHTML = Math.random();
                           console.log("do refresh is working1");
                       }
                       $(function () {
                           setInterval(doRefresh, 5000);
                           console.log("do refresh is working2");
                       });
-                  </script> -->
+                  </script>
                       
                   
 </main>
