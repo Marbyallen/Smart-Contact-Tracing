@@ -236,27 +236,27 @@ session_start();
                       }
 
                       //Auto refresh table
-                      function reload(){
-                          var container = document.getElementById("printableTable");
-                          var content = container.innerHTML;
-                          container.innerHTML= content; 
+                      // function reload(){
+                      //     var container = document.getElementById("printableTable");
+                      //     var content = container.innerHTML;
+                      //     container.innerHTML= content; 
                           
-                        //this line is to watch the result in console , you can remove it later	
-                          console.log("Refreshed"); 
-                      }
-                      setInterval(reload, 10000);
+                      //   //this line is to watch the result in console , you can remove it later	
+                      //     console.log("Refreshed"); 
+                      // }
+                      // setInterval(reload, 10000);
 
-                      function autoGen(){
-                        let userGen; 
-                        let text = "Generate Report that is near to this user?";
-                        if (confirm(text) == true){
-                          location.href = "http://youtube.com";
-                          console.log("user is clicked");
-                        } else {
-                          txt = "";
-                          console.log("cancel autogenerate");
-                        }
-                      }
+                      // function autoGen(){
+                      //   let userGen; 
+                      //   let text = "Generate Report that is near to this user?";
+                      //   if (confirm(text) == true){
+                      //     location.href = "http://youtube.com";
+                      //     console.log("user is clicked");
+                      //   } else {
+                      //     txt = "";
+                      //     console.log("cancel autogenerate");
+                      //   }
+                      // }
                       //test 1
                       // document.getElementById("redirectPage").addEventListener("click", function() {
                       //   window.location.href = "http://google.com", "_blank";
@@ -303,6 +303,25 @@ session_start();
                       
 
                   </script>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+                  <script>
+                      //Auto Refresh
+                      function autoRefresh() {
+                          window.location = window.location.href;
+                      }
+                      setInterval('autoRefresh()', 5000);
+                      
+                      function doRefresh() {
+                          $(printableTable).load(printableTable);
+                          document.getElementById(printableTable).innerHTML = Math.random();
+                          console.log("do refresh is working1");
+                      }
+                      $(function () {
+                          setInterval(doRefresh, 5000);
+                          console.log("do refresh is working2");
+                      });
+                  </script>
+                      
                   
 </main>
   </body>
