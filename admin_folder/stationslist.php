@@ -135,21 +135,32 @@ session_start();
                           return null;
                       }
 
-                      setCookie("first_name", fname,30);
-                      setCookie("last_name", lname,30);
-                      setCookie("user_qrcode", QRcode,30);
-                      setCookie("user_date1", date1,30);
-                      setCookie("user_date2", date2,30);
-                      var userFirstname=getCookie("first_name");
-                      var userFirstname=getCookie("last_name");
-                      var userFirstname=getCookie("user_qrcode");
-                      var userFirstname=getCookie("user_date1");
-                      var userFirstname=getCookie("user_date2");
+                      // setCookie("first_name", fname,30);
+                      // setCookie("last_name", lname,30);
+                      // setCookie("user_qrcode", QRcode,30);
+                      // setCookie("user_date1", date1,30);
+                      // setCookie("user_date2", date2,30);
+                      // var userFirstname=getCookie("first_name");
+                      // var userFirstname=getCookie("last_name");
+                      // var userFirstname=getCookie("user_qrcode");
+                      // var userFirstname=getCookie("user_date1");
+                      // var userFirstname=getCookie("user_date2");
 
                       // Phase 2 refresh
                       function autoRefresh() {
-                          window.location = window.location.href;
-                          console.log('autoRefresh is called');
+                        setCookie("first_name", fname,30);
+                        setCookie("last_name", lname,30);
+                        setCookie("user_qrcode", QRcode,30);
+                        setCookie("user_date1", date1,30);
+                        setCookie("user_date2", date2,30);
+                        var userFirstname=getCookie("first_name");
+                        var userFirstname=getCookie("last_name");
+                        var userFirstname=getCookie("user_qrcode");
+                        var userFirstname=getCookie("user_date1");
+                        var userFirstname=getCookie("user_date2");
+
+                        window.location = window.location.href;
+                        console.log('autoRefresh is called');
                       }
                       setInterval('autoRefresh()', 5000);
                       
