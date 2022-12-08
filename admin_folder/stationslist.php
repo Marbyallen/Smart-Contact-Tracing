@@ -105,7 +105,7 @@ session_start();
                       //another test
                       $(document).ready(function()
                       {
-                        setInterval(function () => {
+                        setInterval(function() {
                           $("#printableTable").load("stationslistTable.php");
                           console.log("refresh table");
                           refresh();
