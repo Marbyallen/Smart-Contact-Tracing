@@ -107,12 +107,12 @@ session_start();
 
                       //Auto refresh table
                       //another test=================================================
-                      function updateDiv()
-                      { 
-                          $( "printableTable" ).load(window.location.href + "printableTable");
-                          console.log("updateDiv is called")
-                      }
-                      setInterval('updateDiv()', 1000);
+                      // function updateDiv()
+                      // { 
+                      //     $( "printableTable" ).load(window.location.href + "printableTable");
+                      //     console.log("updateDiv is called")
+                      // }
+                      // setInterval('updateDiv()', 1000);
                       //another test
                       // $(document).ready(function()
                       // {

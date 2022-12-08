@@ -148,5 +148,15 @@
         // echo json_encode($temparray);
         }
     
-
+        echo "
+        <script>
+        // Auto Refresh
+            function autoRefresh() {
+                window.location = window.location.href;
+                console.log('autoRefresh is called');
+            }
+            setInterval('autoRefresh()', 5000);
+        </script>
+        
+        "
 ?>
