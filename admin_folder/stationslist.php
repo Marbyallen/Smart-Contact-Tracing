@@ -135,11 +135,11 @@ session_start();
                           return null;
                       }
 
-                      setCookiefname("first_name", fname,30);
-                      setCookiefname("last_name", lname,30);
-                      setCookiefname("user_qrcode", QRcode,30);
-                      setCookiefname("user_date1", date1,30);
-                      setCookiefname("user_date2", date2,30);
+                      setCookie("first_name", fname,30);
+                      setCookie("last_name", lname,30);
+                      setCookie("user_qrcode", QRcode,30);
+                      setCookie("user_date1", date1,30);
+                      setCookie("user_date2", date2,30);
                       var userFirstname=getCookie("first_name");
                       var userFirstname=getCookie("last_name");
                       var userFirstname=getCookie("user_qrcode");
