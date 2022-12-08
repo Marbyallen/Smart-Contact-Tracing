@@ -115,7 +115,7 @@ session_start();
                       let date1 = <?php echo json_encode($date1); ?>;
                       let date2 = <?php echo json_encode($date2); ?>;
 
-                      function setCookiefname(fname) {
+                      function setCookiefname(fname, value, days) {
                       var expires = "";
                       if (days) {
                           var date = new Date();
@@ -143,7 +143,7 @@ session_start();
                           // user = prompt("Please enter your name:","");
                           alert("Cookie not fount")
                           if (user != "" && user != null) {
-                            setCookie("first_name", user, 30);
+                            setCookiefname("first_name", user, 30);
                           }
                         }
                       }
