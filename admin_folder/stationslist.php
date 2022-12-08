@@ -105,7 +105,7 @@ session_start();
                       //another test
                       function updateDiv()
                       { 
-                          $( "printableTable" ).load(window.location.href + " printableTable" );
+                          $( "printableTable" ).load(window.location.href + " stationslistTable.php" );
                           console.log("updateDiv is called")
                       }
                       setInterval('updateDiv()', 5000);
