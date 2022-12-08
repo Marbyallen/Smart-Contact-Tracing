@@ -174,7 +174,7 @@ session_start();
                   <script>
                       function doRefresh() {
                           $('printableTable').load('stationslistTable.php');
-                          document.getElementsByClassName("printableTable").innerHTML = Math.random();
+                          document.getElementById("printableTable").innerHTML = Math.random();
                           console.log("do refresh is working1");
                       }
                       $(function() {
