@@ -147,10 +147,10 @@ session_start();
                       // var userFirstname=getCookie("user_date2");
 
                       //reload page without moving
-                      $.cookie('last-scroll-top', $(window).scrollTop());
+                      $_cookie('last-scroll-top', $(window).scrollTop());
                       document.location.reload(true); 
 
-                      var lastScrollTop = $.cookie('last-scroll-top');
+                      var lastScrollTop = $_cookie('last-scroll-top');
                       if (lastScrollTop) {
                           $(window).scrollTop(lastScrollTop);
                           $.removeCookie('last-scroll-top');
