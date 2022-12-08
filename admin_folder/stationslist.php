@@ -172,7 +172,7 @@ session_start();
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
                   <script>
                       function doRefresh() {
-                          $(printableTable).load(stationslistTable.php);
+                          $('printableTable').load('stationslistTable.php');
                           document.getElementsByClassName("printableTable").innerHTML = Math.random();
                           console.log("do refresh is working1");
                       }
