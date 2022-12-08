@@ -107,66 +107,60 @@ session_start();
 
                       //Auto refresh table
                       //another test=================================================
-                      // function updateDiv()
-                      // { 
-                      //     $( "printableTable" ).load(window.location.href + "printableTable");
-                      //     console.log("updateDiv is called")
-                      // }
-                      // setInterval('updateDiv()', 1000);
-                      //another test
-                      // $(document).ready(function()
-                      // {
-                      //   setInterval(function() {
-                      //     $("#printableTable").load("stationslistTable.php");
-                      //     refresh();
-                      //     $( "printableTable" ).listview( "refresh" );
-                      //     console.log("refresh table");
-                      //   }, 5000);
-                      // })
-                      //another test
-                      // function autoRefresh() {
-                      //     window.location = window.location.assign();
-                      // }
-                      // setInterval('autoRefresh()', 5000);
-                      //another test
-                      // function reload(){
-                      //     var container = document.getElementById("printableTable");
-                      //     var content = container.innerHTML;
-                      //     container.innerHTML= content; 
-                          
-                      //   //this line is to watch the result in console , you can remove it later	
-                      //     console.log("Refreshed"); 
-                      // }
-                      // setInterval(reload, 10000);
+                      //fname, lastname, qrcode, date1, date2
+                      let fname = <?php $Sfname ?>
+                      let lname = <?php $Slname ?>
+                      let qrcode = <?php $QRcode ?>
+                      let date1 = <?php $date1 ?>
+                      let date2 = <?php $date2 ?>
+
+                      function setCookiefname(fname) {
+                      var expires = "";
+                      if (days) {
+                          var date = new Date();
+                          date.setTime(date.getTime() + (days*24*60*60*1000));
+                          expires = "; expires=" + date.toUTCString();
+                      }
+                      // document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                      }
+                      function getCookiefname(fname) {
+                          var nameEQ = fname + "=";
+                          var ca = document.cookie.split(';');
+                          for(var i=0;i < ca.length;i++) {
+                              var c = ca[i];
+                              while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                          }
+                          return null;
+                      }
+
+                      function checkCookie() {
+                        let user = getCookiefname("first_name");
+                        if (user != "") {
+                          alert("Welcome again " + user);
+                        } else {
+                          // user = prompt("Please enter your name:","");
+                          alert("Cookie not fount")
+                          if (user != "" && user != null) {
+                            setCookie("first_name", user, 30);
+                          }
+                        }
+                      }
+
+                      // setCookie("user_email","bobthegreat@gmail.com",30); //set "user_email" cookie, expires in 30 days
+                      setCookiefname("first_name", fname,30);
+                      var userFirstname=getCookiefname("first_name");//"bobthegreat@gmail.com"
+                      //Phase 2 refresh
+                      function autoRefresh() {
+                          window.location = window.location.href;
+                          console.log('autoRefresh is called');
+                      }
+                      setInterval('autoRefresh()', 5000);
+                      
 
                       //Auto generate report after clicking button
-                      // function autoGen(){
-                      //   let userGen; 
-                      //   let text = "Generate Report that is near to this user?";
-                      //   if (confirm(text) == true){
-                      //     location.href = "http://youtube.com";
-                      //     console.log("user is clicked");
-                      //   } else {
-                      //     txt = "";
-                      //     console.log("cancel autogenerate");
-                      //   }
-                      // }
-                      //test 1
-                      // document.getElementById("redirectPage").addEventListener("click", function() {
-                      //   window.location.href = "http://google.com", "_blank";
-                      //   console.log("button is clicked!");
-                      //   // window.open(
-                      //   // "http://google.com", "_blank");
-                      // });
-                      //test 2
-                      // document.getElementsByClassName("redirectPage").addEventListener("click", function() {
-                      //   let x = autoGen();
-                      //   document.getElementByClass("redirectPage").innerHTML = x;
-                      // });
-
                       //test 3
                       //
-                      //TODO: print string from Array or Object
                       var class_users = document.getElementsByClassName("redirectPage");
                       //pass array from php array to JS(object)
                       var obj = <?php echo json_encode($temparray); ?>;
@@ -197,20 +191,6 @@ session_start();
                       
 
                   </script>
-                  
-                  <!-- <script>
-                      function doRefresh() {
-                          $('table table-bordered').load('stationslistTable.php');
-                          document.getElementsByClassName("printableTable").innerHTML = Math.random();
-                          console.log("do refresh is working1");
-                      }
-                      $(function() {
-                          setInterval(doRefresh, 5000);
-                          console.log("do refresh is working2");
-                      });
-                  </script> -->
-                      
-                  
 </main>
   </body>
 </html>
