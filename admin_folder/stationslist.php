@@ -146,19 +146,12 @@ session_start();
                       var userFirstname=getCookie("user_date1");
                       var userFirstname=getCookie("user_date2");
 
-                      //reload page without moving
-                      $_cookie('last-scroll-top', $(window).scrollTop());
-                      document.location.reload(true); 
-
-                      var lastScrollTop = $_cookie('last-scroll-top');
-                      if (lastScrollTop) {
-                          $(window).scrollTop(lastScrollTop);
-                          $.removeCookie('last-scroll-top');
-                      }
+                      
                       // Phase 2 refresh
 
                       setTimeout(() => {
                         document.location.reload();
+                        console.log("setTimeout is called");
                       }, 5000);
                       // function autoRefresh() {
 
