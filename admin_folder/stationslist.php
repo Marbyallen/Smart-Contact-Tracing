@@ -108,11 +108,12 @@ session_start();
                       //Auto refresh table
                       //another test=================================================
                       //fname, lastname, qrcode, date1, date2
-                      let fname = <?php $Sfname ?>;
-                      let lname = <?php $Slname ?>;
-                      let qrcode = <?php $QRcode ?>;
-                      let date1 = <?php $date1 ?>;
-                      let date2 = <?php $date2 ?>;
+
+                      let fname = <?php echo json_encode($Sfname); ?>;
+                      let fname = <?php echo json_encode($Slname); ?>;
+                      let fname = <?php echo json_encode($QRcode); ?>;
+                      let fname = <?php echo json_encode($date1); ?>;
+                      let fname = <?php echo json_encode($date2); ?>;
 
                       function setCookiefname(fname) {
                       var expires = "";
