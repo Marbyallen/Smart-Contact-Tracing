@@ -91,7 +91,9 @@ session_start();
                       <!-- remove comment if teblehere is not working -->
                       <table class="table table-bordered">
                         
-                        <?php include 'stationslistTable.php' ?>
+                        <?php 
+                        // include 'stationslistTable.php' 
+                        ?>
 
                         <div id='tableHere'>
                         </div>    
