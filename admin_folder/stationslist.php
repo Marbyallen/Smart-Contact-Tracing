@@ -102,6 +102,20 @@ session_start();
                       }
 
                       //Auto refresh table
+                      //another test
+                      $(document).ready(function()
+                      {
+                        setInterval(function() => {
+                          $("#printableTable").load("stationslistTable.php");
+                          refresh();
+                        }, 10000);
+                      })
+                      //another test
+                      // function autoRefresh() {
+                      //     window.location = window.location.assign();
+                      // }
+                      // setInterval('autoRefresh()', 5000);
+                      //another test
                       // function reload(){
                       //     var container = document.getElementById("printableTable");
                       //     var content = container.innerHTML;
@@ -171,7 +185,7 @@ session_start();
 
                   </script>
                   
-                  <script>
+                  <!-- <script>
                       function doRefresh() {
                           $('table table-bordered').load('stationslistTable.php');
                           document.getElementsByClassName("printableTable").innerHTML = Math.random();
@@ -181,7 +195,7 @@ session_start();
                           setInterval(doRefresh, 5000);
                           console.log("do refresh is working2");
                       });
-                  </script>
+                  </script> -->
                       
                   
 </main>
