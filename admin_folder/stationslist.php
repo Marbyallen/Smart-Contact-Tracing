@@ -115,7 +115,7 @@ session_start();
                       let date1 = <?php echo json_encode($date1); ?>;
                       let date2 = <?php echo json_encode($date2); ?>;
 
-                      function setCookiefname(fname, value, days) {
+                      function setCookie(user_input, value, days) {
                       var expires = "";
                       if (days) {
                           var date = new Date();
@@ -124,8 +124,8 @@ session_start();
                       }
                       // document.cookie = name + "=" + (value || "")  + expires + "; path=/";
                       }
-                      function getCookiefname(fname) {
-                          var nameEQ = fname + "=";
+                      function getCookie(user_input) {
+                          var nameEQ = user_input + "=";
                           var ca = document.cookie.split(';');
                           for(var i=0;i < ca.length;i++) {
                               var c = ca[i];
@@ -135,22 +135,16 @@ session_start();
                           return null;
                       }
 
-                      function checkCookie() {
-                        let user = getCookiefname("first_name");
-                        if (user != "") {
-                          alert("Welcome again " + user);
-                        } else {
-                          // user = prompt("Please enter your name:","");
-                          alert("Cookie not fount")
-                          if (user != "" && user != null) {
-                            setCookiefname("first_name", user, 30);
-                          }
-                        }
-                      }
-
-                      // setCookie("user_email","bobthegreat@gmail.com",30); //set "user_email" cookie, expires in 30 days
                       setCookiefname("first_name", fname,30);
-                      var userFirstname=getCookiefname("first_name");//"bobthegreat@gmail.com"
+                      setCookiefname("last_name", lname,30);
+                      setCookiefname("user_qrcode", QRcode,30);
+                      setCookiefname("user_date1", date1,30);
+                      setCookiefname("user_date2", date2,30);
+                      var userFirstname=getCookie("first_name");
+                      var userFirstname=getCookie("last_name");
+                      var userFirstname=getCookie("user_qrcode");
+                      var userFirstname=getCookie("user_date1");
+                      var userFirstname=getCookie("user_date2");
 
                       //Phase 2 refresh
                       // function autoRefresh() {
