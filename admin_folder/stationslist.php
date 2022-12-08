@@ -103,15 +103,21 @@ session_start();
 
                       //Auto refresh table
                       //another test
-                      $(document).ready(function()
-                      {
-                        setInterval(function() {
-                          $("#printableTable").load("stationslistTable.php");
-                          refresh();
-                          $( "printableTable" ).listview( "refresh" );
-                          console.log("refresh table");
-                        }, 5000);
-                      })
+                      function updateDiv()
+                      { 
+                          $( "printableTable" ).load(window.location.href + " printableTable" );
+                      }
+                      setInterval('updateDiv()', 5000);
+                      //another test
+                      // $(document).ready(function()
+                      // {
+                      //   setInterval(function() {
+                      //     $("#printableTable").load("stationslistTable.php");
+                      //     refresh();
+                      //     $( "printableTable" ).listview( "refresh" );
+                      //     console.log("refresh table");
+                      //   }, 5000);
+                      // })
                       //another test
                       // function autoRefresh() {
                       //     window.location = window.location.assign();
