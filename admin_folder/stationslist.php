@@ -107,6 +107,7 @@ session_start();
 
                       //Auto refresh table
                       //another test=================================================
+                      //TODO: Xaxis should not move after reload page
                       //fname, lastname, qrcode, date1, date2
 
                       let fname = <?php echo json_encode($Sfname); ?>;
