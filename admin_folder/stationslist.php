@@ -154,7 +154,6 @@ session_start();
 
                       window.onbeforeunload = function(e) {
                           localStorage.setItem('scrollpos', window.scrollY);
-                          localStorage.setItem('scrollpos', window.scrollX);
                       };
                       // Phase 2 refresh
 
