@@ -107,8 +107,9 @@ session_start();
                       {
                         setInterval(function() {
                           $("#printableTable").load("stationslistTable.php");
-                          console.log("refresh table");
+                          refresh();
                           $( "printableTable" ).listview( "refresh" );
+                          console.log("refresh table");
                         }, 5000);
                       })
                       //another test
