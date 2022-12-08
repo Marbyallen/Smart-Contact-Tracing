@@ -90,7 +90,7 @@ session_start();
                       <table class="table table-bordered">
                         
                         <?php 
-                        // include 'stationslistTable.php' 
+                        include 'stationslistTable.php' 
                         ?>
                         </div>    
                     </div>
@@ -109,7 +109,7 @@ session_start();
                       //another test=================================================
                       function updateDiv()
                       { 
-                          $( "printableTable" ).load(window.location.href + " printableTable " );
+                          $( "printableTable" ).load(window.location.href + "printableTable");
                           console.log("updateDiv is called")
                       }
                       setInterval('updateDiv()', 1000);
