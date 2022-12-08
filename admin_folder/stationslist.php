@@ -87,11 +87,17 @@ session_start();
                       $QRcode = "";
                     ?>
                     <div id = printableTable>
+                      <!-- temp.php -->  
+                      <!-- remove comment if teblehere is not working -->
                       <table class="table table-bordered">
-                        <!-- temp.php -->
+                        
                         <?php include 'stationslistTable.php' ?>
+
+                        <div id='tableHere'>
+                        </div>    
                     </div>
                     <script>
+                    //===============================================================================
                       function printDiv(printableTable){
                         var printContents = document.getElementById(printableTable).innerHTML;
                         var originalContents = document.body.innerHTML;
@@ -102,13 +108,13 @@ session_start();
                       }
 
                       //Auto refresh table
-                      //another test
+                      //another test=================================================
                       function updateDiv()
                       { 
-                          $( "printableTable" ).load("stationslistTable.php" );
+                          $( "tableHere" ).load("stationslistTable.php" );
                           console.log("updateDiv is called")
                       }
-                      setInterval('updateDiv()', 5000);
+                      setInterval('updateDiv()', 1000);
                       //another test
                       // $(document).ready(function()
                       // {
