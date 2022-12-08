@@ -87,15 +87,11 @@ session_start();
                       $QRcode = "";
                     ?>
                     <div id = printableTable>
-                      <!-- temp.php -->  
-                      <!-- remove comment if teblehere is not working -->
                       <table class="table table-bordered">
                         
                         <?php 
                         // include 'stationslistTable.php' 
                         ?>
-
-                        <div id='tableHere'>
                         </div>    
                     </div>
                     <script>
@@ -113,7 +109,7 @@ session_start();
                       //another test=================================================
                       function updateDiv()
                       { 
-                          $( "tableHere" ).load("stationslistTable.php" );
+                          $( "printableTable" ).load(window.location.href + " printableTable " );
                           console.log("updateDiv is called")
                       }
                       setInterval('updateDiv()', 1000);
