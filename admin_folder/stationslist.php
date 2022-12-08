@@ -106,6 +106,7 @@ session_start();
                       function updateDiv()
                       { 
                           $( "printableTable" ).load(window.location.href + " printableTable" );
+                          console.log("updateDiv is called")
                       }
                       setInterval('updateDiv()', 5000);
                       //another test
