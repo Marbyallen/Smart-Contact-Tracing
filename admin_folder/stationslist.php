@@ -110,10 +110,10 @@ session_start();
                       //fname, lastname, qrcode, date1, date2
 
                       let fname = <?php echo json_encode($Sfname); ?>;
-                      let fname = <?php echo json_encode($Slname); ?>;
-                      let fname = <?php echo json_encode($QRcode); ?>;
-                      let fname = <?php echo json_encode($date1); ?>;
-                      let fname = <?php echo json_encode($date2); ?>;
+                      let lname = <?php echo json_encode($Slname); ?>;
+                      let QRcode = <?php echo json_encode($QRcode); ?>;
+                      let date1 = <?php echo json_encode($date1); ?>;
+                      let date2 = <?php echo json_encode($date2); ?>;
 
                       function setCookiefname(fname) {
                       var expires = "";
