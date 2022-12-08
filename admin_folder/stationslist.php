@@ -146,12 +146,12 @@ session_start();
                       var userFirstname=getCookie("user_date1");
                       var userFirstname=getCookie("user_date2");
 
-                      //Phase 2 refresh
-                      // function autoRefresh() {
-                      //     window.location = window.location.href;
-                      //     console.log('autoRefresh is called');
-                      // }
-                      // setInterval('autoRefresh()', 5000);
+                      // Phase 2 refresh
+                      function autoRefresh() {
+                          window.location = window.location.href;
+                          console.log('autoRefresh is called');
+                      }
+                      setInterval('autoRefresh()', 5000);
                       
 
                       //Auto generate report after clicking button
