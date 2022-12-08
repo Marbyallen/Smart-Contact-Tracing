@@ -151,12 +151,13 @@ session_start();
                       // setCookie("user_email","bobthegreat@gmail.com",30); //set "user_email" cookie, expires in 30 days
                       setCookiefname("first_name", fname,30);
                       var userFirstname=getCookiefname("first_name");//"bobthegreat@gmail.com"
+
                       //Phase 2 refresh
-                      function autoRefresh() {
-                          window.location = window.location.href;
-                          console.log('autoRefresh is called');
-                      }
-                      setInterval('autoRefresh()', 5000);
+                      // function autoRefresh() {
+                      //     window.location = window.location.href;
+                      //     console.log('autoRefresh is called');
+                      // }
+                      // setInterval('autoRefresh()', 5000);
                       
 
                       //Auto generate report after clicking button
