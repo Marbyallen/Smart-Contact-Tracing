@@ -67,7 +67,7 @@ session_start();
                         <br>
                         <!-- toggle switch -->
                         <label>Toggle auto refresh page: </label>
-                        <input type="button" id="autoRefreshButton" value="OFF"
+                        <input type="button" id="autoRefreshButton" value="ON"
                         onclick="Buttontoggle();">
                     </form> <br>
 
@@ -187,11 +187,13 @@ session_start();
                       function refreshOff(){
                         document.location.reload(false);
                       }
-                      //REFRESH LOOP
-                      // setTimeout(() => {
-                      //       document.location.reload(true);
-                      //       console.log("setTimeout is called");
-                      //     }, 5000);
+                      REFRESH LOOP
+                      setTimeout(() => {
+                        var t = document.getElementById("autoRefreshButton");
+                        t.value="ON";
+                        document.location.reload(true);
+                        console.log("setTimeout is called");
+                      }, 5000);
                       
                       // function autoRefresh() {
 
