@@ -169,12 +169,23 @@ session_start();
 
                       const toggle = () => {
                         if ( flag ) {
-                          document.getElementById("myBtn").innerHTML = "OFF";
+                          //ON
+
+                          document.getElementById("myBtn").innerHTML = "OFF"; //switch to off
                           } else {
-                          document.getElementById("myBtn").innerHTML = "ON";
+                            //OFF
+                          document.getElementById("myBtn").innerHTML = "ON"; //switch to on
                           }
                           flag = ! flag;
                       }
+
+                      // REFRESH LOOP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      setTimeout(() => {
+                        do {
+                          document.location.reload(true);
+                          console.log("setTimeout is called");
+                        } while (flag)
+                          }, 5000);
                       //test 
                       // var toggle = true;
                       // function Buttontoggle()
