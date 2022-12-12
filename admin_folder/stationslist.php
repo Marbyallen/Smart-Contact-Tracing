@@ -122,7 +122,7 @@ session_start();
                       
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
-                          let text = "Press a button!\nEither OK or Cancel.";
+                          let text = "generate report that is near to this user?";
                           if (confirm(text) == true) {
                             text = "You pressed OK!";
                           } else {
