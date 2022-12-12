@@ -148,6 +148,10 @@ button.btn-primary {
 table {
   border-collapse: collapse;
   table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  height: 100%;
 }
 
 td,
