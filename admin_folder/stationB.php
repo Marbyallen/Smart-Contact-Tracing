@@ -286,22 +286,7 @@ session_start();
                           console.log("setTimeout is called");
                       }, 5000);
 
-                      //Auto generate report after clicking button========================================================================
                       
-                      var class_users = document.getElementsByClassName("redirectPage");
-                      //pass array from php array to JS(object)
-                      var obj = <?php echo json_encode($temparray); ?>;
-                      //object to array
-                      const toArray = Object.entries(obj); 
-                      console.log("typeof toArray: ", toArray);
-                      
-                      var userArray = [];
-                      
-                      for (var i=0; i < class_users.length; i++) {
-                        class_users[i].onclick = function(){
-                              alert("generate report that is near to this user?");
-                          }
-                      }
                   </script>
                               
             </main>
