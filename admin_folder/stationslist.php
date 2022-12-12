@@ -126,7 +126,7 @@ session_start();
                           if (confirm(text) == true) {
                             // location.href = "https://code-boxx.com/redirect-on-click-javascript/", "_blank";
                             window.open(
-                              "https://code-boxx.com/redirect-on-click-javascript/", "_blank");
+                              "genReport.php", "_blank");
                           } else {
                             text = "You canceled!";
                           }
