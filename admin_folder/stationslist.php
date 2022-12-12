@@ -167,10 +167,10 @@ session_start();
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
-                          refreshOff();
+                          refreshOn();
                           t.value="OFF";}
                         else if(t.value=="OFF"){
-                          refreshOn();
+                          refreshOff();
                           t.value="ON";}
                       }
                       
@@ -190,7 +190,7 @@ session_start();
                       // REFRESH LOOP
                       setTimeout(() => {
                         var t = document.getElementById("autoRefreshButton");
-                        t.value="ON";
+                        t.value="OFF";
                         document.location.reload(true);
                         console.log("setTimeout is called");
                       }, 5000);
