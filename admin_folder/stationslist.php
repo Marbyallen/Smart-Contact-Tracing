@@ -180,12 +180,12 @@ session_start();
                       }
 
                       // REFRESH LOOP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                      setTimeout(() => {
-                        do {
-                          document.location.reload(true);
-                          console.log("setTimeout is called");
-                        } while (flag)
-                          }, 5000);
+                      // setTimeout(() => {
+                      //   do {
+                      //     document.location.reload(true);
+                      //     console.log("setTimeout is called");
+                      //   } while (flag)
+                      // }, 5000);
                       //test 
                       // var toggle = true;
                       // function Buttontoggle()
