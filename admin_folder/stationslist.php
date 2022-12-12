@@ -67,9 +67,9 @@ session_start();
                         <br>
                         <!-- toggle switch -->
                         <label>Toggle auto refresh page: </label>
-                        <input type="button" id="autoRefreshButton" value="OFF"
+                        <input type="button" id="autoRefreshButton" value="ON"
                         onclick="Buttontoggle();">
-                        <input type="button" id="autoRefreshButton2" value="ON"
+                        <input type="button" id="autoRefreshButton2" value="OFF"
                         onclick="Buttontoggle2();">
                     </form> <br>
 
@@ -165,22 +165,22 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      document.getElementById('autoRefreshButton2').style.visibility = "hidden"
+                      document.getElementById('autoRefreshButton2').style.visibility = "visible"
                       function Buttontoggle()
                       {
                         var t = document.getElementById("autoRefreshButton");
-                        if(t.value=="ON"){
-                          document.getElementById('autoRefreshButton').style.visibility = "hidden"
-                          t.value="OFF";}
-                        else if(t.value=="OFF"){
-                          document.getElementById('autoRefreshButton2').style.visibility = "visible"
-                          document.getElementById('autoRefreshButton').style.visibility = "hidden"
+                        if(t.value=="OFF"){
+                          document.getElementById('autoRefreshButton2').style.visibility = "hidden"
+                          document.getElementById('autoRefreshButton').style.visibility = "visible"
                           setTimeout(() => {
                             document.location.reload(true);
-                            t.value="ON";
                             console.log("setTimeout is called");
                           }, 5000);
+
                           t.value="ON";}
+                        else if(t.value=="ON"){
+                          document.getElementById('autoRefreshButton').style.visibility = "visible"
+                          t.value="OFF";}
                       }
                       
                       
