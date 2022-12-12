@@ -69,8 +69,6 @@ session_start();
                         <label>Toggle auto refresh page: </label>
                         <input type="button" id="autoRefreshButton" value="ON"
                         onclick="Buttontoggle();">
-                        <input type="button" id="autoRefreshButton2" value="OFF"
-                        onclick="Buttontoggle2();">
                     </form> <br>
 
                     <!--List of stations buttons-->
@@ -165,25 +163,21 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      document.getElementById('autoRefreshButton2').style.visibility = "visible"
                       function Buttontoggle()
                       {
                         var t = document.getElementById("autoRefreshButton");
-                        if(t.value=="OFF"){
-                          document.getElementById('autoRefreshButton2').style.visibility = "hidden"
-                          document.getElementById('autoRefreshButton').style.visibility = "visible"
-                          setTimeout(() => {
+                        if(t.value=="ON"){
+                          clearTimeout(myTimeout);
+                          t.value="OFF";}
+                        else if(t.value=="OFF"){
+                          
+                          t.value="ON";}
+                      }
+                      
+                      const myTimeout setTimeout(() => {
                             document.location.reload(true);
                             console.log("setTimeout is called");
                           }, 5000);
-
-                          t.value="ON";}
-                        else if(t.value=="ON"){
-                          document.getElementById('autoRefreshButton').style.visibility = "visible"
-                          t.value="OFF";}
-                      }
-                      
-                      
                       
                       // function autoRefresh() {
 
