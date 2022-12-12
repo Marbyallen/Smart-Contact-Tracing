@@ -67,11 +67,10 @@ session_start();
                         <br>
                         
                     </form> <br>
-                    
+                    <!-- toggle switch
                     <div id="toggle-switch">
-                      <!-- toggle switch -->
                       <button id="myBtn" onclick="toggle()">OFF</button>
-                    </div>
+                    </div> -->
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
@@ -164,72 +163,12 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      //flag switch toggle test 
-                      let flag = false;
-
-                      const toggle = () => {
-                        if ( flag ) {
-                          //ON
-                          console.log("toggle ON");
-                          setInterval(refreshON, 10000);
-                          document.getElementById("myBtn").innerHTML = "OFF"; //switch to off
-                          } else {
-                          //OFF
-                          console.log("toggle OFF");
-                          let myInterval = setInterval(refreshON(), 1000);
-                          clearInterval(myInterval);
-                          document.getElementById("myBtn").innerHTML = "ON"; //switch to on
-                          }
-                          flag = ! flag;
-                      }
-                      function refreshON(){
-                        document.location.reload(true);
-                      }
-
                       // REFRESH LOOP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                      // setTimeout(() => {
-                      //   do {
-                      //     document.location.reload(true);
-                      //     console.log("setTimeout is called");
-                      //   } while (flag)
-                      // }, 5000);
-                      //test 
-                      // var toggle = true;
-                      // function Buttontoggle()
-                      // {
-                      //   var t = document.getElementById("autoRefreshButton");
-                      //   if(t.value=="ON"){
-
-                      //     t.value="OFF";}
-                      //   else if(t.value=="OFF"){
-                      //     t.value="ON";}
-                      // }
+                      setTimeout(() => {
+                          document.location.reload(true);
+                          console.log("setTimeout is called");
+                      }, 5000);
                       
-                      
-                      // // REFRESH LOOP test
-                      // setTimeout(() => {
-                      //   var t = document.getElementById("autoRefreshButton");
-                      //   if(t.value=="OFF"){
-                      //     document.location.reload(false);
-                      //     }else {
-                      //       document.location.reload(true);
-                      //     }
-                      //   console.log("setTimeout is called");
-                      // }, 5000);
-                      //
-
-                      // REFRESH LOOP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-                      // setTimeout(() => {
-                      //       document.location.reload(true);
-                      //       console.log("setTimeout is called");
-                      //     }, 5000);
-
-                      // function autoRefresh() {
-
-                      //   window.location = window.location.href;
-                      //   console.log('autoRefresh is called');
-                      // }
-                      // setInterval('autoRefresh()', 5000);
                       
 
                       //Auto generate report after clicking button========================================================================
