@@ -161,6 +161,9 @@ th {
   padding: 15px;
   height: 25px;
 }
+td {
+  width: 100px;
+}
 /* end of table */
 
 /*------------------------------------------------- form */
