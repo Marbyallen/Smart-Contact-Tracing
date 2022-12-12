@@ -153,7 +153,7 @@ session_start();
                       var userFirstname=getCookie("user_date2");
                       // var userFirstname=getCookie("toggle_switch");
 
-                      //
+                      //fix scroll
                       document.addEventListener("DOMContentLoaded", function(event) { 
                         var scrollpos = localStorage.getItem('scrollpos');
                         if (scrollpos) window.scrollTo(0, scrollpos);
@@ -167,7 +167,7 @@ session_start();
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
-                            
+                          document.getElementById('autoRefreshButton').style.visibility = "hidden"
                             t.value="OFF";}
                         else if(t.value=="OFF"){
                             setTimeout(() => {
