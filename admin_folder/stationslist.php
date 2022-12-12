@@ -167,15 +167,25 @@ session_start();
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
-                          clearTimeout(myTimeout);
+                          refreshOff();
                           t.value="OFF";}
                         else if(t.value=="OFF"){
-                          
+                          refreshOn();
                           t.value="ON";}
                       }
                       
-                      const myTimeout = setTimeout(document.location.reload(true), 5000);
+                      // const myTimeout = setTimeout(document.location.reload(true), 5000);
+                      function refreshOn(){
+                        setTimeout(() => {
+                            document.location.reload(true);
+                            console.log("setTimeout is called");
+                          }, 5000);
+                      }
 
+                      fucntion refreshOff(){
+                        document.location.reload(false);
+                      }
+                      //REFRESH LOOP
                       // setTimeout(() => {
                       //       document.location.reload(true);
                       //       console.log("setTimeout is called");
