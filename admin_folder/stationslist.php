@@ -171,7 +171,7 @@ session_start();
                         if ( flag ) {
                           //ON
                           console.log("toggle ON");
-                          setInterval(refreshON(), 10000);
+                          setInterval(refreshON, 10000);
                           document.getElementById("myBtn").innerHTML = "OFF"; //switch to off
                           } else {
                           //OFF
