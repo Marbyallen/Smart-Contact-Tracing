@@ -187,7 +187,7 @@ session_start();
                       function refreshOff(){
                         document.location.reload(false);
                       }
-                      REFRESH LOOP
+                      // REFRESH LOOP
                       setTimeout(() => {
                         var t = document.getElementById("autoRefreshButton");
                         t.value="ON";
