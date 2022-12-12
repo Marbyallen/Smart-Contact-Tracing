@@ -172,6 +172,7 @@ session_start();
                         else if(t.value=="OFF"){
                             setTimeout(() => {
                               document.location.reload(true);
+                              t.value="ON";
                               console.log("setTimeout is called");
                             }, 5000);
                             t.value="ON";}
