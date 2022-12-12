@@ -164,7 +164,7 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      //test
+                      //flag switch toggle test 
                       let flag = false;
 
                       const toggle = () => {
