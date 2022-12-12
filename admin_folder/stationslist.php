@@ -66,10 +66,9 @@ session_start();
 
                         <br>
                         <!-- toggle switch -->
-                        <label>Toggle auto refresh page</label>
-                        <input type="button" id="autoRefreshButton" value="OFF"
+                        <label>Toggle auto refresh page</label><br>
+                        <input type="button" id="autoRefreshButton" name="toggle" value="OFF"
                               onclick="Buttontoggle();">
-                        
                     </form> <br>
 
                     <!--List of stations buttons-->
@@ -120,6 +119,7 @@ session_start();
                       let QRcode = <?php echo json_encode($QRcode); ?>;
                       let date1 = <?php echo json_encode($date1); ?>;
                       let date2 = <?php echo json_encode($date2); ?>;
+                      let toggle = <?php echo json_encode($toggle); ?>;
 
                       function setCookie(user_input, value, days) {
                       var expires = "";

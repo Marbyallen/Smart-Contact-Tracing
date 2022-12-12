@@ -20,6 +20,7 @@
         $QRcode = $_REQUEST['QRcode'];
         $date1 = $_REQUEST['date1'];
         $date2 = $_REQUEST['date2'];
+        $toggle = $_REQUEST['toggle'];
         $class = "redirectPage";
         $temparray = array();
 
