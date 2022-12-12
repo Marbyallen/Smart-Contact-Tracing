@@ -124,7 +124,9 @@ session_start();
                         class_users[i].onclick = function(){
                           let text = "generate report that is near to this user?";
                           if (confirm(text) == true) {
-                            location.href = "https://code-boxx.com/redirect-on-click-javascript/", "_blank";
+                            // location.href = "https://code-boxx.com/redirect-on-click-javascript/", "_blank";
+                            window.open(
+                              "https://code-boxx.com/redirect-on-click-javascript/", "_blank");
                           } else {
                             text = "You canceled!";
                           }
