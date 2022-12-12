@@ -167,17 +167,13 @@ session_start();
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
-                          refreshOn();
                           t.value="OFF";}
                         else if(t.value=="OFF"){
-                          refreshOff();
                           t.value="ON";}
                       }
                       
                       // const myTimeout = setTimeout(document.location.reload(true), 5000);
                       function refreshOn(){
-                        var t = document.getElementById("autoRefreshButton");
-                        t.value="ON";
                         setTimeout(() => {
                             document.location.reload(true);
                             console.log("setTimeout is called");
