@@ -65,12 +65,13 @@ session_start();
                         <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
 
                         <br>
-                        <!-- toggle switch -->
-                        <label>Toggle auto refresh page: </label>
-                        <input type="button" id="autoRefreshButton" value="ON"
-                        onclick="Buttontoggle();">
+                        
                     </form> <br>
-
+                    
+                    <div id="toggle-switch">
+                      <!-- toggle switch -->
+                      <button id="myBtn" onclick="toggle()">OFF</button>
+                    </div>
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
@@ -163,37 +164,48 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      function Buttontoggle()
-                      {
-                        var t = document.getElementById("autoRefreshButton");
-                        if(t.value=="ON"){
-                          t.value="OFF";}
-                        else if(t.value=="OFF"){
-                          t.value="ON";}
-                      }
-                      
-                      // const myTimeout = setTimeout(document.location.reload(true), 5000);
-                      function refreshOn(){
-                        setTimeout(() => {
-                            document.location.reload(true);
-                            console.log("setTimeout is called");
-                          }, 5000);
-                      }
+                      //test
+                      let flag = false;
 
-                      function refreshOff(){
-                        document.location.reload(false);
-                      }
-                      // REFRESH LOOP
-                      setTimeout(() => {
-                        var t = document.getElementById("autoRefreshButton");
-                        if(t.value=="OFF"){
-                          document.location.reload(false);
-                          }else {
-                            document.location.reload(true);
+                      const toggle = () => {
+                        if ( flag ) {
+                          document.getElementById("myBtn").innerHTML = "OFF";
+                          } else {
+                          document.getElementById("myBtn").innerHTML = "ON";
                           }
-                        console.log("setTimeout is called");
-                      }, 5000);
+                          flag = ! flag;
+                      }
+                      //test 
+                      // var toggle = true;
+                      // function Buttontoggle()
+                      // {
+                      //   var t = document.getElementById("autoRefreshButton");
+                      //   if(t.value=="ON"){
+
+                      //     t.value="OFF";}
+                      //   else if(t.value=="OFF"){
+                      //     t.value="ON";}
+                      // }
                       
+                      
+                      // // REFRESH LOOP test
+                      // setTimeout(() => {
+                      //   var t = document.getElementById("autoRefreshButton");
+                      //   if(t.value=="OFF"){
+                      //     document.location.reload(false);
+                      //     }else {
+                      //       document.location.reload(true);
+                      //     }
+                      //   console.log("setTimeout is called");
+                      // }, 5000);
+                      //
+
+                      // REFRESH LOOP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                      // setTimeout(() => {
+                      //       document.location.reload(true);
+                      //       console.log("setTimeout is called");
+                      //     }, 5000);
+
                       // function autoRefresh() {
 
                       //   window.location = window.location.href;
