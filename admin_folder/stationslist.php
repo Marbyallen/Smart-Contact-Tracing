@@ -12,6 +12,7 @@ session_start();
   <head> 
     <link rel="stylesheet" type="text/css" href="\assets_admin\mymain1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Stations List</title>
@@ -66,8 +67,9 @@ session_start();
 
                         <br>
                         <!-- toggle switch -->
-                        <label>Toggle auto refresh page</label><br>
-                        <input type="button" id="autoRefreshButton" name="toggle" value="OFF"
+                        <label>Toggle auto refresh page: </label><br>
+                        <p id="toggle"></p><br>
+                        <input type="button" id="autoRefreshButton" name="toggle" value="Toggle Auto Refresh Page"
                               onclick="Buttontoggle();">
                     </form> <br>
 
@@ -166,16 +168,17 @@ session_start();
                       function Buttontoggle()
                       {
                         var t = document.getElementById("autoRefreshButton");
-                        if(t.value=="ON"){
-                            
-                            t.value="OFF";}
-                        else if(t.value=="OFF"){
+                        if(t.value=="Toggle Auto Refresh Page"){ //if ON
+                          document.getElementById("toggle").innerHTML = "OFF";
+                            t.value="Toggle Auto Refresh Page";} //to OFF
+                        else if(t.value=="Toggle Auto Refresh Page"){ //if OFF
                             setTimeout(() => {
                               document.location.reload(true);
                               t.value="ON";
                               console.log("setTimeout is called");
                             }, 5000);
-                            t.value="ON";}
+                            document.getElementById("toggle").innerHTML = "ON";
+                            t.value="Toggle Auto Refresh Page";} //to ON
                       }
                       
                       
