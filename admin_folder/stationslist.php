@@ -63,7 +63,15 @@ session_start();
                           <br>
                         </div><br>
                         <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
+
+                        <br>
+                        <!-- toggle switch -->
+                        
+                        <input type="button" id="autoRefreshButton" value="NO"
+                              onclick="Buttontoggle();">
+                        
                     </form> <br>
+
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
@@ -153,6 +161,14 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
+                      function Buttontoggle()
+                      {
+                        var t = document.getElementById("myButton");
+                        if(t.value=="YES"){
+                            t.value="NO";}
+                        else if(t.value=="NO"){
+                            t.value="YES";}
+                      }
                       
                       setTimeout(() => {
                             document.location.reload(true);
