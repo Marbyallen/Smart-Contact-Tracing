@@ -154,22 +154,11 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      let flag = false;
-
-                      const toggle = () => {
-                        console.log("toggle is working")
-                        if ( flag ) {
-                          // insert code here when flag is on/true
-                          setTimeout(() => {
+                      
+                      setTimeout(() => {
                             document.location.reload(true);
                             console.log("setTimeout is called");
                           }, 5000);
-                          } else {
-                          // insert code here when flag is off/false
-                          }
-                          flag = ! flag;
-                      }
-
                       
                       // function autoRefresh() {
 
