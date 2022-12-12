@@ -66,9 +66,11 @@ session_start();
 
                         <br>
                         <!-- toggle switch -->
-                        <label>Toggle auto refresh page</label><br>
-                        <input type="button" id="autoRefreshButton" name="toggle" value="OFF"
+                        <label>Toggle auto refresh page: </label>
+                        <input type="button" id="autoRefreshButton" value="OFF"
                               onclick="Buttontoggle();">
+                        <input type="button" id="autoRefreshButton2" value="ON"
+                        onclick="Buttontoggle2();">
                     </form> <br>
 
                     <!--List of stations buttons-->
@@ -168,14 +170,15 @@ session_start();
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
                           document.getElementById('autoRefreshButton').style.visibility = "hidden"
-                            t.value="OFF";}
+                          t.value="OFF";}
                         else if(t.value=="OFF"){
-                            setTimeout(() => {
-                              document.location.reload(true);
-                              t.value="ON";
-                              console.log("setTimeout is called");
-                            }, 5000);
-                            t.value="ON";}
+                          document.getElementById('autoRefreshButton2').style.visibility = "visible"
+                          setTimeout(() => {
+                            document.location.reload(true);
+                            t.value="ON";
+                            console.log("setTimeout is called");
+                          }, 5000);
+                          t.value="ON";}
                       }
                       
                       
