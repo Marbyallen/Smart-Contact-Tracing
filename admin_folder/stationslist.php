@@ -163,7 +163,7 @@ session_start();
                       // Phase 2 refresh
                       function Buttontoggle()
                       {
-                        var t = document.getElementById("myButton");
+                        var t = document.getElementById("autoRefreshButton");
                         if(t.value=="YES"){
                             t.value="NO";}
                         else if(t.value=="NO"){
