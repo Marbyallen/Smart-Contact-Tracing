@@ -68,7 +68,7 @@ session_start();
                         <!-- toggle switch -->
                         <label>Toggle auto refresh page: </label>
                         <input type="button" id="autoRefreshButton" type ="visible" value="OFF"
-                              onclick="Buttontoggle();">
+                        onclick="Buttontoggle();">
                         <input type="button" id="autoRefreshButton2" type ="hidden" value="ON"
                         onclick="Buttontoggle2();">
                     </form> <br>
