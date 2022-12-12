@@ -57,19 +57,9 @@ session_start();
                         </div><br>
                         <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
                         <!-- printableTable -->
-                  <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
-                  <script>
-                    function printDiv(printableTable){
-                      var printContents = document.getElementById(printableTable).innerHTML;
-                      var originalContents = document.body.innerHTML;
-
-                      document.body.innerHTML = printContents;
-                      window.print();
-                      document.body.innerHTML = originalContents;
-                    }
-                  </script>
+                        <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
+                  
                     </form> <br>
-                    <!-- <button class="btn btn-primary" type="button" onclick="window.print()">Print this page</button><br> -->
                         <!-- Display Table -->
                         <?php
                         include "db_connect.php";
@@ -219,8 +209,19 @@ session_start();
                             }
                         ?>
                     </div>
-                              </main>
-                   </main>
+
+                    <script>
+                    function printDiv(printableTable){
+                      var printContents = document.getElementById(printableTable).innerHTML;
+                      var originalContents = document.body.innerHTML;
+
+                      document.body.innerHTML = printContents;
+                      window.print();
+                      document.body.innerHTML = originalContents;
+                    }
+                  </script>
+                              
+            </main>
                    
                    
                     
