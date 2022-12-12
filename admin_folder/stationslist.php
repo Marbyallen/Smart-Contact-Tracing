@@ -165,8 +165,8 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
-                      function Buttontoggle()
                       document.getElementById('autoRefreshButton2').style.visibility = "hidden"
+                      function Buttontoggle()
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
