@@ -67,9 +67,9 @@ session_start();
                         <br>
                         <!-- toggle switch -->
                         <label>Toggle auto refresh page: </label>
-                        <input type="button" id="autoRefreshButton" display="block" value="OFF"
+                        <input type="button" id="autoRefreshButton" value="OFF"
                         onclick="Buttontoggle();">
-                        <input type="button" id="autoRefreshButton2" display="none" value="ON"
+                        <input type="button" id="autoRefreshButton2" value="ON"
                         onclick="Buttontoggle2();">
                     </form> <br>
 
@@ -166,13 +166,14 @@ session_start();
                       };
                       // Phase 2 refresh
                       function Buttontoggle()
+                      document.getElementById('autoRefreshButton2').style.visibility = "hidden"
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
-                          document.getElementById('autoRefreshButton').style.display = "none"
+                          document.getElementById('autoRefreshButton').style.visibility = "hidden"
                           t.value="OFF";}
                         else if(t.value=="OFF"){
-                          document.getElementById('autoRefreshButton2').style.display = "block"
+                          document.getElementById('autoRefreshButton2').style.visibility = "visible"
                           setTimeout(() => {
                             document.location.reload(true);
                             t.value="ON";
