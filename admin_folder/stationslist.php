@@ -174,6 +174,7 @@ session_start();
                           t.value="OFF";}
                         else if(t.value=="OFF"){
                           document.getElementById('autoRefreshButton2').style.visibility = "visible"
+                          document.getElementById('autoRefreshButton').style.visibility = "hidden"
                           setTimeout(() => {
                             document.location.reload(true);
                             t.value="ON";
