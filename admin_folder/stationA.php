@@ -84,7 +84,7 @@ session_start();
                         $Slname = "";
                         $QRcode = "";
                     ?>
-                    <div id = printableTable>
+                    <div id = "printableTable" style="overflow-x: auto;">
                         <table class="table table-bordered">
 
                         <?php
