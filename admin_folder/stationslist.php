@@ -165,15 +165,16 @@ session_start();
                       {
                         var t = document.getElementById("autoRefreshButton");
                         if(t.value=="ON"){
+                            setTimeout(() => {
+                              document.location.reload(true);
+                              console.log("setTimeout is called");
+                            }, 5000);
                             t.value="OFF";}
                         else if(t.value=="OFF"){
                             t.value="ON";}
                       }
                       
-                      setTimeout(() => {
-                            document.location.reload(true);
-                            console.log("setTimeout is called");
-                          }, 5000);
+                      
                       
                       // function autoRefresh() {
 
