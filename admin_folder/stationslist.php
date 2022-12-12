@@ -176,6 +176,8 @@ session_start();
                       
                       // const myTimeout = setTimeout(document.location.reload(true), 5000);
                       function refreshOn(){
+                        var t = document.getElementById("autoRefreshButton");
+                        t.value="ON";
                         setTimeout(() => {
                             document.location.reload(true);
                             console.log("setTimeout is called");
