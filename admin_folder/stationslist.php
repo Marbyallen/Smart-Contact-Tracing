@@ -16,12 +16,7 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Stations List</title>
   </head>
-  <style>
-    /* tr[data-href]{ */
-    .redirectPage{
-      cursor: pointer;
-    }
-  </style>
+  
   <body>
     <div class="sidenav">
       <ul class="first">

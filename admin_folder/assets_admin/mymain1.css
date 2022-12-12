@@ -131,6 +131,9 @@ button.btn-primary {
   border-radius: 5px;
   width:23%;
 }
+.redirectPage{
+  cursor: pointer;
+}
 
 /*-------------------------------------------------Table*/
 
@@ -144,6 +147,7 @@ button.btn-primary {
 /* tr:nth-child(even) {
           background-color: #dddddd;
         } */
+
 
 table {
   border-collapse: collapse;

@@ -85,6 +85,8 @@ session_start();
                                 $QRcode = $_REQUEST['QRcode'];
                                 $date1 = $_REQUEST['date1'];
                                 $date2 = $_REQUEST['date2'];
+                                $class = "redirectPage";
+                                $temparray = array();
                                 echo "
                                 <tr>
                                 <th>QR code</th>
@@ -190,7 +192,8 @@ session_start();
                             echo "Number of rows found: " . $numResults;
                             while($row = mysqli_fetch_array($result))
                             {
-                                        echo "<tr>";
+                                        array_push($temparray,$row);                  
+                                        echo "<tr class = " . $class . ">";
                                         echo "<td>" . $row['QRcode'] . "</td>";
                                         echo "<td>" . $row['firstname'] . "</td>";
                                         echo "<td>" . $row['lastname'] . "</td>";
