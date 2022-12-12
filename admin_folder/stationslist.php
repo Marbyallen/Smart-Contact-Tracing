@@ -119,7 +119,7 @@ session_start();
                       let QRcode = <?php echo json_encode($QRcode); ?>;
                       let date1 = <?php echo json_encode($date1); ?>;
                       let date2 = <?php echo json_encode($date2); ?>;
-                      let toggle = <?php echo json_encode($toggle); ?>;
+                      // let toggle = <?php echo json_encode($toggle); ?>;
 
                       function setCookie(user_input, value, days) {
                       var expires = "";
@@ -145,13 +145,13 @@ session_start();
                       setCookie("user_qrcode", QRcode,30);
                       setCookie("user_date1", date1,30);
                       setCookie("user_date2", date2,30);
-                      setCookie("toggle_switch", toggle,30);
+                      // setCookie("toggle_switch", toggle,30);
                       var userFirstname=getCookie("first_name");
                       var userFirstname=getCookie("last_name");
                       var userFirstname=getCookie("user_qrcode");
                       var userFirstname=getCookie("user_date1");
                       var userFirstname=getCookie("user_date2");
-                      var userFirstname=getCookie("toggle_switch");
+                      // var userFirstname=getCookie("toggle_switch");
 
                       //
                       document.addEventListener("DOMContentLoaded", function(event) { 
