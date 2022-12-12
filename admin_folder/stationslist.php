@@ -174,10 +174,12 @@ session_start();
                           t.value="ON";}
                       }
                       
-                      const myTimeout setTimeout(() => {
-                            document.location.reload(true);
-                            console.log("setTimeout is called");
-                          }, 5000);
+                      const myTimeout = setTimeout(document.location.reload(true);, 5000);
+
+                      // setTimeout(() => {
+                      //       document.location.reload(true);
+                      //       console.log("setTimeout is called");
+                      //     }, 5000);
                       
                       // function autoRefresh() {
 
