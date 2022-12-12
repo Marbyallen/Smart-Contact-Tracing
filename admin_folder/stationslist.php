@@ -122,13 +122,14 @@ session_start();
                       
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
-                          let text = "generate report that is near to this user?";
-                          if (confirm(text) == true) {
-                            // location.href = "https://code-boxx.com/redirect-on-click-javascript/", "_blank";
+                          let text = "generate report that is near to this user?\n";
+                          let user = obj[i][1];
+                          let alertString = text + user;
+                          if (confirm(alertString) == true) {
                             window.open(
                               "genReport.php", "_blank");
                           } else {
-                            text = "You canceled!";
+                            // text = "You canceled!";
                           }
                               // alert("generate report that is near to this user?");
                           }
