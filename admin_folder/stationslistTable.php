@@ -6,7 +6,7 @@
     {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    header("Refresh:0");
+    // header("Refresh:0");
 
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
     $Sfname =  "";

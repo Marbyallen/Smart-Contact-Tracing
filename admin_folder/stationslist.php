@@ -91,8 +91,7 @@ session_start();
                         
                         <?php 
                         include 'stationslistTable.php' 
-                        ?>
-                        </div>    
+                        ?>    
                     </div>
                     <script>
                     //===============================================================================
@@ -155,10 +154,10 @@ session_start();
                       };
                       // Phase 2 refresh
                       
-                      // setTimeout(() => {
-                      //       document.location.reload(true);
-                      //       console.log("setTimeout is called");
-                      //     }, 5000);
+                      setTimeout(() => {
+                            document.location.reload(true);
+                            console.log("setTimeout is called");
+                          }, 5000);
                       
                       // function autoRefresh() {
 
