@@ -171,12 +171,13 @@ session_start();
                         if ( flag ) {
                           //ON
                           console.log("toggle ON");
-                          // setInterval(refreshON, 10000);
+                          setInterval(refreshON, 10000);
                           document.getElementById("myBtn").innerHTML = "OFF"; //switch to off
                           } else {
                           //OFF
                           console.log("toggle OFF");
-                          // clearInterval(myInterval);
+                          let myInterval = setInterval(refreshON(), 1000);
+                          clearInterval(myInterval);
                           document.getElementById("myBtn").innerHTML = "ON"; //switch to on
                           }
                           flag = ! flag;
@@ -184,7 +185,6 @@ session_start();
                       function refreshON(){
                         document.location.reload(true);
                       }
-                      myInterval = setInterval(refreshON(), 1000);
 
                       // REFRESH LOOP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
                       // setTimeout(() => {
