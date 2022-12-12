@@ -190,8 +190,12 @@ session_start();
                       // REFRESH LOOP
                       setTimeout(() => {
                         var t = document.getElementById("autoRefreshButton");
-                        t.value="OFF";
-                        document.location.reload(true);
+                        if(t.value=="Off"){
+                          document.location.reload(false);
+                          t.value="OFF";}
+                          else {
+                            document.location.reload(true);
+                          }
                         console.log("setTimeout is called");
                       }, 5000);
                       
