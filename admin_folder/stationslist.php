@@ -67,7 +67,7 @@ session_start();
                         <br>
                         <!-- toggle switch -->
                         <label>Toggle auto refresh page: </label>
-                        <input type="button" id="autoRefreshButton" value="ON"
+                        <input type="button" id="autoRefreshButton" value="OFF"
                         onclick="Buttontoggle();">
                     </form> <br>
 
@@ -182,7 +182,7 @@ session_start();
                           }, 5000);
                       }
 
-                      fucntion refreshOff(){
+                      function refreshOff(){
                         document.location.reload(false);
                       }
                       //REFRESH LOOP
