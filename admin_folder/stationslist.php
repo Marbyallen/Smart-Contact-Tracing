@@ -124,7 +124,7 @@ session_start();
                         class_users[i].onclick = function(){
                           let text = "generate report that is near to this user?\n";
                           let user_name = 1;
-                          let user = obj[i][user_name];
+                          let user = obj[i];
                           let alertString = text + user;
                           
                           if (confirm(alertString) == true) {
