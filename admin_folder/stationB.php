@@ -17,6 +17,11 @@ session_start();
             <title>Station B</title>
             
     </head>
+    <style>
+        .redirectPage{
+        cursor: pointer;
+        }
+    </style>
         <body>
             <div class="sidenav">
             <ul class="first">
