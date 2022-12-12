@@ -66,8 +66,8 @@ session_start();
 
                         <br>
                         <!-- toggle switch -->
-                        
-                        <input type="button" id="autoRefreshButton" value="NO"
+                        <label>Toggle auto refresh page</label>
+                        <input type="button" id="autoRefreshButton" value="OFF"
                               onclick="Buttontoggle();">
                         
                     </form> <br>
@@ -164,10 +164,10 @@ session_start();
                       function Buttontoggle()
                       {
                         var t = document.getElementById("autoRefreshButton");
-                        if(t.value=="YES"){
-                            t.value="NO";}
-                        else if(t.value=="NO"){
-                            t.value="YES";}
+                        if(t.value=="ON"){
+                            t.value="OFF";}
+                        else if(t.value=="OFF"){
+                            t.value="ON";}
                       }
                       
                       setTimeout(() => {
