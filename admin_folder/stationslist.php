@@ -160,7 +160,7 @@ session_start();
                         console.log("toggle is working")
                         if ( flag ) {
                           // insert code here when flag is on/true
-                          setTimeout(function() => {
+                          setTimeout(() => {
                             document.location.reload(true);
                             console.log("setTimeout is called");
                           }, 5000);
