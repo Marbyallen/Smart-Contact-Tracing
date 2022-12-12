@@ -106,9 +106,7 @@ session_start();
                       }
 
                       //Auto refresh table
-                      //another test=================================================
                       //TODO: Xaxis should not move after reload page
-                      //fname, lastname, qrcode, date1, date2
 
                       let fname = <?php echo json_encode($Sfname); ?>;
                       let lname = <?php echo json_encode($Slname); ?>;
@@ -118,12 +116,11 @@ session_start();
 
                       function setCookie(user_input, value, days) {
                       var expires = "";
-                      if (days) {
-                          var date = new Date();
-                          date.setTime(date.getTime() + (days*24*60*60*1000));
-                          expires = "; expires=" + date.toUTCString();
-                      }
-                      // document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+                        if (days) {
+                            var date = new Date();
+                            date.setTime(date.getTime() + (days*24*60*60*1000));
+                            expires = "; expires=" + date.toUTCString();
+                        }
                       }
                       function getCookie(user_input) {
                           var nameEQ = user_input + "=";
@@ -157,11 +154,23 @@ session_start();
                           localStorage.setItem('scrollpos', window.scrollY);
                       };
                       // Phase 2 refresh
+                      let flag = false;
 
-                      setTimeout(() => {
-                        document.location.reload(true);
-                        console.log("setTimeout is called");
-                      }, 5000);
+                      const toggle = () => {
+                        console.log("toggle is working")
+                        if ( flag ) {
+                          // insert code here when flag is on/true
+                          setTimeout(function() => {
+                            document.location.reload(true);
+                            console.log("setTimeout is called");
+                          }, 5000);
+                          } else {
+                          // insert code here when flag is off/false
+                          }
+                          flag = ! flag;
+                      }
+
+                      
                       // function autoRefresh() {
 
                       //   window.location = window.location.href;
@@ -170,7 +179,7 @@ session_start();
                       // setInterval('autoRefresh()', 5000);
                       
 
-                      //Auto generate report after clicking button
+                      //Auto generate report after clicking button========================================================================
                       //test 3
                       //
                       var class_users = document.getElementsByClassName("redirectPage");
