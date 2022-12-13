@@ -23,19 +23,27 @@ session_start();
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <br>
     <h2>Store and retrieve data from local storage.</h2><br>
-    <p id="demo"></p><br>
+    <!-- <p id="demo"></p><br> -->
     
     <script>
       // Retrieving data:
       let text = localStorage.getItem("testJSON");
       let obj = JSON.parse(text);
-      document.getElementById("demo").innerHTML = obj.name;
+      // document.getElementById("demo").innerHTML = obj.name;
     </script>
     <?php
     // $array = json_decode($_POST['obj']);
     $user_info = json_encode(['text']);
     
     echo count($user_info);
+
+    function echo_arr($arr){
+      for ($i=0; $i < count($arr); $i++) { 
+              echo $arr[$i];
+          }
+      }
+
+    echo_arr($user_info);
     ?>
     </main>
   </body>
