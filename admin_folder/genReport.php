@@ -36,6 +36,9 @@ session_start();
     $user_info = json_encode(['text']);
     
     echo count($user_info);
+    echo ($user_info[0]);
+    echo ($user_info[1]);
+    echo ($user_info[2]);
 
     function echo_arr($arr){
       for ($i=0; $i < count($arr); $i++) { 
