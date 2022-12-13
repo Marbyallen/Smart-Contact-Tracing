@@ -67,10 +67,6 @@ session_start();
                         <br>
                         
                     </form> <br>
-                    <!-- toggle switch
-                    <div id="toggle-switch">
-                      <button id="myBtn" onclick="toggle()">OFF</button>
-                    </div> -->
                     <!--List of stations buttons-->
                    <div class="divStations-btn">
                         <button id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="document.location='stationA.php' ">Station A</button>
@@ -120,13 +116,13 @@ session_start();
                       // console.log("typeof toArray: ", toArray);
                       
                       function printAlert(qr, firstname, lastname, station, date, time, bht){
-                        let qr = "QRcode: ", qr;
+                        let qrcode = "QRcode: ", qr;
                         let fullname = "User Name: ", firstname + " " + lastname;
                         let station = "Station: ", station;
                         let date = "Date: ", date;
                         let time = "Time: ", time;
                         let bht = "Body Heat Temperature", bht;
-                        let alertString = qr + fullname + "\n" + station + "\n" + date + "\n" + time;
+                        let alertString = qrcode + fullname + "\n" + station + "\n" + date + "\n" + time;
                         return alertString;
                       }
                       
@@ -134,7 +130,8 @@ session_start();
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                           let text = "generate report that is near to this user?\n";
-                          let alertString = printAlert(users_obj[i], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
+                          let text2 = printAlert(users_obj[i], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
+                          let alertString = text + text2;
                           
                           if (confirm(alertString) == true) {
                             window.open(
