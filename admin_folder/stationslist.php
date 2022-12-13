@@ -113,20 +113,28 @@ session_start();
                       
                       var class_users = document.getElementsByClassName("redirectPage");
                       //pass array from php array to JS(object)
-                      const obj = <?php echo json_encode($temparray); ?>;
-                      console.log(typeof obj);
+                      const users_obj = <?php echo json_encode($temparray); ?>;
+                      console.log(typeof users_obj);
                       //object to array
-                      const toArray = Object.entries(obj); 
-                      console.log("typeof toArray: ", toArray);
+                      // const toArray = Object.entries(obj); 
+                      // console.log("typeof toArray: ", toArray);
                       
-                      var userArray = [];
+                      function printAlert(QRcode, firstname, lastname, station, date, time, bht){
+                        let qrcode = "QRcode: ", QRcode;
+                        let fullname = "User Name: ", firstname + " " + lastname;
+                        let station = "Station: ", station;
+                        let date = "Date: ", date;
+                        let time = "Time: ", time;
+                        let bht = "Body Heat Temperature", bht;
+                        let alertString = qrcode + fullname + "\n" + station + "\n" + date + "\n" + time;
+                        return alertString;
+                      }
+                      
                       
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                           let text = "generate report that is near to this user?\n";
-                          let user_name = 1;
-                          let user = obj[i];
-                          let alertString = text + user;
+                          let alertString = printAlert(users_obj[i], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
                           
                           if (confirm(alertString) == true) {
                             window.open(
@@ -137,6 +145,8 @@ session_start();
                               // alert("generate report that is near to this user?");
                           }
                       }
+
+
                     </script>
 </main>
   </body>
