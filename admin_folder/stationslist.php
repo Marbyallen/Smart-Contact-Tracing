@@ -151,6 +151,9 @@ session_start();
                               let text2 = alertMsg(selectedUser[1], selectedUser[2], selectedUser[5], selectedUser[7], selectedUser[8], selectedUser[9]);
                               // alert(text1 + text2);
                               if (confirm(text1 + text2) == true) {
+                                <?php
+                                $array=json_decode($_POST['selectedUser']);
+                                ?>
                                 window.open(
                                   "genReport.php", "_blank");
                               } else {

@@ -22,7 +22,8 @@ session_start();
     <h1>Generate Report</h1>
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <?php
-    echo $selectedUser;
+    $array=json_decode($_POST['selectedUser']);
+    echo $array;
     ?>
     </main>
   </body>
