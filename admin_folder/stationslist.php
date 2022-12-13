@@ -182,7 +182,7 @@ session_start();
                               var string8 = cell8.innerHTML;
                               var string9 = cell9.innerHTML;
 
-                              var id = cell.innerHTML;
+                              // var id = cell.innerHTML;
                               // alert("id:" + id); //orig
                               const selectedUser = [string0, string1, string2, string3, string4, string5, string6, string7, string8, string9];
                               console.log("typeof selectedUser: ", typeof selectedUser);
@@ -196,7 +196,7 @@ session_start();
                         }
                       }
                       window.onload = addRowHandlers();
-
+                      // end of onclick row v2 test
                     </script>
 </main>
   </body>
