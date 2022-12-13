@@ -152,10 +152,11 @@ session_start();
                               // alert(text1 + text2);
                               if (confirm(text1 + text2) == true) {
                                 const myJson = JSON.stringify(selectedUser);
+                                //checking Json is working
                                 console.log("myJson content: ", myJson);
                                 console.log("myJson typeOf", typeof myJson);
                                 <?php
-                                // $array=json_decode($_POST['jsondata']);
+                                // $array=json_decode($_POST['myJson']);
                                 ?>
                                 window.open(
                                   "genReport.php", "_blank");

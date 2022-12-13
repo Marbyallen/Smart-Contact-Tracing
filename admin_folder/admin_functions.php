@@ -28,4 +28,6 @@ function check_login($con)
     }
 }
 
+$array=json_decode($_POST['myJson']);
+
 ?>
