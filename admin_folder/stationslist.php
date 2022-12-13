@@ -183,7 +183,7 @@ session_start();
                               var string9 = cell9.innerHTML;
 
 
-                              var string1 = cell5.innerHTML;
+                              // var string1 = cell5.innerHTML;
                               var id = cell.innerHTML;
                               // alert("id:" + id); //orig
                               const selectedUser = [string0, string1, string2, string3, string4, string5, string6, string7, string8, string9];
