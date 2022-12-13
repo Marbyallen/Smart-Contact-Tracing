@@ -34,16 +34,14 @@ session_start();
 
     <?php
     $user_info = json_encode(['obj']);
-    
-    echo count($user_info); 
+    $msg1 = "user_info count:";
+    echo count($msg1 + $user_info); 
     echo "<br>";
-    echo ($user_info[0]);
-    echo ($user_info[1]);
-    echo ($user_info[2]);
 
     function echo_arr($arr){
       for ($i=0; $i < count($arr); $i++) { 
               echo $arr[$i];
+              echo "<br>";
           }
     }
 
