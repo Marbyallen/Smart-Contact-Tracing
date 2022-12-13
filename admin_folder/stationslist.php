@@ -201,10 +201,10 @@ session_start();
 
                       function alertMsg(fname, lname, station, date, time, bodyheat){
                         let fullname = fname + " " + lname;
-                        let st ="station: ", station;
-                        let date1 = "Date: ", date;
-                        let time1 = "Time: ", time;
-                        let bht = "Body Heat Temperature: ", bodyheat;
+                        let st ="station: " + station;
+                        let date1 = "Date: " + date;
+                        let time1 = "Time: " + time;
+                        let bht = "Body Heat Temperature: " + bodyheat;
                         let alrtmsg = fullname + "\n" + st + "\n" + date1 + "\n" + time1 + "\n" + bht + "\n";
                         return alrtmsg; 
                       }
