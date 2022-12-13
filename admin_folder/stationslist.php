@@ -161,9 +161,13 @@ session_start();
                           var createClickHandler = function(row) {
                             return function() {
                               var cell = row.getElementsByTagName("td")[0];
+                              var cell5 = row.getElementsByTagName("td")[5];
+                              var cell7 = row.getElementsByTagName("td")[7];
+                              var cell8 = row.getElementsByTagName("td")[8];
+                              var string1 = cell5.innerHTML;
                               var id = cell.innerHTML;
-                              console.log("content: " cell);
-                              console.log("typeof id" typeof cell);
+                              console.log("content: " string1);
+                              console.log("typeof string1" typeof string1);
                               alert("id:" + id);
 
                             };
