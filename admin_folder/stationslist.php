@@ -120,13 +120,13 @@ session_start();
                       // console.log("typeof toArray: ", toArray);
                       
                       function printAlert(qr, firstname, lastname, station, date, time, bht){
-                        let qrcode = "QRcode: ", qr;
+                        let qr = "QRcode: ", qr;
                         let fullname = "User Name: ", firstname + " " + lastname;
                         let station = "Station: ", station;
                         let date = "Date: ", date;
                         let time = "Time: ", time;
                         let bht = "Body Heat Temperature", bht;
-                        let alertString = qrcode + fullname + "\n" + station + "\n" + date + "\n" + time;
+                        let alertString = qr + fullname + "\n" + station + "\n" + date + "\n" + time;
                         return alertString;
                       }
                       
