@@ -36,7 +36,7 @@ session_start();
     $user_info = json_encode(['text']);
     
     echo count($user_info);
-    echo ($user_info[0]);
+    echo ($user_info[0][0]);
     echo ($user_info[1]);
     echo ($user_info[2]);
 
