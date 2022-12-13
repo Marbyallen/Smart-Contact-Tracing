@@ -122,7 +122,7 @@ session_start();
                         let date = "Date: ", date;
                         let time = "Time: ", time;
                         let bht = "Body Heat Temperature", bht;
-                        let alertString = qrcode + fullname + "\n" + station + "\n" + date + "\n" + time;
+                        let alertString = qrcode + fullname + "\n" + station + "\n" + date + "\n" + time + "\n" + bht;
                         return alertString;
                       }
                       
