@@ -166,9 +166,8 @@ session_start();
                               var cell8 = row.getElementsByTagName("td")[8];
                               var string1 = cell5.innerHTML;
                               var id = cell.innerHTML;
-                              console.log("content: " string1);
-                              console.log("typeof string1" typeof string1);
-                              alert("id:" + id);
+                              // alert("id:" + id); //orig
+                              alert("id:" + string1);
 
                             };
                           };
