@@ -160,7 +160,7 @@ session_start();
                           var currentRow = table.rows[i];
                           var createClickHandler = function(row) {
                             return function() {
-                              var cell = row.getElementsByTagName("td")[0];
+                              var cell0 = row.getElementsByTagName("td")[0];
                               var cell1 = row.getElementsByTagName("td")[1];
                               var cell2 = row.getElementsByTagName("td")[2];
                               var cell3 = row.getElementsByTagName("td")[3];
@@ -171,7 +171,7 @@ session_start();
                               var cell8 = row.getElementsByTagName("td")[8];
                               var cell9 = row.getElementsByTagName("td")[9];
 
-                              var string0 = cell.innerHTML;
+                              var string0 = cell0.innerHTML;
                               var string1 = cell1.innerHTML;
                               var string2 = cell2.innerHTML;
                               var string3 = cell3.innerHTML;
@@ -182,8 +182,6 @@ session_start();
                               var string8 = cell8.innerHTML;
                               var string9 = cell9.innerHTML;
 
-
-                              // var string1 = cell5.innerHTML;
                               var id = cell.innerHTML;
                               // alert("id:" + id); //orig
                               const selectedUser = [string0, string1, string2, string3, string4, string5, string6, string7, string8, string9];
