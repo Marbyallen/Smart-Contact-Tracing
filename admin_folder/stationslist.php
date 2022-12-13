@@ -162,8 +162,8 @@ session_start();
                             return function() {
                               var cell = row.getElementsByTagName("td")[0];
                               var id = cell.innerHTML;
-                              console.log(id);
-                              console.log(typeof id);
+                              console.log("content: " cell);
+                              console.log("typeof id" typeof cell);
                               alert("id:" + id);
 
                             };
