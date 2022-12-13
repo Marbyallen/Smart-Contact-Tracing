@@ -188,7 +188,7 @@ session_start();
                               console.log("typeof selectedUser: ", typeof selectedUser);
                               console.log("content of selectedUser: ", selectedUser);
                               //print alert
-                              let text = "generate report that is near to this user?\n";
+                              let text1 = "generate report that is near to this user?\n";
                               let text2 = alertMsg(selectedUser[1], selectedUser[2], selectedUser[5], selectedUser[7], selectedUser[8], selectedUser[9]);
                               alert(text1 + text2);
 
