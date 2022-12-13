@@ -190,7 +190,15 @@ session_start();
                               //print alert
                               let text1 = "generate report that is near to this user?\n";
                               let text2 = alertMsg(selectedUser[1], selectedUser[2], selectedUser[5], selectedUser[7], selectedUser[8], selectedUser[9]);
-                              alert(text1 + text2);
+                              // alert(text1 + text2);
+                              if (confirm(text1 + text2) == true) {
+                                window.open(
+                                  "genReport.php", "_blank");
+                              } else {
+                                // text = "You canceled!";
+                              }
+                              
+                            
 
                             };
                           };
