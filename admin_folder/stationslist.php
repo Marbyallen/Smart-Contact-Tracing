@@ -168,7 +168,7 @@ session_start();
                           currentRow.onclick = createClickHandler(currentRow);
                         }
                       }
-
+                      window.onload = addRowHandlers();
 
                     </script>
 </main>
