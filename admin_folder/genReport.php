@@ -22,8 +22,17 @@ session_start();
     <h1>Generate Report</h1>
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <br>
+    <h2>Store and retrieve data from local storage.</h2><br>
+    <p id="demo"></p><br>
+    
+    <script>
+      // Retrieving data:
+      let text = localStorage.getItem("testJSON");
+      let obj = JSON.parse(text);
+      document.getElementById("demo").innerHTML = obj.name;
+    </script>
     <?php
-    echo count($array);
+    // echo count($array);
     ?>
     </main>
   </body>

@@ -155,6 +155,8 @@ session_start();
                                 //checking Json is working
                                 console.log("myJson content: ", myJson);
                                 console.log("myJson typeOf", typeof myJson);
+                                //==
+                                localStorage.setItem("testJSON", myJson);
                                 <?php
                                 $array=json_decode($_POST['myJson']);
                                 ?>
