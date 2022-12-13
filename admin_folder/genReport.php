@@ -39,7 +39,7 @@ session_start();
     echo "<br>";
 
     function echo_arr($arr){
-      for ($i=0; $i < 100; $i++) { 
+      for ($i=0; $i < count($arr); $i++) { 
               echo $arr[$i];
               echo "<br>";
           }
