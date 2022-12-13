@@ -119,8 +119,8 @@ session_start();
                       // const toArray = Object.entries(obj); 
                       // console.log("typeof toArray: ", toArray);
                       
-                      function printAlert(qrcode, firstname, lastname, station, date, time, bht){
-                        let qrcode = "QRcode: ", QRcode;
+                      function printAlert(qr, firstname, lastname, station, date, time, bht){
+                        let qrcode = "QRcode: ", qr;
                         let fullname = "User Name: ", firstname + " " + lastname;
                         let station = "Station: ", station;
                         let date = "Date: ", date;
