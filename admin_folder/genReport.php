@@ -31,8 +31,8 @@ session_start();
       let obj = JSON.parse(text);
       // document.getElementById("demo").innerHTML = obj.name;
     </script>
+
     <?php
-    // $array = json_decode($_POST['obj']);
     $user_info = json_encode(['text']);
     
     echo count($user_info);
@@ -41,7 +41,7 @@ session_start();
       for ($i=0; $i < count($arr); $i++) { 
               echo $arr[$i];
           }
-      }
+    }
 
     echo_arr($user_info);
     ?>
