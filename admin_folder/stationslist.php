@@ -161,13 +161,24 @@ session_start();
                           var createClickHandler = function(row) {
                             return function() {
                               var cell = row.getElementsByTagName("td")[0];
+                              var cell1 = row.getElementsByTagName("td")[1];
+                              var cell2 = row.getElementsByTagName("td")[2];
+                              var cell3 = row.getElementsByTagName("td")[3];
+                              var cell4 = row.getElementsByTagName("td")[4];
                               var cell5 = row.getElementsByTagName("td")[5];
+                              var cell6 = row.getElementsByTagName("td")[6];
                               var cell7 = row.getElementsByTagName("td")[7];
                               var cell8 = row.getElementsByTagName("td")[8];
+                              var cell9 = row.getElementsByTagName("td")[9];
+
                               var string1 = cell5.innerHTML;
                               var id = cell.innerHTML;
                               // alert("id:" + id); //orig
-                              alert("id:" + string1);
+                              const selectedUser = [cell, cell2, cell3, cell4, cell5, cell6, cell7, cell8, cell9];
+                              console.log("typeof selectedUser: ", typeof selectedUser);
+                              console.log("content of selectedUser: ", selectedUser);
+                              let text = "generate report that is near to this user?\n";
+                              alert(":" + string1);
 
                             };
                           };
