@@ -118,16 +118,16 @@ session_start();
                       // const toArray = Object.entries(obj); 
                       // console.log("typeof toArray: ", toArray);
                       
-                      function printAlert(qrcode, firstname, lastname, station, date, time, bht){
-                        qr = "QRcode: ", qrcode;
-                        fullname = "User Name: ", firstname + " " + lastname;
-                        station = "Station: ", station;
-                        date = "Date: ", date;
-                        time = "Time: ", time;
-                        bht = "Body Heat Temperature", bht;
-                        let alertString = qr + fullname + "\n" + station + "\n" + date + "\n" + time + "\n" + bht;
-                        return alertString;
-                      }
+                      // function printAlert(qrcode, firstname, lastname, station, date, time, bht){
+                      //   qr = "QRcode: ", qrcode;
+                      //   fullname = "User Name: ", firstname + " " + lastname;
+                      //   station = "Station: ", station;
+                      //   date = "Date: ", date;
+                      //   time = "Time: ", time;
+                      //   bht = "Body Heat Temperature", bht;
+                      //   let alertString = qr + fullname + "\n" + station + "\n" + date + "\n" + time + "\n" + bht;
+                      //   return alertString;
+                      // }
                       
                       //onclick row v1 ================================================================================
                       // for (var i=0; i < class_users.length; i++) {
@@ -202,10 +202,10 @@ session_start();
                       function alertMsg(fname, lname, station, date, time, bodyheat){
                         let fullname = fname + " " + lname;
                         let st = station;
-                        let date = date;
-                        let time = time;
+                        let date1 = date;
+                        let time1 = time;
                         let bht = bodyheat;
-                        let alrtmsg = fullname + "\n" + st + "\n" + date + " " + time + " " + bht + " ";
+                        let alrtmsg = fullname + "\n" + st + "\n" + date1 + " " + time1 + " " + bht + " ";
                         return alrtmsg; 
                       }
                       // end of onclick row v2 test
