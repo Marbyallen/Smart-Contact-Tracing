@@ -106,52 +106,11 @@ session_start();
                         document.body.innerHTML = originalContents;
                       }
                       //Auto generate report after clicking button========================================================================
-                      
                       var class_users = document.getElementsByClassName("redirectPage");
                       //pass array from php array to JS(object)
                       const users_obj = <?php echo json_encode($temparray); ?>;
                       const users_arr = Object.entries(users_obj);
                       
-                      console.log(typeof users_arr);
-                      console.log("users_arr contain: ", users_arr);
-                      //object to array
-                      // const toArray = Object.entries(obj); 
-                      // console.log("typeof toArray: ", toArray);
-                      
-                      // function printAlert(qrcode, firstname, lastname, station, date, time, bht){
-                      //   qr = "QRcode: ", qrcode;
-                      //   fullname = "User Name: ", firstname + " " + lastname;
-                      //   station = "Station: ", station;
-                      //   date = "Date: ", date;
-                      //   time = "Time: ", time;
-                      //   bht = "Body Heat Temperature", bht;
-                      //   let alertString = qr + fullname + "\n" + station + "\n" + date + "\n" + time + "\n" + bht;
-                      //   return alertString;
-                      // }
-                      
-                      //onclick row v1 ================================================================================
-                      // for (var i=0; i < class_users.length; i++) {
-                      //   class_users[i].onclick = function(){
-                      //     let numSelected = i;
-                      //     console.log(numSelected);
-                      //     // const selectedUser = Object.entries(users_obj[i]);
-                      //     // console.log("typeof selectedUser: ", typeof selectedUser);
-                      //     // console.log("selectedUser content: ", selectedUser);
-
-                      //     let text = "generate report that is near to this user?\n";
-                      //     // let text2 = printAlert(users_obj[i][0], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
-                      //     let alertString = text;
-                          
-                      //     if (confirm(alertString) == true) {
-                      //       window.open(
-                      //         "genReport.php", "_blank");
-                      //     } else {
-                      //       // text = "You canceled!";
-                      //     }
-                      //         // alert("generate report that is near to this user?");
-                      //     }
-                      // }
-                      //==========
                       //onclick row v2 test================================================================================
                       function addRowHandlers() {
                         var table = document.getElementById("tableId");
@@ -197,9 +156,6 @@ session_start();
                               } else {
                                 // text = "You canceled!";
                               }
-                              
-                            
-
                             };
                           };
                           currentRow.onclick = createClickHandler(currentRow);
