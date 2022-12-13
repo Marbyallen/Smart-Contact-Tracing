@@ -136,8 +136,8 @@ session_start();
                           console.log("typeof selectedUser: ", typeof selectedUser);
                           console.log("selectedUser content: ", selectedUser);
                           let text = "generate report that is near to this user?\n";
-                          let text2 = printAlert(users_obj[i][0], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
-                          let alertString = text + text2;
+                          // let text2 = printAlert(users_obj[i][0], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
+                          let alertString = text;
                           
                           if (confirm(alertString) == true) {
                             window.open(
