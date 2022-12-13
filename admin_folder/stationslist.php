@@ -90,7 +90,7 @@ session_start();
                       $QRcode = "";
                     ?>
                     <div id ="printableTable" style="overflow-x: auto;">
-                      <table class="table table-bordered">
+                      <table class="table table-bordered" id = "tableId">
                         
                         <?php 
                         include 'stationslistTable.php' 
@@ -129,26 +129,44 @@ session_start();
                         return alertString;
                       }
                       
-                      
-                      for (var i=0; i < class_users.length; i++) {
-                        class_users[i].onclick = function(){
-                          let numSelected = i;
-                          console.log(numSelected);
-                          // const selectedUser = Object.entries(users_obj[i]);
-                          // console.log("typeof selectedUser: ", typeof selectedUser);
-                          // console.log("selectedUser content: ", selectedUser);
-                          let text = "generate report that is near to this user?\n";
-                          // let text2 = printAlert(users_obj[i][0], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
-                          let alertString = text;
+                      //onclick row v1 ================================================================================
+                      // for (var i=0; i < class_users.length; i++) {
+                      //   class_users[i].onclick = function(){
+                      //     let numSelected = i;
+                      //     console.log(numSelected);
+                      //     // const selectedUser = Object.entries(users_obj[i]);
+                      //     // console.log("typeof selectedUser: ", typeof selectedUser);
+                      //     // console.log("selectedUser content: ", selectedUser);
+
+                      //     let text = "generate report that is near to this user?\n";
+                      //     // let text2 = printAlert(users_obj[i][0], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
+                      //     let alertString = text;
                           
-                          if (confirm(alertString) == true) {
-                            window.open(
-                              "genReport.php", "_blank");
-                          } else {
-                            // text = "You canceled!";
-                          }
-                              // alert("generate report that is near to this user?");
-                          }
+                      //     if (confirm(alertString) == true) {
+                      //       window.open(
+                      //         "genReport.php", "_blank");
+                      //     } else {
+                      //       // text = "You canceled!";
+                      //     }
+                      //         // alert("generate report that is near to this user?");
+                      //     }
+                      // }
+                      //==========
+                      //onclick row v2 test================================================================================
+                      function addRowHandlers() {
+                        var table = document.getElementById("tableId");
+                        var rows = table.getElementsByTagName("tr");
+                        for (i = 0; i < rows.length; i++) {
+                          var currentRow = table.rows[i];
+                          var createClickHandler = function(row) {
+                            return function() {
+                              var cell = row.getElementsByTagName("td")[0];
+                              var id = cell.innerHTML;
+                              alert("id:" + id);
+                            };
+                          };
+                          currentRow.onclick = createClickHandler(currentRow);
+                        }
                       }
 
 
