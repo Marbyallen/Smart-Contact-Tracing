@@ -33,10 +33,11 @@ session_start();
     </script>
 
     <?php
-    $user_info = json_encode(['text']);
+    $user_info = json_encode(['obj']);
     
-    echo count($user_info);
-    echo ($user_info[0][0]);
+    echo count($user_info); 
+    echo "<br>";
+    echo ($user_info[0]);
     echo ($user_info[1]);
     echo ($user_info[2]);
 
