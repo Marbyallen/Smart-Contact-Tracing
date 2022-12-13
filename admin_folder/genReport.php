@@ -21,7 +21,9 @@ session_start();
     <main>
     <h1>Generate Report</h1>
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
-    
+    <?php
+    echo $selectedUser;
+    ?>
     </main>
   </body>
 </html>
