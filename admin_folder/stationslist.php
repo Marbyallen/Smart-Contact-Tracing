@@ -153,7 +153,7 @@ session_start();
                               if (confirm(text1 + text2) == true) {
                                 const myJson = JSON.stringify(selectedUser);
                                 console.log("myJson content: ", myJson);
-                                console.log("myJson typeOf", typeOf myJson);
+                                console.log("myJson typeOf", typeof myJson);
                                 <?php
                                 // $array=json_decode($_POST['jsondata']);
                                 ?>
