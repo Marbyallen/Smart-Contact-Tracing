@@ -32,7 +32,7 @@ session_start();
       document.getElementById("demo").innerHTML = obj.name;
     </script>
     <?php
-    $array = json_decode($_POST['text']);
+    $array = json_decode($_POST['obj']);
     echo count($array);
     ?>
     </main>
