@@ -171,24 +171,26 @@ session_start();
                               var cell8 = row.getElementsByTagName("td")[8];
                               var cell9 = row.getElementsByTagName("td")[9];
 
-                              var string0 = cell0.innerHTML;
-                              var string1 = cell1.innerHTML;
-                              var string2 = cell2.innerHTML;
-                              var string3 = cell3.innerHTML;
-                              var string4 = cell4.innerHTML;
-                              var string5 = cell5.innerHTML;
-                              var string6 = cell6.innerHTML;
-                              var string7 = cell7.innerHTML;
-                              var string8 = cell8.innerHTML;
-                              var string9 = cell9.innerHTML;
+                              var string0 = cell0.innerHTML;  //qr
+                              var string1 = cell1.innerHTML;  //fname
+                              var string2 = cell2.innerHTML;  //lname
+                              var string3 = cell3.innerHTML;  //cnumber
+                              var string4 = cell4.innerHTML;  //email
+                              var string5 = cell5.innerHTML;  // station
+                              var string6 = cell6.innerHTML;  //facialrecogimage
+                              var string7 = cell7.innerHTML;  //date
+                              var string8 = cell8.innerHTML;  //time
+                              var string9 = cell9.innerHTML;  //body heat temp
 
                               // var id = cell.innerHTML;
                               // alert("id:" + id); //orig
                               const selectedUser = [string0, string1, string2, string3, string4, string5, string6, string7, string8, string9];
                               console.log("typeof selectedUser: ", typeof selectedUser);
                               console.log("content of selectedUser: ", selectedUser);
+                              //print alert
                               let text = "generate report that is near to this user?\n";
-                              alert(":" + string1);
+                              let text2 = alertMsg(selectedUser[1], selectedUser[2], selectedUser[5], selectedUser[7], selectedUser[8], selectedUser[9]);
+                              alert(text1 + text2);
 
                             };
                           };
@@ -196,6 +198,16 @@ session_start();
                         }
                       }
                       window.onload = addRowHandlers();
+
+                      function alertMsg(fname, lname, station, date, time, bodyheat){
+                        let fullname = fname + " " + lname;
+                        let st = station;
+                        let date = date;
+                        let time = time;
+                        let bht = bodyheat;
+                        let alrtmsg = fullname + "\n" + st + "\n" + date + " " + time + " " + bht + " ";
+                        return alrtmsg; 
+                      }
                       // end of onclick row v2 test
                     </script>
 </main>
