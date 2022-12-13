@@ -156,7 +156,7 @@ session_start();
                                 console.log("myJson content: ", myJson);
                                 console.log("myJson typeOf", typeof myJson);
                                 <?php
-                                // $array=json_decode($_POST['myJson']);
+                                $array=json_decode($_POST['myJson']);
                                 ?>
                                 window.open(
                                   "genReport.php", "_blank");
