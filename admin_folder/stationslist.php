@@ -158,7 +158,7 @@ session_start();
                                 //==
                                 localStorage.setItem("testJSON", myJson);
                                 <?php
-                                $array=json_decode($_POST['myJson']);
+                                // $array=json_decode($_POST['myJson']);
                                 ?>
                                 window.open(
                                   "genReport.php", "_blank");
