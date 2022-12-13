@@ -130,7 +130,7 @@ session_start();
                       for (var i=0; i < class_users.length; i++) {
                         class_users[i].onclick = function(){
                           let text = "generate report that is near to this user?\n";
-                          let text2 = printAlert(users_obj[i], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
+                          let text2 = printAlert(users_obj[i][0], users_obj[i][1], users_obj[2], users_obj[i][5], users_obj[i][7], users_obj[i][8], users_obj[i][9]);
                           let alertString = text + text2;
                           
                           if (confirm(alertString) == true) {
