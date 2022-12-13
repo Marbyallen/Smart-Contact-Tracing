@@ -33,8 +33,9 @@ session_start();
     </script>
     <?php
     // $array = json_decode($_POST['obj']);
-    $array = json_decode(['obj']);
-    echo count($array);
+    $user_info = json_decode(['text']);
+    
+    echo count($user_info);
     ?>
     </main>
   </body>
