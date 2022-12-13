@@ -117,11 +117,11 @@ session_start();
                       
                       function printAlert(qrcode, firstname, lastname, station, date, time, bht){
                         qr = "QRcode: ", qrcode;
-                        let fullname = "User Name: ", firstname + " " + lastname;
-                        let station = "Station: ", station;
-                        let date = "Date: ", date;
-                        let time = "Time: ", time;
-                        let bht = "Body Heat Temperature", bht;
+                        fullname = "User Name: ", firstname + " " + lastname;
+                        station = "Station: ", station;
+                        date = "Date: ", date;
+                        time = "Time: ", time;
+                        bht = "Body Heat Temperature", bht;
                         let alertString = qr + fullname + "\n" + station + "\n" + date + "\n" + time + "\n" + bht;
                         return alertString;
                       }
