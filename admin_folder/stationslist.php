@@ -110,8 +110,9 @@ session_start();
                       var class_users = document.getElementsByClassName("redirectPage");
                       //pass array from php array to JS(object)
                       const users_obj = <?php echo json_encode($temparray); ?>;
-                      console.log(typeof users_obj);
-                      console.log("users_obj contain: ", users_obj);
+                      const users_arr = Object.entries(users_obj);
+                      console.log(typeof users_arr);
+                      console.log("users_arr contain: ", users_arr);
                       //object to array
                       // const toArray = Object.entries(obj); 
                       // console.log("typeof toArray: ", toArray);
