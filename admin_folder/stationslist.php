@@ -162,7 +162,8 @@ session_start();
                             return function() {
                               var cell = row.getElementsByTagName("td")[0];
                               var id = cell.innerHTML;
-                              console.log(currentRow);
+                              console.log(id);
+                              console.log(typeof id);
                               alert("id:" + id);
 
                             };
