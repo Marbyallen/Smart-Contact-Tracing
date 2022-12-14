@@ -40,6 +40,10 @@ session_start();
     </script>
 
     <?php
+    $text = json_encode(['text']);
+
+    $obj = json_encode(['obj']);
+ 
     $textLength = count($text);
     $objLength = count($obj);
     echo "<br>text count: " . $textLength;
