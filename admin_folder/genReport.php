@@ -22,6 +22,8 @@ session_start();
     <h1>Generate Report</h1>
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <br>
+    <p id="demo"></p>
+    <p id="demo2"></p>
     
     <script>
       // Retrieving data:
@@ -34,6 +36,9 @@ session_start();
       //checking obj content
       console.log("obj content: ", obj);
       console.log("typeof obj: ", typeof obj);
+
+      document.getElementById("demo").innerHTML = text;
+      document.getElementById("demo2").innerHTML = obj;
       
 
       // document.getElementById("demo").innerHTML = obj.name;
