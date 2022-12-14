@@ -17,7 +17,7 @@ session_start();
     <title>Head Admin</title>
 
     <style>
-      #genReportTable {
+      #Form {
         visibility: hidden;
       }
       #print_button {
@@ -35,37 +35,40 @@ session_start();
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <br>
     <!-- search area -->
-      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" id = "genReportTable">
-          <div class="row"><br>
-            <div class="col-md-4">
-                <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
-                <button type="submit" class="btn btn-primary" >Search</button>      
-            </div>     
-            <div class="col-md-4">
-                <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
-            </div>
-            <div class="col-md-4">
-                <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
-            </div>
-          </div><br>
+    <div id = "Form">
+      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            <div class="row"><br>
+              <div class="col-md-4">
+                  <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
+                  <button type="submit" class="btn btn-primary" >Search</button>      
+              </div>     
+              <div class="col-md-4">
+                  <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
+              </div>
+              <div class="col-md-4">
+                  <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
+              </div>
+            </div><br>
 
-          <!-- Date input -->
-          <div class="row">
-            <div class="col-md-4">
-            <label>From:</label>
-            <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
-            </div>
-            <div class="col-md-4">
-            <label>To</label>
-            <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
-            </div>
+            <!-- Date input -->
+            <div class="row">
+              <div class="col-md-4">
+              <label>From:</label>
+              <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
+              </div>
+              <div class="col-md-4">
+              <label>To</label>
+              <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
+              </div>
+              <br>
+            </div><br>
+            <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
+
             <br>
-          </div><br>
-          <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
-
-          <br>
-          
+            
       </form> <br>
+    </div>
+      
       <div id = "print_button">
         <!-- printableTable -->
         <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
@@ -93,14 +96,11 @@ session_start();
         window.print();
         document.body.innerHTML = originalContents;
       }
-
-
       // Retrieving data:
       let text = localStorage.getItem("testJSON");
       //checking text content
       console.log("text content: ", text);
       console.log("typeof text: ", typeof text);
-
       let obj = JSON.parse(text);
       //checking obj content
       console.log("obj content: ", obj);
@@ -108,9 +108,6 @@ session_start();
 
       document.getElementById("demo").innerHTML = text;
       document.getElementById("demo2").innerHTML = obj;
-      
-
-      // document.getElementById("demo").innerHTML = obj.name;
     </script>
 
     <?php
