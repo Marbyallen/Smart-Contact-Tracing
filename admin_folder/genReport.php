@@ -40,9 +40,9 @@ session_start();
     </script>
 
     <?php
-    $text = json_encode(['text']);
+    $text = json_decode(['text']);
 
-    $obj = json_encode(['obj']);
+    $obj = json_decode(['obj']);
  
     $textLength = count($text);
     $objLength = count($obj);
