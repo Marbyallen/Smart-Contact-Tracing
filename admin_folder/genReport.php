@@ -15,6 +15,18 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Head Admin</title>
+
+    <style>
+      #genReportTable {
+        visibility: hidden;
+      }
+      #print_button {
+        visibility: hidden;
+      }
+      #printableTable {
+        visibility: hidden;
+      }
+    </style>
             
   </head>
   <body>
@@ -22,10 +34,67 @@ session_start();
     <h1>Generate Report</h1>
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <br>
+    <!-- search area -->
+      <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" id = "genReportTable">
+          <div class="row"><br>
+            <div class="col-md-4">
+                <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
+                <button type="submit" class="btn btn-primary" >Search</button>      
+            </div>     
+            <div class="col-md-4">
+                <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
+            </div>
+            <div class="col-md-4">
+                <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
+            </div>
+          </div><br>
+
+          <!-- Date input -->
+          <div class="row">
+            <div class="col-md-4">
+            <label>From:</label>
+            <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
+            </div>
+            <div class="col-md-4">
+            <label>To</label>
+            <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
+            </div>
+            <br>
+          </div><br>
+          <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
+
+          <br>
+          
+      </form> <br>
+      <div id = "print_button">
+        <!-- printableTable -->
+        <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
+      </div>
+      
+
+    
+    <div id ="printableTable" style="overflow-x: auto;">
+    <table class="table table-bordered" id = "tableId">
+      <?php 
+      include 'genReportTable.php' 
+      ?>    
+    </div>
+
+    
     <p id="demo"></p>
     <p id="demo2"></p>
     
     <script>
+      function printDiv(printableTable){
+        var printContents = document.getElementById(printableTable).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+      }
+
+
       // Retrieving data:
       let text = localStorage.getItem("testJSON");
       //checking text content
