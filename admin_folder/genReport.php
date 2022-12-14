@@ -17,16 +17,19 @@ session_start();
     <title>Head Admin</title>
 
     <style>
-      
-      #print_button {
-        visibility: hidden;
-      }
-      #printableTable {
-        visibility: hidden;
-      }
-      #testContent{
+      #form{
         visibility: visible;
       }
+      #print_button {
+        visibility: visible;
+      }
+      #printableTable {
+        visibility: visible;
+      }
+      #testContent{
+        visibility: hidden;
+      }
+
     </style>
             
   </head>
@@ -44,9 +47,40 @@ session_start();
 
       </div>
 
+      <div id="form">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+            <div class="row"><br>
+              <div class="col-md-4">
+                  <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
+                  <button type="submit" class="btn btn-primary" >Search</button>      
+              </div>     
+              <div class="col-md-4">
+                  <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
+              </div>
+              <div class="col-md-4">
+                  <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
+              </div>
+            </div><br>
+            <!-- Date input -->
+            <div class="row">
+              <div class="col-md-4">
+              <label>From:</label>
+              <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
+              </div>
+              <div class="col-md-4">
+              <label>To</label>
+              <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
+              </div>
+              <br>
+            </div><br>
+            <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
+      
+        </form> <br>
+
+      </div>
+
       <!-- printableTable -->
       <div id = "print_button">
-        
         <input class="btn btn-primary" type="button" onclick="printDiv('printableTable')" value= "Print this page" /><br>
       </div>
       
