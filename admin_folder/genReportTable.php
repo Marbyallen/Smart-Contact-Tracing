@@ -6,17 +6,26 @@
     {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-
-    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
+    // SELECT * FROM usersAndStations_table 
+    // WHERE 
+    // station LIKE 'B' AND
+    // date IN ('2022-11-24') AND 
+    // time BETWEEN '12:31:22' AND '14:31:22'
+    // ORDER BY time DESC;
+    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'ctime1' AND 'ctime2'  ORDER BY date DESC");
     $station =  "";
     $date = "";
-    $time = "";
+    $time1 = "";
+    $ctime1 = "";
+    $ctime2 = "";
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $station = $_REQUEST['station'];
         $date = $_REQUEST['date'];
-        $time = $_REQUEST['time'];
+        $time1 = $_REQUEST['time1'];
+        $ctime1 = $_REQUEST['ctime1'];
+        $ctime1 = $_REQUEST['ctime2'];
         $class = "redirectPage";
         $temparray = array();
 

@@ -59,7 +59,9 @@ session_start();
                   <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
               </div>
               <div class="col-md-4">
-                  <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
+                  <input id="time1" name="time" type="text" placeholder="" class="form-control input-md">
+                  <input id="ctime1" name="time" type="text" placeholder="" class="form-control input-md">
+                  <input id="ctime2" name="time" type="text" placeholder="" class="form-control input-md">
               </div>
             </div><br>
         </form> <br>
@@ -101,9 +103,20 @@ session_start();
         console.log("obj content: ", obj);
         console.log("typeof obj: ", typeof obj);
 
+        //calc ctime1 and ctime2
+        varTime = obj[8];
+        let reptime = varTime.replace(/:/g, "");
+        let timeNum = parseInt(reptime);
+        let a = 1000;
+        let cctime1 = timeNum - a;
+        let cctime2 = timeNum + a;
+
         document.getElementById("station").innerHTML = obj[5];
         document.getElementById("date").innerHTML = obj[7];
         document.getElementById("time").innerHTML = obj[8];
+        document.getElementById("ctime1").innerHTML = cctime1;
+        document.getElementById("ctime1").innerHTML = cctime2;
+
       </script>
 
       <?php
