@@ -44,9 +44,9 @@ session_start();
     $objLength = count($obj);
     echo "<br>text count: " . $textLength;
     echo "<br>obj count: " . $objLength;
-    // $user_info = json_encode(['obj']);
+    $user_info = json_encode(['obj']);
     echo "<br>user info<br>"
-    $user_info = obj[];
+    $user_info = $obj;
     // $msg1 = "user_info count:";
     // echo count($msg1 + $user_info); 
     // echo "<br>";
