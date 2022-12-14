@@ -26,23 +26,30 @@ session_start();
     <script>
       // Retrieving data:
       let text = localStorage.getItem("testJSON");
-      let obj = JSON.parse(text);
-      //checking text and obj content
-        console.log("text content: ", text);
-        console.log("typeof text: ", typeof text);
+      //checking text content
+      console.log("text content: ", text);
+      console.log("typeof text: ", typeof text);
 
-        console.log("obj content: ", obj);
-        console.log("typeof obj: ", typeof obj);
-      //
+      let obj = JSON.parse(text);
+      //checking obj content
+      console.log("obj content: ", obj);
+      console.log("typeof obj: ", typeof obj);
+      
 
       // document.getElementById("demo").innerHTML = obj.name;
     </script>
 
     <?php
-    $user_info = json_encode(['obj']);
-    $msg1 = "user_info count:";
-    echo count($msg1 + $user_info); 
-    echo "<br>";
+    $textLength = count($text);
+    $objLength = count($obj);
+    echo "<br>text count: " . $textLength;
+    echo "<br>obj count: " . $objLength;
+    // $user_info = json_encode(['obj']);
+    echo "<br>user info<br>"
+    $user_info = obj[];
+    // $msg1 = "user_info count:";
+    // echo count($msg1 + $user_info); 
+    // echo "<br>";
 
     function echo_arr($arr){
       for ($i=0; $i < count($arr); $i++) { 
