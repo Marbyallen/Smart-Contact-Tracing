@@ -49,32 +49,19 @@ session_start();
 
       <div id="form">
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+        <!-- get station, date and time -->
             <div class="row"><br>
               <div class="col-md-4">
-                  <input id="fname" name="Sfname" type="text" placeholder="First Name" class="form-control input-md">
+                  <input id="station" name="station" type="text" placeholder="" class="form-control input-md">
                   <button type="submit" class="btn btn-primary" >Search</button>      
               </div>     
               <div class="col-md-4">
-                  <input id="lname" name="Slname" type="text" placeholder="Last Name" class="form-control input-md">
+                  <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
               </div>
               <div class="col-md-4">
-                  <input id="qrcode" name="QRcode" type="text" placeholder="QR code" class="form-control input-md">
+                  <input id="time" name="time" type="text" placeholder="" class="form-control input-md">
               </div>
             </div><br>
-            <!-- Date input -->
-            <div class="row">
-              <div class="col-md-4">
-              <label>From:</label>
-              <input type="date" class="form-control" placeholder="Start" name="date1" class="form-control input-md">
-              </div>
-              <div class="col-md-4">
-              <label>To</label>
-              <input type="date" class="form-control" placeholder="End" name="date2" class="form-control input-md">
-              </div>
-              <br>
-            </div><br>
-            <button class="btn btn-primary" name="search"><span class="glyphicon glyphicon-search"></span>Search</button><br>
-      
         </form> <br>
 
       </div>
@@ -114,8 +101,9 @@ session_start();
         console.log("obj content: ", obj);
         console.log("typeof obj: ", typeof obj);
 
-        document.getElementById("demo").innerHTML = text;
-        document.getElementById("demo2").innerHTML = obj;
+        document.getElementById("station").innerHTML = obj[5];
+        document.getElementById("date").innerHTML = obj[7];
+        document.getElementById("time").innerHTML = obj[8];
       </script>
 
       <?php
@@ -125,8 +113,8 @@ session_start();
     
         $textLength = count($text);
         $objLength = count($obj);
-        echo "<br>text count: " . $textLength;
-        echo "<br>obj count: " . $objLength;
+        // echo "<br>text count: " . $textLength;
+        // echo "<br>obj count: " . $objLength;
 
         $array=json_decode($_POST['text']);
         echo "after decode";
@@ -148,8 +136,8 @@ session_start();
         }
 
         // echo_arr($user_info);
-        echo_arr($text);
-        echo_arr($obj);
+        // echo_arr($text);
+        // echo_arr($obj);
       ?>
     </main>
   </body>

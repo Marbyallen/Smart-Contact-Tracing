@@ -8,17 +8,15 @@
     }
 
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
-    $Sfname =  "";
-    $Slname = "";
-    $QRcode = "";
+    $station =  "";
+    $date = "";
+    $time = "";
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $Sfname = $_REQUEST['Sfname'];
-        $Slname = $_REQUEST['Slname'];
-        $QRcode = $_REQUEST['QRcode'];
-        $date1 = $_REQUEST['date1'];
-        $date2 = $_REQUEST['date2'];
+        $station = $_REQUEST['station'];
+        $date = $_REQUEST['date'];
+        $time = $_REQUEST['time'];
         $class = "redirectPage";
         $temparray = array();
 
