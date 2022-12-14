@@ -47,7 +47,7 @@ session_start();
 
     // $user_info = json_encode(['obj']);
 
-    echo "<br>user info<br>"
+    echo "<br>user info<br>";
     $user_info = $obj;
     // $msg1 = "user_info count:";
     // echo count($msg1 + $user_info); 
