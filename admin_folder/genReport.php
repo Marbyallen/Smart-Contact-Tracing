@@ -115,7 +115,7 @@ session_start();
         document.getElementById("date1").innerHTML = obj[7];
         document.getElementById("time").innerHTML = obj[8];
         document.getElementById("ctime1").innerHTML = cctime1;
-        document.getElementById("ctime1").innerHTML = cctime2;
+        document.getElementById("ctime2").innerHTML = cctime2;
 
       </script>
 
