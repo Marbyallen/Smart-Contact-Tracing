@@ -22,13 +22,19 @@ session_start();
     <h1>Generate Report</h1>
     Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
     <br>
-    <h2>Store and retrieve data from local storage.</h2><br>
-    <!-- <p id="demo"></p><br> -->
     
     <script>
       // Retrieving data:
       let text = localStorage.getItem("testJSON");
       let obj = JSON.parse(text);
+      //checking text and obj content
+        console.log("text content: ", text);
+        console.log("typeof text: ", typeof text);
+
+        console.log("obj content: ", obj);
+        console.log("typeof obj: ", typeof obj);
+      //
+
       // document.getElementById("demo").innerHTML = obj.name;
     </script>
 
