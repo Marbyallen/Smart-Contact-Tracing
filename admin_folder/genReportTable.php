@@ -14,7 +14,7 @@
     // ORDER BY time DESC;
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'ctime1' AND 'ctime2'  ORDER BY date DESC");
     $station =  "";
-    $date = "";
+    $date1 = "";
     $time1 = "";
     $ctime1 = "";
     $ctime2 = "";
@@ -22,7 +22,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $station = $_REQUEST['station'];
-        $date = $_REQUEST['date'];
+        $date1 = $_REQUEST['date1'];
         $time1 = $_REQUEST['time1'];
         $ctime1 = $_REQUEST['ctime1'];
         $ctime1 = $_REQUEST['ctime2'];

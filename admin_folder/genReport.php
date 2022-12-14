@@ -56,12 +56,12 @@ session_start();
                   <button type="submit" class="btn btn-primary" >Search</button>      
               </div>     
               <div class="col-md-4">
-                  <input id="date" name="date" type="text" placeholder="" class="form-control input-md">
+                  <input id="date1" name="date1" type="text" placeholder="" class="form-control input-md">
               </div>
               <div class="col-md-4">
-                  <input id="time1" name="time" type="text" placeholder="" class="form-control input-md">
-                  <input id="ctime1" name="time" type="text" placeholder="" class="form-control input-md">
-                  <input id="ctime2" name="time" type="text" placeholder="" class="form-control input-md">
+                  <input id="time1" name="time" type="time1" placeholder="" class="form-control input-md">
+                  <input id="ctime1" name="time" type="ctime1" placeholder="" class="form-control input-md">
+                  <input id="ctime2" name="time" type="ctime2" placeholder="" class="form-control input-md">
               </div>
             </div><br>
         </form> <br>
@@ -112,7 +112,7 @@ session_start();
         let cctime2 = timeNum + a;
 
         document.getElementById("station").innerHTML = obj[5];
-        document.getElementById("date").innerHTML = obj[7];
+        document.getElementById("date1").innerHTML = obj[7];
         document.getElementById("time").innerHTML = obj[8];
         document.getElementById("ctime1").innerHTML = cctime1;
         document.getElementById("ctime1").innerHTML = cctime2;
