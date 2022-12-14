@@ -40,15 +40,15 @@ session_start();
     </script>
 
     <?php
-    // $textLength = count($text);
-    // $objLength = count($obj);
-    // echo "<br>text count: " . $textLength;
-    // echo "<br>obj count: " . $objLength;
+    $textLength = count($text);
+    $objLength = count($obj);
+    echo "<br>text count: " . $textLength;
+    echo "<br>obj count: " . $objLength;
 
     // $user_info = json_encode(['obj']);
 
-    echo "<br>user info<br>";
-    $user_info = $obj;
+    // echo "<br>user info<br>";
+    // $user_info = $obj;
     // $msg1 = "user_info count:";
     // echo count($msg1 + $user_info); 
     // echo "<br>";
@@ -60,7 +60,9 @@ session_start();
           }
     }
 
-    echo_arr($user_info);
+    // echo_arr($user_info);
+    echo_arr($text);
+    echo_arr($obj);
     ?>
     </main>
   </body>
