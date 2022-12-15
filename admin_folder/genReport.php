@@ -58,7 +58,7 @@ session_start();
               </div>     
               <div class="col-md-4">
                 <label for="">Date</label>
-                  <input id="date1" name="date1" type="text" placeholder="" class="form-control input-md">
+                  <input id="date1" name="date1" type="date" placeholder="" class="form-control input-md">
               </div><br>
               <div class="col-md-5">
                   <label for="">Time1</label>
