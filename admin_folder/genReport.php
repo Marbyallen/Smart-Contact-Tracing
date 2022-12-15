@@ -155,12 +155,32 @@ session_start();
 
         //calc ctime1 and ctime2
         // varTime = obj[8];
-        const timeValue = obj[8];
 
-        checkContent('timeValue', timeValue);
+        const timeValue = obj[8];
         const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
         const timeInput = document.getElementById('time1');  
         timeInput.value = removedLast3;  
+
+        const hr = removedLast3.slice(0, -3);  //01 number
+        const string2 = removedLast3.slice(2, 5);  //:50  number
+        const string22 = string2.toString();
+        
+
+        //                    COMPUTE timeA
+        // let timeA = hr - 1;  //00
+        let string1_timeA = computeTimeA(hr);
+        let string11 = string1_timeA.toString();
+        
+        let timeA = string11.concat(string22);
+        // checkContent('timeA', timeA);
+        
+        //                    COMPUTE timeB
+        let hrNum = parseInt(hr);
+        // if hrNum = 24
+        let string1_timeB = computeTimeB(hrNum);
+        let string11_timeB = string1_timeB.toString();
+        let timeB = string11_timeB.concat(string22);
+        checkContent('timeB', timeB);
 
         // let reptime = varTime.replace(/:/g, "");
         // let timeNum = parseInt(reptime);
@@ -169,6 +189,10 @@ session_start();
 
         document.getElementById("station").value = obj[5];
         document.getElementById("date1").value = obj[7];
+        const timeInputA = document.getElementById('time2');  
+        timeInputA.value = timeA;  
+        const timeInputB = document.getElementById('time3');  
+        timeInputB.value = timeB;  
         // document.getElementById("time1").value = obj[8];
         // document.getElementById("time2").value = cctime1;
         // document.getElementById("time3").value = cctime2;
