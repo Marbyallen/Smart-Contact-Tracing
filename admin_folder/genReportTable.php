@@ -12,20 +12,22 @@
     // date IN ('2022-11-24') AND 
     // time BETWEEN '12:31:22' AND '14:31:22'
     // ORDER BY time DESC;
-    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'ctime1' AND 'ctime2'  ORDER BY date DESC");
+    // $time1 = $_POST["time1"];
+    $time2 = $_POST["time2"];
+    $time3 = $_POST["time3"];
+    echo "time1 value: " . $time1;
+    echo "<br>";
+    echo "time2 value: " . $time2;
+    echo "<br>";
+    echo "time3 value: " . $time3;
+    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'time1' AND 'time2'  ORDER BY date DESC");
     $station =  "";
     $date1 = "";
-    $time1 = "";
-    $ctime1 = "";
-    $ctime2 = "";
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $station = $_REQUEST['station'];
         $date1 = $_REQUEST['date1'];
-        $time1 = $_REQUEST['time1'];
-        $ctime1 = $_REQUEST['ctime1'];
-        $ctime1 = $_REQUEST['ctime2'];
         $class = "redirectPage";
         $temparray = array();
 

@@ -53,17 +53,18 @@ session_start();
             <div class="row"><br>
               <div class="col-md-4">
                   <input id="station" name="station" type="text" placeholder="" class="form-control input-md">
-                  <button type="submit" class="btn btn-primary" >Search</button>      
+                        
               </div>     
               <div class="col-md-4">
                   <input id="date1" name="date1" type="text" placeholder="" class="form-control input-md">
               </div>
               <div class="col-md-4">
-                  <input id="time1" name="time" type="time1" placeholder="" class="form-control input-md">
-                  <input id="ctime1" name="time" type="ctime1" placeholder="" class="form-control input-md">
-                  <input id="ctime2" name="time" type="ctime2" placeholder="" class="form-control input-md">
+                  <input id="time1" name="time" type="time" placeholder="" class="form-control input-md">
+                  <input id="time2" name="time" type="time" placeholder="" class="form-control input-md">
+                  <input id="time3" name="time" type="time" placeholder="" class="form-control input-md">
               </div>
             </div><br>
+            <button type="submit" class="btn btn-primary" >Search</button>
         </form> <br>
 
       </div>
@@ -103,6 +104,7 @@ session_start();
         console.log("obj content: ", obj);
         console.log("typeof obj: ", typeof obj);
 
+
         //calc ctime1 and ctime2
         varTime = obj[8];
         let reptime = varTime.replace(/:/g, "");
@@ -120,37 +122,7 @@ session_start();
       </script>
 
       <?php
-        $text = json_decode(['text']);
 
-        $obj = json_decode(['obj']);
-    
-        $textLength = count($text);
-        $objLength = count($obj);
-        // echo "<br>text count: " . $textLength;
-        // echo "<br>obj count: " . $objLength;
-
-        $array=json_decode($_POST['text']);
-        echo "after decode";
-        echo count($array);
-
-        // $user_info = json_encode(['obj']);
-
-        // echo "<br>user info<br>";
-        // $user_info = $obj;
-        // $msg1 = "user_info count:";
-        // echo count($msg1 + $user_info); 
-        // echo "<br>";
-
-        function echo_arr($arr){
-          for ($i=0; $i < count($arr); $i++) { 
-                  echo $arr[$i];
-                  echo "<br>";
-              }
-        }
-
-        // echo_arr($user_info);
-        // echo_arr($text);
-        // echo_arr($obj);
       ?>
     </main>
   </body>
