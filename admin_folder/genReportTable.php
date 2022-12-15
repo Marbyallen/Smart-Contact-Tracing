@@ -25,34 +25,41 @@
     // $station = $_POST["station"];
     // $date1 = $_POST["date1"];
 
-    echo "time1 value: " . $time1;
-    echo "<br>";
-    echo "time2 value: " . $time2;
-    echo "<br>";
-    echo "time3 value: " . $time3;
-    echo "<br>";
-    echo "station value: " . $station;
-    echo "<br>";
-    echo "date1 value: " . $date1;
-    echo "<br>";
+    // echo "time1 value: " . $time1;
+    // echo "<br>";
+    // echo "time2 value: " . $time2;
+    // echo "<br>";
+    // echo "time3 value: " . $time3;
+    // echo "<br>";
+    // echo "station value: " . $station;
+    // echo "<br>";
+    // echo "date1 value: " . $date1;
+    // echo "<br>";
 
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'time2' AND 'time3'  ORDER BY date DESC");
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // $station = $_REQUEST['station'];
-        // $date1 = $_REQUEST['date1'];
+        $station = $_REQUEST['station'];
+        $date1 = $_REQUEST['date1'];
+        $time2 = $_REQUEST['time2'];
+        $time3 = $_REQUEST['time3'];
 
-        $time2 = $_POST["time2"];
-        $time3 = $_POST["time3"];
         // echo "time1 value: " . $time1;
         // echo "<br>";
         // echo "time2 value: " . $time2;
         // echo "<br>";
         // echo "time3 value: " . $time3;
         // echo "<br>";
-        $station = $_POST["station"];
-        $date1 = $_POST["date1"];
+        // echo "station value: " . $station;
+        // echo "<br>";
+        // echo "date1 value: " . $date1;
+        // echo "<br>";
+
+        // $time2 = $_POST["time2"];
+        // $time3 = $_POST["time3"];
+        // $station = $_POST["station"];
+        // $date1 = $_POST["date1"];
 
         $class = "redirectPage";
         $temparray = array();
