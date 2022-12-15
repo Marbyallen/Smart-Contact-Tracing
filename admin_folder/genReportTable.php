@@ -14,8 +14,8 @@
     // ORDER BY time DESC;
     // $time1 = $_POST["time1"];
 
-    $time2 = $_POST["time2"];
-    $time3 = $_POST["time3"];
+    $time2 = $_REQUEST["time2"];
+    $time3 = $_REQUEST["time3"];
     echo "time1 value: " . $time1;
     echo "<br>";
     echo "time2 value: " . $time2;
