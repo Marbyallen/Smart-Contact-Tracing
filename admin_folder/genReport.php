@@ -88,6 +88,19 @@ session_start();
         ?>    
       </div>
 
+      <?php
+        include "db_connect.php";
+        $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
+        // Check connection
+        if (mysqli_connect_errno())
+        {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        }
+
+        $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
+
+      ?>
+
 
     
       <script>
@@ -199,9 +212,7 @@ session_start();
 
       </script>
 
-      <?php
 
-      ?>
     </main>
   </body>
 </html>
