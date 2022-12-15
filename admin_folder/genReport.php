@@ -142,9 +142,9 @@ session_start();
 
       //time from db value
       // const timeValue = "14:50:50";  
-      const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
-      const timeInput = document.getElementById('time1');  
-      timeInput.value = removedLast3;  
+      // const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
+      // const timeInput = document.getElementById('time1');  
+      // timeInput.value = removedLast3;  
       //
 
 
@@ -156,6 +156,7 @@ session_start();
         //calc ctime1 and ctime2
         // varTime = obj[8];
         const timeValue = obj[8];
+
         checkContent('timeValue', timeValue);
         const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
         const timeInput = document.getElementById('time1');  
