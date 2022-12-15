@@ -60,14 +60,14 @@ session_start();
                 <label for="">Date</label>
                   <input id="date1" name="date1" type="text" placeholder="" class="form-control input-md">
               </div><br>
-              
+              <div class="col-md-5">
                   <label for="">Time1</label>
                   <input id="time1" name="time" type="time" placeholder="" class="form-control input-md">
                   <label for="">Time2</label>
                   <input id="time2" name="time" type="time" placeholder="" class="form-control input-md">
                   <label for="">Time3</label>
                   <input id="time3" name="time" type="time" placeholder="" class="form-control input-md">
-              
+              </div>
             </div><br>
             <button type="submit" class="btn btn-primary" >Search</button>
         </form> <br>
