@@ -115,14 +115,14 @@ session_start();
         let reptime = varTime.replace(/:/g, "");
         let timeNum = parseInt(reptime);
         let a = 1000;
-        let cctime1 = timeNum - a;
-        let cctime2 = timeNum + a;
+        // let cctime1 = timeNum - a;
+        // let cctime2 = timeNum + a;
 
-        document.getElementById("station").innerHTML = obj[5];
-        document.getElementById("date1").innerHTML = obj[7];
-        document.getElementById("time").innerHTML = obj[8];
-        document.getElementById("ctime1").innerHTML = cctime1;
-        document.getElementById("ctime2").innerHTML = cctime2;
+        document.getElementById("station").value = obj[5];
+        document.getElementById("date1").value = obj[7];
+        document.getElementById("time1").value = obj[8];
+        document.getElementById("time2").value = cctime1;
+        document.getElementById("time3").value = cctime2;
 
       </script>
 
