@@ -100,6 +100,15 @@ session_start();
           document.body.innerHTML = originalContents;
         }
 
+      function checkContent(varName, varContent){
+        let varrName = varName;
+        let varrContent = varContent;
+        let msg1 = "content of " + varrName + ": " + varContent + "<br>";
+        let msg2 = "typeof " + varrName + ": " + typeof + varContent + "<br>";
+        document.write(msg1);
+        document.write(msg2);
+      }
+
         function computeTimeA(x){
           let time = parseInt(x);   //1 number
           
@@ -147,6 +156,7 @@ session_start();
         //calc ctime1 and ctime2
         // varTime = obj[8];
         const timeValue = obj[8];
+        checkContent('timeValue',timeValue );
         const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
         const timeInput = document.getElementById('time1');  
         timeInput.value = removedLast3;  
