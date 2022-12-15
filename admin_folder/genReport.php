@@ -69,7 +69,7 @@ session_start();
                   <input id="time3" name="time" type="time" placeholder="" class="form-control input-md">
               </div>
             </div><br>
-            <button type="submit" class="btn btn-primary" >Search</button>
+            <button type="submit" value="Submit" class="btn btn-primary" >Search</button>
         </form> <br>
 
       </div>
