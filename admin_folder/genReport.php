@@ -48,7 +48,7 @@ session_start();
       </div>
 
       <div id="form">
-        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+        <form action="/genReportTable.php" method="post" target="_blank">
         <!-- get station, date and time -->
             <div class="row"><br>
               <div class="col-md-4">
@@ -84,20 +84,20 @@ session_start();
       <div id ="printableTable" style="overflow-x: auto;">
       <table class="table table-bordered" id = "tableId">
         <?php 
-        include 'genReportTable.php' 
+        // include 'genReportTable.php' 
         ?>    
       </div>
 
       <?php
-        include "db_connect.php";
-        $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
-        // Check connection
-        if (mysqli_connect_errno())
-        {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-        }
+        // include "db_connect.php";
+        // $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
+        // // Check connection
+        // if (mysqli_connect_errno())
+        // {
+        // echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        // }
 
-        $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
+        // $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
 
       ?>
 
