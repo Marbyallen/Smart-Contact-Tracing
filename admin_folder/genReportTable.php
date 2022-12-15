@@ -20,6 +20,9 @@
     echo "time2 value: " . $time2;
     echo "<br>";
     echo "time3 value: " . $time3;
+    echo "<br>";
+    $station = $_POST["station"];
+    $date1 = $_POST["date1"];
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'time1' AND 'time2'  ORDER BY date DESC");
     $station =  "";
     $date1 = "";
