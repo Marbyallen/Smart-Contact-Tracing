@@ -30,6 +30,39 @@
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN 'time2' AND 'time3'  ORDER BY date DESC");
 
 
+    //method 2 test
+        echo "
+            <tr>
+            <th>QR code</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Contact No.</th>
+            <th>Email Address</th>
+            <th>Station</th>
+            <th>Facial recognition image</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Body Heat Temperature</th>
+            </tr>
+        ";
+        array_push($temparray,$row);                  
+        echo "<tr class = " . $class . ">";
+        echo "<td>" . $row['QRcode'] . "</td>";
+        echo "<td>" . $row['firstname'] . "</td>";
+        echo "<td>" . $row['lastname'] . "</td>";
+        echo "<td>" . $row['contactno'] . "</td>";
+        echo "<td>" . $row['email'] . "</td>";
+        echo "<td>" . $row['station'] . "</td>";
+        echo "<td>" . $row['facialimg'] . "</td>";
+        echo "<td>" . $row['date'] . "</td>";
+        echo "<td>" . $row['time'] . "</td>";
+        echo "<td>" . $row['bodyheat_temp'] . "</td>";
+        echo "</tr>";
+            
+        echo "</table>";
+        mysqli_close($mysqli);
+    //
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // $station = $_REQUEST['station'];
         // $date1 = $_REQUEST['date1'];
