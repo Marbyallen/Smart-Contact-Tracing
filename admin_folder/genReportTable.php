@@ -7,6 +7,7 @@
     <title>GenerateReport</title>
     </head>
 <body>
+<table class="table table-bordered" id = "tableId">
 <?php
     include "db_connect.php";
     $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
