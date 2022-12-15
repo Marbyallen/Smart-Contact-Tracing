@@ -28,7 +28,7 @@
 
 
     //method 2 test
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // $station = $_REQUEST['station'];
             // $date1 = $_REQUEST['date1'];
 
@@ -82,7 +82,7 @@
             echo "</table>";
             mysqli_close($mysqli);
             
-        }
+        // }
     //
 
     // if ($_SERVER["REQUEST_METHOD"] == "POST") {
