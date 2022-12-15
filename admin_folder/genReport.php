@@ -180,7 +180,7 @@ session_start();
         let string1_timeB = computeTimeB(hrNum);
         let string11_timeB = string1_timeB.toString();
         let timeB = string11_timeB.concat(string22);
-        checkContent('timeB', timeB);
+        // checkContent('timeB', timeB);
 
         // let reptime = varTime.replace(/:/g, "");
         // let timeNum = parseInt(reptime);
