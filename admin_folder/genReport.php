@@ -99,30 +99,68 @@ session_start();
           window.print();
           document.body.innerHTML = originalContents;
         }
+
+        function computeTimeA(x){
+          let time = parseInt(x);   //1 number
+          
+          let time1 = "";
+          
+          if (time <= 1) {
+            time1 = "00";
+            // let string_time1 = time1.toString();
+            return time1;
+          } else if (time == 0){
+            time1 = "13";
+            return time1;
+          } else {
+            time1 = time - 1;
+            return time1;
+            
+          }
+        }
+
+      function computeTimeB(x){
+        let time = x;
+        time1 = "";
+        if (time <24) {
+          time1 = time + 1;
+          return time1;
+        } else {
+          time1 = "01";
+          return time1;
+        }
+      }
+
+      //time from db value
+      // const timeValue = "14:50:50";  
+      const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
+      const timeInput = document.getElementById('time1');  
+      timeInput.value = removedLast3;  
+      //
+
+
         // Retrieving data:
         let text = localStorage.getItem("testJSON");
-        //checking text content
-        console.log("text content: ", text);
-        console.log("typeof text: ", typeof text);
         let obj = JSON.parse(text);
-        //checking obj content
-        console.log("obj content: ", obj);
-        console.log("typeof obj: ", typeof obj);
 
 
         //calc ctime1 and ctime2
-        varTime = obj[8];
-        let reptime = varTime.replace(/:/g, "");
-        let timeNum = parseInt(reptime);
-        let a = 1000;
+        // varTime = obj[8];
+        const timeValue = obj[8];
+        const removedLast3 = timeValue.slice(0, -3);  //remove last 3 characters 
+        const timeInput = document.getElementById('time1');  
+        timeInput.value = removedLast3;  
+
+        // let reptime = varTime.replace(/:/g, "");
+        // let timeNum = parseInt(reptime);
         // let cctime1 = timeNum - a;
         // let cctime2 = timeNum + a;
 
         document.getElementById("station").value = obj[5];
         document.getElementById("date1").value = obj[7];
-        document.getElementById("time1").value = obj[8];
-        document.getElementById("time2").value = cctime1;
-        document.getElementById("time3").value = cctime2;
+        // document.getElementById("time1").value = obj[8];
+        // document.getElementById("time2").value = cctime1;
+        // document.getElementById("time3").value = cctime2;
 
       </script>
 
