@@ -1,3 +1,5 @@
+<html>
+<body>
 <?php
     include "db_connect.php";
     $mysqli=mysqli_connect("$dbhost","$dbuser","$dbpass","$dbname");
@@ -176,3 +178,5 @@
     
 
 ?>
+</body>
+</html>
