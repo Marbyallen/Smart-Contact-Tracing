@@ -62,11 +62,11 @@ session_start();
               </div><br>
               <div class="col-md-5">
                   <label for="">Time1</label>
-                  <input id="time1" name="time" type="time" placeholder="" class="form-control input-md">
+                  <input id="time1" name="time1" type="time" placeholder="" class="form-control input-md">
                   <label for="">Time2</label>
-                  <input id="time2" name="time" type="time" placeholder="" class="form-control input-md">
+                  <input id="time2" name="time2" type="time" placeholder="" class="form-control input-md">
                   <label for="">Time3</label>
-                  <input id="time3" name="time" type="time" placeholder="" class="form-control input-md">
+                  <input id="time3" name="time3" type="time" placeholder="" class="form-control input-md">
               </div>
             </div><br>
             <button type="submit" value="Submit" class="btn btn-primary" >Search</button>
