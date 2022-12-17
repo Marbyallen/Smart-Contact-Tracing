@@ -27,11 +27,11 @@
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '".$station."' AND date IN ('".$date1."') AND time BETWEEN '".$time2."' AND '".$time3."'  ORDER BY date DESC");
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $station = test_input($_REQUEST["station"]);
-        $date1 = test_input($_REQUEST["date1"]);
-        $time1 = test_input($_REQUEST["time1"]);
-        $time2 = test_input($_REQUEST["time2"]);
-        $time3 = test_input($_REQUEST["time3"]);
+        $station = $_REQUEST["station"];
+        $date1 = $_REQUEST["date1"];
+        $time1 = $_REQUEST["time1"];
+        $time2 = $_REQUEST["time2"];
+        $time3 = $_REQUEST["time3"];
 
         echo "time1 value: " . $time1;
         echo "<br>";
