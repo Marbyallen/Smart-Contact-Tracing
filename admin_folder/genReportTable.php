@@ -33,12 +33,17 @@
         $time2 = $_REQUEST["time2"];
         $time3 = $_REQUEST["time3"];
 
+        echo "station value: " . $station;
+        echo "<br>";
+        echo "date value: " . $date1;
+        echo "<br>";
         echo "time1 value: " . $time1;
         echo "<br>";
         echo "time2 value: " . $time2;
         echo "<br>";
         echo "time3 value: " . $time3;
         echo "<br>";
+
 
         echo "
         <tr>
