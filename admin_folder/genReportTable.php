@@ -23,7 +23,7 @@
     // time BETWEEN '12:31:22' AND '14:31:22'
     // ORDER BY time DESC;
     // $time1 = $_POST["time1"];
-    $station = $date1 = $time1 = $time2 = $time3 = "";
+    // $station = $date1 = $time1 = $time2 = $time3 = "";
     $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '$station' AND date IN ('$date') AND time BETWEEN '$time2' AND '$time3'  ORDER BY date DESC");
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
