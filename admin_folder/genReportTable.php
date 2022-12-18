@@ -16,20 +16,7 @@
     {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
-    // SELECT * FROM usersAndStations_table 
-    // WHERE 
-    // station LIKE 'B' AND
-    // date IN ('2022-11-24') AND 
-    // time BETWEEN '12:31:22' AND '14:31:22'
-    // ORDER BY time DESC;
-    // $time1 = $_POST["time1"];
-    // $station = $date1 = $time1 = $time2 = $time3 = "";
 
-    // SELECT  * FROM usersAndStations_table WHERE `station` LIKE 'B' AND `date` IN ('2022-11-24') AND `time` BETWEEN '12:12:50' AND '13:21:54'  ORDER BY `time` ASC;
-    // $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '".$station."' AND date IN ('".$date1."') AND time BETWEEN '".$time2."' AND '".$time3."'  ORDER BY date DESC");
-    // $result = mysqli_query($mysqli, "SELECT  * FROM usersAndStations_table WHERE `station` LIKE '".$station."' AND `date` LIKE '".$date1."' AND `time` BETWEEN '".$time2."' AND '".$time3."'  ORDER BY `time` ASC");
-    
-    // $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE station LIKE '".$test."'  ORDER BY date DESC");
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $station = $_REQUEST["station"];
         $date1 = $_REQUEST["date1"];
@@ -37,25 +24,8 @@
         $time2 = $_REQUEST["time2"];
         $time3 = $_REQUEST["time3"];
 
-        $test = "B";
-        $stringStation = (string)$test;
-
-        // $numberString = (string)$number;
-
-        var_dump($test); echo "<br>";
-        // $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE station LIKE '".$station."'  ORDER BY date DESC");
         $result = mysqli_query($mysqli, "SELECT  * FROM usersAndStations_table WHERE `station` LIKE '".$station."' AND `date` LIKE '".$date1."' AND `time` BETWEEN '".$time2."' AND '".$time3."'  ORDER BY `time` ASC");
-    
-        // echo "station value: " . $station;
-        // echo "<br>";
-        // echo "date value: " . $date1;
-        // echo "<br>";
-        // echo "time1 value: " . $time1;
-        // echo "<br>";
-        // echo "time2 value: " . $time2;
-        // echo "<br>";
-        // echo "time3 value: " . $time3;
-        // echo "<br>";
+
 
 
         echo "
@@ -95,53 +65,6 @@
 
 
       }
-
-    //method 2 test
-        // $time2 = $_REQUEST["time2"];
-        // $time3 = $_REQUEST["time3"];
-        // $station = $_REQUEST["station"];
-        // $date1 = $_REQUEST["date1"];
-        // $class = "redirectPage";
-        // $temparray = array();
-
-        // echo "
-        //     <tr>
-        //     <th>QR code</th>
-        //     <th>First Name</th>
-        //     <th>Last Name</th>
-        //     <th>Contact No.</th>
-        //     <th>Email Address</th>
-        //     <th>Station</th>
-        //     <th>Facial recognition image</th>
-        //     <th>Date</th>
-        //     <th>Time</th>
-        //     <th>Body Heat Temperature</th>
-        //     </tr>
-        // ";
-        
-        // $numResults = mysqli_num_rows($result);
-        // echo "Number of rows found: " . $numResults;
-        // while($row = mysqli_fetch_array($result))
-        // { 
-        //     array_push($temparray,$row);                  
-        //     echo "<tr class = " . $class . ">";
-        //     echo "<td>" . $row['QRcode'] . "</td>";
-        //     echo "<td>" . $row['firstname'] . "</td>";
-        //     echo "<td>" . $row['lastname'] . "</td>";
-        //     echo "<td>" . $row['contactno'] . "</td>";
-        //     echo "<td>" . $row['email'] . "</td>";
-        //     echo "<td>" . $row['station'] . "</td>";
-        //     echo "<td>" . $row['facialimg'] . "</td>";
-        //     echo "<td>" . $row['date'] . "</td>";
-        //     echo "<td>" . $row['time'] . "</td>";
-        //     echo "<td>" . $row['bodyheat_temp'] . "</td>";
-        //     echo "</tr>";
-        // }
-        // echo "</table>";
-        // mysqli_close($mysqli);
-    //
-            
-
 ?>
 </body>
 </html>
