@@ -28,7 +28,7 @@
     // SELECT  * FROM usersAndStations_table WHERE `station` LIKE 'B' AND `date` IN ('2022-11-24') AND `time` BETWEEN '12:12:50' AND '13:21:54'  ORDER BY `time` ASC;
     // $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table station LIKE '".$station."' AND date IN ('".$date1."') AND time BETWEEN '".$time2."' AND '".$time3."'  ORDER BY date DESC");
     // $result = mysqli_query($mysqli, "SELECT  * FROM usersAndStations_table WHERE `station` LIKE '".$station."' AND `date` LIKE '".$date1."' AND `time` BETWEEN '".$time2."' AND '".$time3."'  ORDER BY `time` ASC");
-    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table  ORDER BY date DESC");
+    $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE station = '$station'  ORDER BY date DESC");
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $station = $_REQUEST["station"];
         $date1 = $_REQUEST["date1"];
