@@ -43,8 +43,9 @@
         // $numberString = (string)$number;
 
         var_dump($test); echo "<br>";
-        $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE station LIKE '".$station."'  ORDER BY date DESC");
-
+        // $result = mysqli_query($mysqli," SELECT  * FROM usersAndStations_table WHERE station LIKE '".$station."'  ORDER BY date DESC");
+        $result = mysqli_query($mysqli, "SELECT  * FROM usersAndStations_table WHERE `station` LIKE '".$station."' AND `date` LIKE '".$date1."' AND `time` BETWEEN '".$time2."' AND '".$time3."'  ORDER BY `time` ASC");
+    
         // echo "station value: " . $station;
         // echo "<br>";
         // echo "date value: " . $date1;
