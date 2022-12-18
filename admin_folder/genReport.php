@@ -61,11 +61,11 @@ session_start();
                   <input id="date1" name="date1" type="date" placeholder="" class="form-control input-md">
               </div><br>
               <div class="col-md-5">
-                  <label for="">Time1</label>
+                  <label for="">User's Time In</label>
                   <input id="time1" name="time1" type="time" placeholder="" class="form-control input-md">
-                  <label for="">Time2</label>
+                  <label for="">User's Time In BEFORE 1 HOUR</label>
                   <input id="time2" name="time2" type="time" placeholder="" class="form-control input-md">
-                  <label for="">Time3</label>
+                  <label for="">User's Time In AFTER 1 HOUR</label>
                   <input id="time3" name="time3" type="time" placeholder="" class="form-control input-md">
               </div>
             </div><br>
