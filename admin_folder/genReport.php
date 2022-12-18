@@ -35,17 +35,7 @@ session_start();
   </head>
   <body>
     <main>
-      <div id = "top_content">
-        <h1>Generate Report</h1>
-        Welcome, <?php echo $user_data['firstname']. " " .$user_data['lastname']; ?>
-      <br>
-      </div>
-      
-      <div id = "testContent">
-        <p id="demo"></p>
-        <p id="demo2"></p>
 
-      </div>
 
       <div id="form">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" target="">
