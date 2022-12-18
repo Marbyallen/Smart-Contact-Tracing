@@ -36,9 +36,8 @@
         $time1 = $_REQUEST["time1"];
         $time2 = $_REQUEST["time2"];
         $time3 = $_REQUEST["time3"];
-        $test = "B";
 
-        $stringStation = (string)$station;
+        $stringStation = (string)$test;
 
         // $numberString = (string)$number;
 
