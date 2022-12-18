@@ -36,6 +36,8 @@
         $time2 = $_REQUEST["time2"];
         $time3 = $_REQUEST["time3"];
 
+        var_dump($station);
+
         // echo "station value: " . $station;
         // echo "<br>";
         // echo "date value: " . $date1;
