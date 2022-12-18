@@ -36,13 +36,13 @@
         $time1 = $_REQUEST["time1"];
         $time2 = $_REQUEST["time2"];
         $time3 = $_REQUEST["time3"];
-        
-        $test = $station;
+
+        $test = "B";
         $stringStation = (string)$test;
 
         // $numberString = (string)$number;
 
-        var_dump($stringStation); echo "<br>";
+        var_dump($test); echo "<br>";
 
         // echo "station value: " . $station;
         // echo "<br>";
