@@ -40,7 +40,7 @@
 
         // $numberString = (string)$number;
 
-        var_dump($station);
+        var_dump($stringStation);
 
         // echo "station value: " . $station;
         // echo "<br>";
