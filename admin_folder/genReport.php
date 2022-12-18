@@ -35,7 +35,9 @@ session_start();
   </head>
   <body>
     <main>
-
+      <div id = "top_content">
+        <h1>Generate Report</h1>
+      </div>
 
       <div id="form">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" target="">
@@ -50,13 +52,13 @@ session_start();
                 <label for="">Date</label>
                   <input id="date1" name="date1" type="date" placeholder="" class="form-control input-md">
               </div><br>
-              <div class="col-md-5">
+              <div class="col-md-5"> <br>
                   <label for="">User's Time In</label>
-                  <input id="time1" name="time1" type="time" placeholder="" class="form-control input-md">
+                  <input id="time1" name="time1" type="time" placeholder="" class="form-control input-md"><br>
                   <label for="">User's Time In BEFORE 1 HOUR</label>
-                  <input id="time2" name="time2" type="time" placeholder="" class="form-control input-md">
+                  <input id="time2" name="time2" type="time" placeholder="" class="form-control input-md"><br>
                   <label for="">User's Time In AFTER 1 HOUR</label>
-                  <input id="time3" name="time3" type="time" placeholder="" class="form-control input-md">
+                  <input id="time3" name="time3" type="time" placeholder="" class="form-control input-md"><br>
               </div>
             </div><br>
             <button type="submit" value="Submit" class="btn btn-primary" >Search</button>
